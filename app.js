@@ -10,6 +10,13 @@ const embeddedRuns = Array.isArray(window.BENCHMARK_EMBEDDED_RUNS)
   ? window.BENCHMARK_EMBEDDED_RUNS
   : [];
 
+const sourceRepositories = {
+  "HOL Light": "https://github.com/jrh13/hol-light",
+  "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
+  "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
+  "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts",
+};
+
 const elements = {
   runSelect: document.querySelector("#run-select"),
   notice: document.querySelector("#notice"),
@@ -138,24 +145,48 @@ function renderMetadata() {
     if (data.s2n_bignum_commit) commits.set("s2n-bignum", data.s2n_bignum_commit);
     if (data.flyspeck_commit) commits.set("Flyspeck", data.flyspeck_commit);
   }
+  if (state.manifest?.benchmark_scripts_commit) {
+    commits.set("benchmark-scripts", state.manifest.benchmark_scripts_commit);
+  }
 
   const memory = machine.memory_total_gib !== null && machine.memory_total_gib !== undefined
     ? `${machine.memory_total_gib} GiB`
     : "Unknown";
   const items = [
-    ["Processor", machine.cpu_brand || "Unknown", false],
-    ["Architecture / cores", `${machine.architecture || "unknown"} · ${machine.num_cores ?? "?"} online`, false],
-    ["Memory", memory, false],
-    ["Source commits", [...commits].map(([name, hash]) => `${name} ${shortHash(hash)}`).join(" · ") || "Unknown", true],
+    ["Processor", machine.cpu_brand || "Unknown"],
+    ["Architecture / cores", `${machine.architecture || "unknown"} · ${machine.num_cores ?? "?"} online`],
+    ["Memory", memory],
   ];
-  for (const [label, value, mono] of items) {
+  for (const [label, value] of items) {
     const item = makeElement("div", "meta-item");
-    item.append(makeElement("span", "meta-label", label));
-    const valueNode = makeElement("span", `meta-value${mono ? " mono" : ""}`, value);
-    if (label === "Source commits") valueNode.title = [...commits.values()].join("\n");
-    item.append(valueNode);
+    item.append(
+      makeElement("span", "meta-label", label),
+      makeElement("span", "meta-value", value),
+    );
     elements.metadata.append(item);
   }
+
+  const sourceItem = makeElement("div", "meta-item");
+  sourceItem.append(makeElement("span", "meta-label", "Source commits"));
+  const commitList = makeElement("ul", "commit-list");
+  for (const [name, hash] of commits) {
+    const repository = sourceRepositories[name];
+    const row = document.createElement("li");
+    const repoLink = makeElement("a", "repo-link", name);
+    repoLink.href = repository;
+    repoLink.target = "_blank";
+    repoLink.rel = "noopener noreferrer";
+    const commitLink = makeElement("a", "commit-link", shortHash(hash));
+    commitLink.href = `${repository}/commit/${hash}`;
+    commitLink.target = "_blank";
+    commitLink.rel = "noopener noreferrer";
+    commitLink.title = hash;
+    row.append(repoLink, document.createTextNode(" @ "), commitLink);
+    commitList.append(row);
+  }
+  if (!commits.size) commitList.append(makeElement("li", "", "Unknown"));
+  sourceItem.append(commitList);
+  elements.metadata.append(sourceItem);
 }
 
 function renderHeading() {

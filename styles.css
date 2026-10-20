@@ -132,6 +132,11 @@ main { padding: 28px 0 48px; }
 .meta-label { display: block; margin-bottom: 3px; color: var(--muted); font-size: 11px; }
 .meta-value { display: block; font-weight: 600; overflow-wrap: anywhere; }
 .meta-value.mono { font: 12px var(--mono); }
+.commit-list { margin: 0; padding: 0; list-style: none; font: 12px/1.55 var(--mono); }
+.commit-list a { color: var(--link); text-decoration: none; }
+.commit-list a:hover { text-decoration: underline; }
+.repo-link { font-family: var(--sans); font-weight: 600; }
+.commit-link { font-family: var(--mono); }
 
 .section-heading {
   display: flex;

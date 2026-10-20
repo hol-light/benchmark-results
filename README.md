@@ -14,8 +14,9 @@ Each run lives in a directory named:
 ```
 
 A run directory contains the unmodified result JSON files and a
-`manifest.json` that gives each report its display label. `runs.json` is the
-root index used by the webpage.
+`manifest.json` that gives each report its display label and records the exact
+`benchmark-scripts` commit used for the run. `runs.json` is the root index used
+by the webpage.
 
 The 2026-10-20 run has four benchmark families but five physical reports,
 because s2n-bignum records ARM and x86 separately:
@@ -64,7 +65,8 @@ run's manifest, and its report files with relative URLs.
 
 1. Create `<date>-<hol-light-commit>/`.
 2. Copy the result JSON files into it.
-3. Add `manifest.json`, following the existing run.
+3. Add `manifest.json`, following the existing run, including the full
+   `benchmark_scripts_commit` that produced the reports.
 4. Prepend an entry to `runs.json` so the newest run loads by default.
 5. Run `./generate-embedded-runs.py` to refresh direct `file://` support.
 

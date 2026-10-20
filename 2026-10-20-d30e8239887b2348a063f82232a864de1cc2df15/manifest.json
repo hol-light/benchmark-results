@@ -2,6 +2,7 @@
   "id": "2026-10-20-d30e8239887b2348a063f82232a864de1cc2df15",
   "date": "2026-10-20",
   "hol_light_commit": "d30e8239887b2348a063f82232a864de1cc2df15",
+  "benchmark_scripts_commit": "becc7fa55422cc19916216f22302c64a31195dc0",
   "reports": [
     {
       "label": "HOL Light",
