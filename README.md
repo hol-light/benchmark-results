@@ -2,6 +2,9 @@
 
 Static result archive and browser dashboard for HOL Light benchmarks.
 
+To reproduce the reports, see the
+[HOL benchmark scripts](https://github.com/hol-light-family/benchmark-scripts/).
+
 ## Layout
 
 Each run lives in a directory named:
