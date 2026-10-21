@@ -14,9 +14,10 @@ Each run lives in a directory named:
 ```
 
 A run directory contains the unmodified result JSON files and a
-`manifest.json` that gives each report its display label and records the exact
-`benchmark-scripts` commit used for the run. `runs.json` is the root index used
-by the webpage.
+`manifest.json` that gives each report its display label, records the exact
+`benchmark-scripts` commit used for the run, and maps source names to their
+repository URLs so commit links work for forks. `runs.json` is the root index
+used by the webpage.
 
 The 2026-10-20 run has four benchmark families but five physical reports,
 because s2n-bignum records ARM and x86 separately:
@@ -49,6 +50,20 @@ Then open <http://localhost:8000/>.
 The page automatically loads the newest entry in `runs.json` (or its bundled
 copy when opened directly). Use the run selector to switch among other runs.
 
+## Compare runs
+
+Open `compare.html` or use **Compare runs** in the results page header. Select
+a baseline and comparison run to see:
+
+- elapsed time, speed ratio, and faster/slower result for every comparable test,
+- geometric-mean improvement for each benchmark and for the full run,
+- aggregate elapsed-time ratios, and
+- a warning when CPU model, architecture, or total RAM differs between runs.
+
+Tests contribute to averages only when they passed and have positive elapsed
+times in both runs. Benchmark sections are collapsed by default, and the
+**Slower only** filter isolates regressions.
+
 ## Publish with GitHub Pages
 
 This repository has no build step. In the GitHub repository settings:
@@ -66,8 +81,11 @@ run's manifest, and its report files with relative URLs.
 1. Create `<date>-<hol-light-commit>/`.
 2. Copy the result JSON files into it.
 3. Add `manifest.json`, following the existing run, including the full
-   `benchmark_scripts_commit` that produced the reports.
-4. Prepend an entry to `runs.json` so the newest run loads by default.
+   `benchmark_scripts_commit` that produced the reports. For forked HOL Light
+   runs, set `hol_light_label` (for example, `HOL Light (aqjune-aws)`) and the
+   matching `repositories["HOL Light"]` URL.
+4. Prepend an entry to `runs.json` with the same `hol_light_label` so the
+   newest run loads by default.
 5. Run `./generate-embedded-runs.py` to refresh direct `file://` support.
 
 Keep full commit hashes in both the directory name and JSON provenance fields.

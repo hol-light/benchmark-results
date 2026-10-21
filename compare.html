@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare HOL Light benchmark performance">
+  <title>Compare HOL benchmark runs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Compare HOL benchmark runs</h1>
+      <div class="header-actions">
+        <a class="nav-link" href="index.html">Results</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="comparison-controls" aria-labelledby="comparison-title">
+      <h2 id="comparison-title">Select runs</h2>
+      <div class="comparison-pickers">
+        <label class="run-picker" for="baseline-run">
+          <span>Baseline</span>
+          <select id="baseline-run" disabled><option>Loading runs…</option></select>
+        </label>
+        <button id="swap-runs" class="plain-button" type="button" disabled>Swap</button>
+        <label class="run-picker" for="candidate-run">
+          <span>Comparison</span>
+          <select id="candidate-run" disabled><option>Loading runs…</option></select>
+        </label>
+      </div>
+      <p class="comparison-direction">Positive improvement means the comparison run completed faster than the baseline.</p>
+    </section>
+
+    <div id="compare-notice" class="notice" role="status" hidden></div>
+
+    <section id="comparison" hidden>
+      <div id="comparison-heading" class="comparison-heading"></div>
+      <div id="environment-warning" class="environment-warning" role="status" hidden></div>
+      <div id="comparison-overall" class="comparison-overall"></div>
+
+      <div class="section-heading comparison-filter-heading">
+        <h2>Benchmarks</h2>
+        <div class="filters">
+          <label class="search-field">
+            <span class="sr-only">Search tests</span>
+            <input id="compare-search" type="search" placeholder="Search tests">
+          </label>
+          <label class="checkbox-control">
+            <input id="regressions-only" type="checkbox">
+            Slower only
+          </label>
+        </div>
+      </div>
+
+      <div id="benchmark-comparisons" class="benchmark-comparisons"></div>
+
+      <section class="method-note" aria-labelledby="method-title">
+        <h2 id="method-title">Calculation</h2>
+        <p>Speed ratio is <code>baseline time / comparison time</code>. Values above 1.0× are faster. Average improvement uses the geometric mean of per-test speed ratios, which gives equal weight to proportional changes in fast and slow tests. Only tests that passed and have positive elapsed times in both runs are included.</p>
+      </section>
+    </section>
+
+    <section id="compare-empty" class="empty-state">
+      <h2>Two runs are required</h2>
+      <p>Add at least two entries to <code>runs.json</code> to compare performance.</p>
+    </section>
+  </main>
+
+  <footer>Static benchmark comparison viewer.</footer>
+
+  <script src="embedded-runs.js"></script>
+  <script src="compare.js" defer></script>
+</body>
+</html>

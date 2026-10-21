@@ -106,7 +106,7 @@ function loadEmbeddedRun(runId) {
 function populateRunSelect(runs, valueForRun) {
   elements.runSelect.replaceChildren(new Option("Choose a published run…", ""));
   for (const run of runs) {
-    const label = `${run.date} · HOL Light ${shortHash(run.hol_light_commit)}`;
+    const label = `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}`;
     elements.runSelect.add(new Option(label, valueForRun(run)));
   }
   elements.runSelect.disabled = false;
@@ -170,7 +170,7 @@ function renderMetadata() {
   sourceItem.append(makeElement("span", "meta-label", "Source commits"));
   const commitList = makeElement("ul", "commit-list");
   for (const [name, hash] of commits) {
-    const repository = sourceRepositories[name];
+    const repository = state.manifest?.repositories?.[name] || sourceRepositories[name];
     const row = document.createElement("li");
     const repoLink = makeElement("a", "repo-link", name);
     repoLink.href = repository;
@@ -193,7 +193,8 @@ function renderHeading() {
   elements.runHeading.replaceChildren();
   const title = makeElement("h2", "", state.manifest ? `Run · ${state.manifest.date}` : "Local result files");
   const commit = state.manifest?.hol_light_commit || state.reports.find((r) => r.data.hol_light_commit)?.data.hol_light_commit;
-  const subtitle = makeElement("p", "", commit ? `HOL Light ${commit}` : "Ad hoc report set");
+  const holLightLabel = state.manifest?.hol_light_label || "HOL Light";
+  const subtitle = makeElement("p", "", commit ? `${holLightLabel} ${commit}` : "Ad hoc report set");
   elements.runHeading.append(title, subtitle);
 }
 

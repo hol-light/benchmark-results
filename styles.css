@@ -257,6 +257,69 @@ footer {
   font-size: 12px;
 }
 
+.nav-link { color: var(--link); text-decoration: none; }
+.nav-link:hover { text-decoration: underline; }
+.comparison-controls { padding-bottom: 18px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.comparison-controls h2 { margin-bottom: 12px; }
+.comparison-pickers { display: flex; align-items: end; gap: 10px; }
+.comparison-pickers .run-picker { flex: 1; }
+.comparison-pickers select { width: 100%; }
+.plain-button {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid #b9bdc2;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+.plain-button:hover { background: var(--subtle); }
+.plain-button:disabled { color: #999; cursor: default; }
+.comparison-direction { margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+.comparison-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.comparison-run { display: flex; align-items: baseline; gap: 8px; }
+.comparison-label { color: var(--muted); font-size: 11px; text-transform: uppercase; }
+.comparison-arrow { color: var(--muted); }
+.comparison-heading .commit-link { color: var(--link); font: 13px var(--mono); }
+.environment-warning {
+  margin-bottom: 14px;
+  padding: 7px 10px;
+  border: 1px solid #dfc47f;
+  border-radius: 4px;
+  color: #6d5007;
+  background: #fff8e7;
+  font-size: 12px;
+}
+.comparison-overall { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-bottom: 32px; }
+.metric-card { display: grid; gap: 3px; padding: 11px 12px; border: 1px solid var(--border); border-radius: 4px; }
+.metric-label, .metric-detail { color: var(--muted); font-size: 11px; }
+.metric-value { font-size: 20px; font-variant-numeric: tabular-nums; }
+.perf-faster { color: var(--pass); }
+.perf-slower { color: var(--fail); }
+.perf-same { color: var(--muted); }
+.comparison-filter-heading { margin-bottom: 10px; }
+.checkbox-control { min-height: 36px; display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.benchmark-comparisons { display: grid; gap: 9px; }
+.comparison-suite { border: 1px solid var(--border); border-radius: 4px; background: white; }
+.comparison-suite > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 12px;
+  color: var(--text);
+  background: var(--subtle);
+}
+.comparison-summary-main { display: flex; align-items: baseline; gap: 9px; }
+.comparison-summary-main span { color: var(--muted); }
+.comparison-summary-metric { margin-left: auto; font-weight: 650; font-variant-numeric: tabular-nums; }
+.comparison-suite-stats { display: flex; flex-wrap: wrap; gap: 18px; padding: 8px 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+.comparison-table-wrap { border-width: 1px 0 0; border-radius: 0; }
+.comparison-table .not-comparable { color: var(--muted); background: #fafafa; }
+.method-note { max-width: 900px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); }
+.method-note h2 { margin-bottom: 7px; color: var(--text); }
+.method-note p { margin: 0; }
+.method-note code { font-family: var(--mono); color: var(--text); }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -280,6 +343,8 @@ footer {
   .filters { width: 100%; }
   .search-field { flex: 1; }
   .search-field input { width: 100%; }
+  .comparison-overall { grid-template-columns: 1fr 1fr; }
+  .comparison-filter-heading { align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 540px) {
@@ -293,4 +358,11 @@ footer {
   .run-heading { align-items: flex-start; flex-direction: column; }
   .filters { flex-direction: column; }
   .filters select { width: 100%; }
+  .comparison-pickers { align-items: stretch; flex-direction: column; }
+  .comparison-pickers .plain-button { width: 100%; }
+  .comparison-heading { align-items: flex-start; flex-direction: column; }
+  .comparison-arrow { transform: rotate(90deg); }
+  .comparison-overall { grid-template-columns: 1fr; }
+  .comparison-suite > summary { align-items: flex-start; flex-direction: column; }
+  .comparison-summary-metric { margin-left: 0; }
 }
