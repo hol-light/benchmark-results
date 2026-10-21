@@ -51,9 +51,10 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000/>.
 
-The page automatically loads the newest entry in `runs.json`. When hosted, it
-uses same-origin relative URLs; when opened directly, it uses the raw GitHub
-URLs above. Use the run selector to switch among other runs.
+The page initially shows the newest official HOL Light run. The run selector
+lists official results first and groups fork-specific runs below an owner
+separator. When hosted, it uses same-origin relative URLs; when opened directly,
+it uses the raw GitHub URLs above.
 
 ## Compare runs
 

@@ -93,13 +93,39 @@ function resetCollapsedSuites() {
   );
 }
 
+function runOwner(run) {
+  const match = String(run.hol_light_label || "").match(/^HOL Light \(([^)]+)\)$/);
+  return match ? match[1] : null;
+}
+
 function populateRunSelect(runs, valueForRun) {
   elements.runSelect.replaceChildren(new Option("Choose a published run…", ""));
-  for (const run of runs) {
+
+  const officialRuns = runs.filter((run) => !runOwner(run));
+  const runsByOwner = new Map();
+  for (const run of runs.filter((entry) => runOwner(entry))) {
+    const owner = runOwner(run);
+    if (!runsByOwner.has(owner)) runsByOwner.set(owner, []);
+    runsByOwner.get(owner).push(run);
+  }
+
+  const addRunOption = (run) => {
     const label = `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}`;
     elements.runSelect.add(new Option(label, valueForRun(run)));
+  };
+
+  for (const run of officialRuns) addRunOption(run);
+  for (const [owner, ownerRuns] of runsByOwner) {
+    const separator = new Option(`---- ${owner} ----`, "");
+    separator.disabled = true;
+    elements.runSelect.add(separator);
+    for (const run of ownerRuns) addRunOption(run);
   }
   elements.runSelect.disabled = false;
+}
+
+function defaultPublishedRun(runs) {
+  return runs.find((run) => !runOwner(run)) || runs[0] || null;
 }
 
 async function loadPublishedRun(manifestPath) {
@@ -347,10 +373,12 @@ function render() {
 async function initializePublishedRuns() {
   try {
     const index = await fetchJson(new URL("runs.json", resultsRoot));
-    populateRunSelect(index.runs || [], (run) => run.manifest);
-    if (index.runs?.length) {
-      elements.runSelect.value = index.runs[0].manifest;
-      await loadPublishedRun(index.runs[0].manifest);
+    const runs = index.runs || [];
+    populateRunSelect(runs, (run) => run.manifest);
+    const initialRun = defaultPublishedRun(runs);
+    if (initialRun) {
+      elements.runSelect.value = initialRun.manifest;
+      await loadPublishedRun(initialRun.manifest);
     }
   } catch (error) {
     elements.runSelect.replaceChildren(new Option("Published runs unavailable", ""));
