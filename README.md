@@ -34,11 +34,15 @@ because s2n-bignum records ARM and x86 separately:
 
 ## View locally
 
-You can open `index.html` directly. For `file://` pages, the dashboard uses
-`embedded-runs.js`, generated from the same indexed JSON reports.
+You can open `index.html` directly. For `file://` pages, the dashboard loads
+`runs.json`, manifests, and reports from:
 
-To test the normal hosted behavior, serve the repository with any static HTTP
-server:
+```text
+https://raw.githubusercontent.com/hol-light/benchmark-results/main/
+```
+
+This requires network access and shows data already pushed to `main`. To test
+uncommitted local changes, serve the repository with any static HTTP server:
 
 ```bash
 cd ~/benchmark-results
@@ -47,8 +51,9 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000/>.
 
-The page automatically loads the newest entry in `runs.json` (or its bundled
-copy when opened directly). Use the run selector to switch among other runs.
+The page automatically loads the newest entry in `runs.json`. When hosted, it
+uses same-origin relative URLs; when opened directly, it uses the raw GitHub
+URLs above. Use the run selector to switch among other runs.
 
 ## Compare runs
 
@@ -61,8 +66,10 @@ a baseline and comparison run to see:
 - a warning when CPU model, architecture, or total RAM differs between runs.
 
 Tests contribute to averages only when they passed and have positive elapsed
-times in both runs. Benchmark sections are collapsed by default, and the
-**Slower only** filter isolates regressions.
+times in both runs. Benchmark sections and test rows default to descending
+speedup. Click any table heading to sort by that column or reverse its order.
+Benchmark sections are collapsed by default, and the **Slower only** filter
+isolates regressions.
 
 ## Publish with GitHub Pages
 
@@ -86,7 +93,6 @@ run's manifest, and its report files with relative URLs.
    matching `repositories["HOL Light"]` URL.
 4. Prepend an entry to `runs.json` with the same `hol_light_label` so the
    newest run loads by default.
-5. Run `./generate-embedded-runs.py` to refresh direct `file://` support.
 
 Keep full commit hashes in both the directory name and JSON provenance fields.
 Do not combine the two s2n-bignum reports: their common schema and distinct

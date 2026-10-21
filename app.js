@@ -6,9 +6,12 @@ const state = {
   collapsedSuites: new Set(),
 };
 
-const embeddedRuns = Array.isArray(window.BENCHMARK_EMBEDDED_RUNS)
-  ? window.BENCHMARK_EMBEDDED_RUNS
-  : [];
+const remoteResultsRoot = new URL(
+  "https://raw.githubusercontent.com/hol-light/benchmark-results/main/",
+);
+const resultsRoot = window.location.protocol === "file:"
+  ? remoteResultsRoot
+  : new URL("./", window.location.href);
 
 const sourceRepositories = {
   "HOL Light": "https://github.com/jrh13/hol-light",
@@ -90,19 +93,6 @@ function resetCollapsedSuites() {
   );
 }
 
-function loadEmbeddedRun(runId) {
-  const bundled = embeddedRuns.find((run) => run.index.id === runId);
-  if (!bundled) {
-    showNotice(`Bundled run not found: ${runId}`, true);
-    return;
-  }
-  clearNotice();
-  state.manifest = bundled.manifest;
-  state.reports = bundled.reports;
-  resetCollapsedSuites();
-  render();
-}
-
 function populateRunSelect(runs, valueForRun) {
   elements.runSelect.replaceChildren(new Option("Choose a published run…", ""));
   for (const run of runs) {
@@ -116,7 +106,7 @@ async function loadPublishedRun(manifestPath) {
   clearNotice();
   elements.runSelect.disabled = true;
   try {
-    const manifestUrl = new URL(manifestPath, window.location.href);
+    const manifestUrl = new URL(manifestPath, resultsRoot);
     const manifest = await fetchJson(manifestUrl);
     const baseUrl = new URL("./", manifestUrl);
     const reports = await Promise.all(manifest.reports.map(async (entry) => ({
@@ -355,43 +345,22 @@ function render() {
 }
 
 async function initializePublishedRuns() {
-  if (window.location.protocol === "file:" && embeddedRuns.length) {
-    const runs = embeddedRuns.map((entry) => entry.index);
-    populateRunSelect(runs, (run) => `embedded:${run.id}`);
-    elements.runSelect.value = `embedded:${runs[0].id}`;
-    loadEmbeddedRun(runs[0].id);
-    return;
-  }
-
   try {
-    const index = await fetchJson("runs.json");
+    const index = await fetchJson(new URL("runs.json", resultsRoot));
     populateRunSelect(index.runs || [], (run) => run.manifest);
     if (index.runs?.length) {
       elements.runSelect.value = index.runs[0].manifest;
       await loadPublishedRun(index.runs[0].manifest);
     }
   } catch (error) {
-    if (embeddedRuns.length) {
-      const runs = embeddedRuns.map((entry) => entry.index);
-      populateRunSelect(runs, (run) => `embedded:${run.id}`);
-      elements.runSelect.value = `embedded:${runs[0].id}`;
-      loadEmbeddedRun(runs[0].id);
-      showNotice("The JSON index could not be fetched, so bundled results are shown instead.");
-    } else {
-      elements.runSelect.replaceChildren(new Option("Published runs unavailable", ""));
-      showNotice(`Could not load runs.json: ${error.message}`, true);
-    }
+    elements.runSelect.replaceChildren(new Option("Published runs unavailable", ""));
+    showNotice(`Could not load runs.json: ${error.message}`, true);
   }
 }
 
 elements.runSelect.addEventListener("change", () => {
   const value = elements.runSelect.value;
-  if (!value) return;
-  if (value.startsWith("embedded:")) {
-    loadEmbeddedRun(value.slice("embedded:".length));
-  } else {
-    loadPublishedRun(value);
-  }
+  if (value) loadPublishedRun(value);
 });
 elements.search.addEventListener("input", renderResults);
 elements.statusFilter.addEventListener("change", renderResults);

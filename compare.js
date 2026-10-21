@@ -1,8 +1,11 @@
 "use strict";
 
-const embeddedRuns = Array.isArray(window.BENCHMARK_EMBEDDED_RUNS)
-  ? window.BENCHMARK_EMBEDDED_RUNS
-  : [];
+const remoteResultsRoot = new URL(
+  "https://raw.githubusercontent.com/hol-light/benchmark-results/main/",
+);
+const resultsRoot = window.location.protocol === "file:"
+  ? remoteResultsRoot
+  : new URL("./", window.location.href);
 
 const elements = {
   baseline: document.querySelector("#baseline-run"),
@@ -25,6 +28,8 @@ const state = {
   candidate: null,
   comparisons: [],
   cache: new Map(),
+  sortBySuite: new Map(),
+  openSuites: new Set(),
 };
 
 function makeElement(tag, className, text) {
@@ -100,38 +105,20 @@ function clearNotice() {
   elements.notice.textContent = "";
 }
 
-function embeddedBundle(runId) {
-  return embeddedRuns.find((entry) => entry.index.id === runId) || null;
-}
-
 async function loadBundle(run) {
   if (state.cache.has(run.id)) return state.cache.get(run.id);
 
-  if (window.location.protocol === "file:") {
-    const embedded = embeddedBundle(run.id);
-    if (!embedded) throw new Error(`No bundled data for ${run.id}`);
-    state.cache.set(run.id, embedded);
-    return embedded;
-  }
-
-  try {
-    const manifestUrl = new URL(run.manifest, window.location.href);
-    const manifest = await fetchJson(manifestUrl);
-    const baseUrl = new URL("./", manifestUrl);
-    const reports = await Promise.all(manifest.reports.map(async (entry) => ({
-      label: entry.label,
-      fileName: entry.file,
-      data: await fetchJson(new URL(entry.file, baseUrl)),
-    })));
-    const bundle = { index: run, manifest, reports };
-    state.cache.set(run.id, bundle);
-    return bundle;
-  } catch (error) {
-    const embedded = embeddedBundle(run.id);
-    if (!embedded) throw error;
-    state.cache.set(run.id, embedded);
-    return embedded;
-  }
+  const manifestUrl = new URL(run.manifest, resultsRoot);
+  const manifest = await fetchJson(manifestUrl);
+  const baseUrl = new URL("./", manifestUrl);
+  const reports = await Promise.all(manifest.reports.map(async (entry) => ({
+    label: entry.label,
+    fileName: entry.file,
+    data: await fetchJson(new URL(entry.file, baseUrl)),
+  })));
+  const bundle = { index: run, manifest, reports };
+  state.cache.set(run.id, bundle);
+  return bundle;
 }
 
 function comparableTest(baseline, candidate) {
@@ -335,21 +322,103 @@ function makeComparisonRow(row) {
   return tr;
 }
 
+function sortValue(row, key) {
+  if (key === "name") return row.name;
+  if (key === "baseline") return row.comparable ? row.baselineSeconds : null;
+  if (key === "candidate") return row.comparable ? row.candidateSeconds : null;
+  if (key === "improvement") return row.comparable ? row.improvement : null;
+  if (key === "ratio") return row.comparable ? row.ratio : null;
+  if (key === "result") return row.comparable ? verdict(row.improvement) : row.reason;
+  return null;
+}
+
+function sortedRows(rows, sort) {
+  return [...rows].sort((left, right) => {
+    const leftValue = sortValue(left, sort.key);
+    const rightValue = sortValue(right, sort.key);
+    const leftMissing = leftValue === null || leftValue === undefined;
+    const rightMissing = rightValue === null || rightValue === undefined;
+    if (leftMissing !== rightMissing) return leftMissing ? 1 : -1;
+    if (leftMissing && rightMissing) return left.name.localeCompare(right.name);
+
+    let order;
+    if (typeof leftValue === "number" && typeof rightValue === "number") {
+      order = leftValue - rightValue;
+    } else {
+      order = String(leftValue).localeCompare(String(rightValue));
+    }
+    if (order === 0) order = left.name.localeCompare(right.name);
+    return sort.direction === "asc" ? order : -order;
+  });
+}
+
+function sortableHeader(title, key, numeric, comparison) {
+  const current = state.sortBySuite.get(comparison.label) || {
+    key: "ratio",
+    direction: "desc",
+  };
+  const active = current.key === key;
+  const th = makeElement("th", numeric ? "numeric" : "");
+  th.setAttribute(
+    "aria-sort",
+    active ? (current.direction === "asc" ? "ascending" : "descending") : "none",
+  );
+  const button = makeElement(
+    "button",
+    `sort-button${active ? " active" : ""}`,
+    `${title}${active ? (current.direction === "asc" ? " ▲" : " ▼") : ""}`,
+  );
+  button.type = "button";
+  button.addEventListener("click", () => {
+    const previous = state.sortBySuite.get(comparison.label) || {
+      key: "ratio",
+      direction: "desc",
+    };
+    const defaultDirection = ["name", "result"].includes(key) ? "asc" : "desc";
+    state.sortBySuite.set(comparison.label, {
+      key,
+      direction: previous.key === key
+        ? (previous.direction === "asc" ? "desc" : "asc")
+        : defaultDirection,
+    });
+    state.openSuites.add(comparison.label);
+    renderBenchmarks();
+  });
+  th.append(button);
+  return th;
+}
+
 function renderBenchmarks() {
   elements.benchmarks.replaceChildren();
   const query = elements.search.value.trim().toLowerCase();
   const slowerOnly = elements.regressionsOnly.checked;
 
-  for (const comparison of state.comparisons) {
-    const rows = comparison.rows.filter((row) => {
+  const comparisons = [...state.comparisons].sort((left, right) => {
+    if (left.ratio === null) return 1;
+    if (right.ratio === null) return -1;
+    return right.ratio - left.ratio;
+  });
+
+  for (const comparison of comparisons) {
+    const filteredRows = comparison.rows.filter((row) => {
       if (query && !`${comparison.label} ${row.name}`.toLowerCase().includes(query)) return false;
       if (slowerOnly && (!row.comparable || row.improvement >= -0.05)) return false;
       return true;
     });
+    const sort = state.sortBySuite.get(comparison.label) || {
+      key: "ratio",
+      direction: "desc",
+    };
+    const rows = sortedRows(filteredRows, sort);
     if (!rows.length) continue;
 
     const details = makeElement("details", "comparison-suite");
-    if (query || slowerOnly) details.open = true;
+    details.open = Boolean(query) || slowerOnly || state.openSuites.has(comparison.label);
+    details.addEventListener("toggle", () => {
+      if (query || slowerOnly) return;
+      if (details.open) state.openSuites.add(comparison.label);
+      else state.openSuites.delete(comparison.label);
+    });
     const summary = document.createElement("summary");
     const summaryMain = makeElement("span", "comparison-summary-main");
     summaryMain.append(
@@ -380,15 +449,15 @@ function renderBenchmarks() {
     table.className = "comparison-table";
     const thead = document.createElement("thead");
     const headRow = document.createElement("tr");
-    for (const [title, numeric] of [
-      ["Test", false],
-      ["Baseline", true],
-      ["Comparison", true],
-      ["Time saved", true],
-      ["Speed ratio", true],
-      ["Result", false],
+    for (const [title, key, numeric] of [
+      ["Test", "name", false],
+      ["Baseline", "baseline", true],
+      ["Comparison", "candidate", true],
+      ["Time saved", "improvement", true],
+      ["Speed ratio", "ratio", true],
+      ["Result", "result", false],
     ]) {
-      headRow.append(makeElement("th", numeric ? "numeric" : "", title));
+      headRow.append(sortableHeader(title, key, numeric, comparison));
     }
     thead.append(headRow);
     const tbody = document.createElement("tbody");
@@ -436,6 +505,8 @@ async function compareSelected() {
       loadBundle(baselineRun),
       loadBundle(candidateRun),
     ]);
+    state.sortBySuite.clear();
+    state.openSuites.clear();
     renderComparison();
   } catch (error) {
     showNotice(`Could not compare runs: ${error.message}`, true);
@@ -461,14 +532,10 @@ function populateSelectors(runs) {
 
 async function initialize() {
   try {
-    if (window.location.protocol === "file:") {
-      state.runs = embeddedRuns.map((entry) => entry.index);
-    } else {
-      state.runs = (await fetchJson("runs.json")).runs || [];
-    }
+    state.runs = (await fetchJson(new URL("runs.json", resultsRoot))).runs || [];
   } catch (error) {
-    state.runs = embeddedRuns.map((entry) => entry.index);
-    if (state.runs.length) showNotice("Using bundled run data because runs.json could not be fetched.");
+    state.runs = [];
+    showNotice(`Could not load runs.json: ${error.message}`, true);
   }
 
   populateSelectors(state.runs);
