@@ -365,10 +365,17 @@ function sortableHeader(title, key, numeric, comparison) {
   );
   const button = makeElement(
     "button",
-    `sort-button${active ? " active" : ""}`,
-    `${title}${active ? (current.direction === "asc" ? " ▲" : " ▼") : ""}`,
+    `sort-button${active ? ` active sort-${current.direction}` : ""}`,
+    title,
   );
   button.type = "button";
+  button.setAttribute(
+    "aria-label",
+    active
+      ? `${title}, sorted ${current.direction === "asc" ? "ascending" : "descending"}`
+      : `${title}, not currently sorted`,
+  );
+  button.append(makeElement("span", "sort-indicator"));
   button.addEventListener("click", () => {
     const previous = state.sortBySuite.get(comparison.label) || {
       key: "ratio",

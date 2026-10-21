@@ -228,6 +228,37 @@ th .sort-button {
 }
 th.numeric .sort-button { text-align: right; }
 th .sort-button:hover, th .sort-button.active { color: var(--link); }
+.sort-indicator {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 11px;
+  margin-left: 5px;
+  vertical-align: -2px;
+  color: currentColor;
+  opacity: 0.35;
+}
+.sort-indicator::before,
+.sort-indicator::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.sort-indicator::before {
+  top: 0;
+  border-bottom: 4px solid currentColor;
+}
+.sort-indicator::after {
+  bottom: 0;
+  border-top: 4px solid currentColor;
+}
+.sort-button.active .sort-indicator { opacity: 1; }
+.sort-button.sort-asc .sort-indicator::after { display: none; }
+.sort-button.sort-desc .sort-indicator::before { display: none; }
 tbody tr:last-child td { border-bottom: 0; }
 tbody tr.test-row:hover { background: #fafbfc; }
 .suite-group-row td { padding: 0; background: #eef0f2; border-bottom-color: #cfd2d5; }
