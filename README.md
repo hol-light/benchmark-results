@@ -66,6 +66,9 @@ a baseline and comparison run to see:
 - aggregate elapsed-time ratios, and
 - a warning when CPU model, architecture, or total RAM differs between runs.
 
+The selected run IDs are stored in the URL as `baseline` and `comparison`
+query parameters. Copying the browser URL therefore shares the same comparison.
+
 Tests contribute to averages only when they passed and have positive elapsed
 times in both runs. Benchmark sections and test rows default to descending
 speedup. Click any table heading to sort by that column or reverse its order.

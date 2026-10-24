@@ -490,6 +490,14 @@ function renderComparison() {
   renderBenchmarks();
 }
 
+function updateComparisonUrl(baselineId, candidateId) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("baseline", baselineId);
+  url.searchParams.set("comparison", candidateId);
+  window.history.replaceState(null, "", url);
+  document.title = `${shortHash(baselineId.split("-").at(-1))} vs ${shortHash(candidateId.split("-").at(-1))} · HOL benchmark comparison`;
+}
+
 async function compareSelected() {
   clearNotice();
   const baselineId = elements.baseline.value;
@@ -508,6 +516,10 @@ async function compareSelected() {
   try {
     const baselineRun = state.runs.find((run) => run.id === baselineId);
     const candidateRun = state.runs.find((run) => run.id === candidateId);
+    if (!baselineRun || !candidateRun) {
+      throw new Error("The URL names a run that is not present in runs.json");
+    }
+    updateComparisonUrl(baselineId, candidateId);
     [state.baseline, state.candidate] = await Promise.all([
       loadBundle(baselineRun),
       loadBundle(candidateRun),
@@ -532,8 +544,20 @@ function populateSelectors(runs) {
   }
   elements.swap.disabled = runs.length < 2;
   if (runs.length >= 2) {
-    elements.baseline.value = runs[1].id;
-    elements.candidate.value = runs[0].id;
+    const params = new URL(window.location.href).searchParams;
+    const requestedBaseline = params.get("baseline");
+    const requestedCandidate = params.get("comparison");
+    const validIds = new Set(runs.map((run) => run.id));
+    const baselineId = validIds.has(requestedBaseline) ? requestedBaseline : runs[1].id;
+    const candidateId = validIds.has(requestedCandidate) ? requestedCandidate : runs[0].id;
+
+    if (baselineId !== candidateId) {
+      elements.baseline.value = baselineId;
+      elements.candidate.value = candidateId;
+    } else {
+      elements.baseline.value = runs[1].id;
+      elements.candidate.value = runs[0].id;
+    }
   }
 }
 
