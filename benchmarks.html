@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explanation of the HOL Light benchmark suites">
+  <title>HOL benchmark explanations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>HOL benchmark explanations</h1>
+      <nav class="header-actions" aria-label="Site navigation">
+        <a class="nav-link" href="index.html">Results</a>
+        <a class="nav-link" href="compare.html">Compare runs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-page">
+    <section>
+      <h2>What is measured?</h2>
+      <p>These runs measure how long HOL Light takes to load and check several large proof developments. Each theorem is reconstructed through the HOL Light kernel. The archive contains four benchmark families and five result files because s2n-bignum records ARM and x86 separately.</p>
+      <p>The reports record source commits and machine information. Those fields matter: a timing comparison is most useful when the proof sources, CPU, architecture, memory, and level of parallelism are comparable.</p>
+    </section>
+
+    <section id="holtest">
+      <h2>HOL Light regression suite</h2>
+      <p><a href="https://github.com/jrh13/hol-light">HOL Light</a> includes <code>holtest.mk</code>, a broad regression suite covering its libraries, examples, decision procedures, formalized mathematics, and supported external tools.</p>
+      <p>The runner executes independent test targets concurrently. Each test has its own log and timing. A test may be skipped when an optional external program is unavailable; the archived runs normally skip the legacy zChaff/MiniSat-p test.</p>
+    </section>
+
+    <section id="s2n-bignum">
+      <h2>s2n-bignum: ARM and x86</h2>
+      <p><a href="https://github.com/awslabs/s2n-bignum">s2n-bignum</a> contains optimized assembly routines for cryptographic big-integer arithmetic, together with HOL Light proofs of functional correctness and related safety properties.</p>
+      <p>ARM and x86 are separate reports. The runner assembles each architecture's source and checks the proof against the resulting object code. Foreign machine code is not executed, so the non-native architecture only needs a cross-assembler rather than an emulator. Proof binaries are built and checked concurrently with a memory-based job limit.</p>
+    </section>
+
+    <section id="flyspeck">
+      <h2>Flyspeck</h2>
+      <p><a href="https://github.com/hol-light-family/Flyspeck">Flyspeck</a> is the formal proof of the Kepler conjecture. The benchmark loads <code>load_flyspeck.ml</code> and evaluates the complete <code>Build.build_sequence_full</code>.</p>
+      <p>The run verifies the archived linear-program certificates and loads the text formalization. The nonlinear inequalities are imported against recorded digests rather than recomputed; their original recomputation required a large external Azure workload. The tame-hypermap classification is verified separately in Isabelle, as documented by Flyspeck.</p>
+    </section>
+
+    <section id="four-colour">
+      <h2>Four Colour Theorem</h2>
+      <p>HOL Light's <a href="https://github.com/jrh13/hol-light/tree/master/4CT"><code>4CT/</code> development</a> proves the Four Colour Theorem for hypermaps, planar graphs, and plane maps.</p>
+      <p>The benchmark uses the OCaml 5 parallel bytecode route. Its proof-producing computations distribute the presentation checks and 633 reducibility checks over as many as 128 OCaml domains. A successful report contains <code>FOUR_COLOR</code>, <code>FOUR_COLOR_PLANAR_GRAPH</code>, and <code>FOUR_COLOR_MAP</code>.</p>
+    </section>
+
+    <section id="statuses">
+      <h2>Result statuses</h2>
+      <dl class="definition-list">
+        <div><dt>Pass</dt><dd>The target completed and no applicable failure marker was found.</dd></div>
+        <div><dt>Fail</dt><dd>The target stopped early, emitted a proof/load error, or did not reach its required completion theorem or marker.</dd></div>
+        <div><dt>Skip</dt><dd>The suite deliberately omitted a test because an optional dependency was unavailable.</dd></div>
+        <div><dt>Missing</dt><dd>No complete output was produced, usually because a run was interrupted.</dd></div>
+      </dl>
+      <p class="status-note"><strong>Failure markers</strong> are case-insensitive log lines such as <code>error:</code>, <code>exception:</code>, and <code>Error in included file</code>; <code>### Error: skip</code> is excluded. Holtest also requires a <code>.ready</code> file, while Flyspeck and 4CT require their completion markers and 4CT's final theorem bindings. See <a href="https://github.com/hol-light-family/benchmark-scripts/blob/main/common/check-failures.sh"><code>common/check-failures.sh</code></a> for the shared marker rules.</p>
+    </section>
+
+    <section id="timing">
+      <h2>How to read timings</h2>
+      <p>Individual elapsed times are wall-clock durations reported by each test or proof. A report's total is the sum of those individual durations, not necessarily the wall time of the parallel suite.</p>
+      <p>The comparison page defines speed ratio as <code>baseline time / comparison time</code>. A value above 1.0× means the comparison is faster. Average improvement is based on the geometric mean of individual speed ratios, so proportional changes in short and long tests receive equal weight.</p>
+    </section>
+
+    <section id="reproduce">
+      <h2>Run the benchmarks</h2>
+      <p>Setup instructions and runners are available in the <a href="https://github.com/hol-light-family/benchmark-scripts/">benchmark-scripts repository</a>. Its <code>run-all.sh</code> creates a fresh HOL Light workspace, runs every suite, and writes reports in the format consumed by this site.</p>
+    </section>
+  </main>
+
+  <footer>HOL Light benchmark documentation.</footer>
+</body>
+</html>
