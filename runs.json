@@ -1,6 +1,14 @@
 {
   "runs": [
     {
+      "id": "2026-10-24-4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff",
+      "date": "2026-10-24",
+      "hol_light_label": "HOL Light (aqjune-aws)",
+      "hol_light_commit": "4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff",
+      "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
+      "manifest": "2026-10-24-4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff/manifest.json"
+    },
+    {
       "id": "2026-10-20-4c16a8bd753719d8efd643a791ad384cff355635",
       "date": "2026-10-20",
       "hol_light_label": "HOL Light (aqjune-aws)",

@@ -1,0 +1,36 @@
+{
+  "id": "2026-10-24-4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff",
+  "date": "2026-10-24",
+  "hol_light_label": "HOL Light (aqjune-aws)",
+  "hol_light_commit": "4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff",
+  "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
+  "benchmark_scripts_dirty": true,
+  "repositories": {
+    "HOL Light": "https://github.com/aqjune-aws/hol-light",
+    "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
+    "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
+    "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts"
+  },
+  "reports": [
+    {
+      "label": "HOL Light",
+      "file": "hol-light-results.json"
+    },
+    {
+      "label": "s2n-bignum ARM",
+      "file": "s2n-bignum-arm-results.json"
+    },
+    {
+      "label": "s2n-bignum x86",
+      "file": "s2n-bignum-x86-results.json"
+    },
+    {
+      "label": "Flyspeck",
+      "file": "flyspeck-results.json"
+    },
+    {
+      "label": "Four Colour Theorem",
+      "file": "4ct-results.json"
+    }
+  ]
+}

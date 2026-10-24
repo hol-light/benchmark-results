@@ -1,0 +1,36 @@
+{
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-10-24-01.49.1792806574/hol-light",
+  "hol_light_commit": "4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-10-24-01.49.1792806574/logs/4ct-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872949760,
+    "memory_total_gib": 377.07
+  },
+  "total": 1,
+  "counts": {
+    "pass": 1,
+    "fail": 0,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 3382.0,
+  "tests": [
+    {
+      "name": "4CT/four_color",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-10-24-01.49.1792806574/logs/4ct-run.log",
+      "status": "pass",
+      "elapsed_seconds": 3382.0,
+      "start_unixtime": 1792826057.0,
+      "end_unixtime": 1792829439.0,
+      "domains": 128,
+      "theorems": [
+        "FOUR_COLOR",
+        "FOUR_COLOR_PLANAR_GRAPH",
+        "FOUR_COLOR_MAP"
+      ]
+    }
+  ]
+}
