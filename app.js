@@ -17,6 +17,7 @@ const sourceRepositories = {
   "HOL Light": "https://github.com/jrh13/hol-light",
   "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
   "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
+  "Navier-Stokes": "https://github.com/hol-light-family/Navier_Stokes",
   "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts",
 };
 
@@ -110,7 +111,8 @@ function populateRunSelect(runs, valueForRun) {
   }
 
   const addRunOption = (run) => {
-    const label = `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}`;
+    const compiler = run.ocaml_version ? ` · OCaml ${run.ocaml_version}` : "";
+    const label = `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}${compiler}`;
     elements.runSelect.add(new Option(label, valueForRun(run)));
   };
 
@@ -160,6 +162,7 @@ function renderMetadata() {
     if (data.hol_light_commit) commits.set("HOL Light", data.hol_light_commit);
     if (data.s2n_bignum_commit) commits.set("s2n-bignum", data.s2n_bignum_commit);
     if (data.flyspeck_commit) commits.set("Flyspeck", data.flyspeck_commit);
+    if (data.navier_stokes_commit) commits.set("Navier-Stokes", data.navier_stokes_commit);
   }
   if (state.manifest?.benchmark_scripts_commit) {
     commits.set("benchmark-scripts", state.manifest.benchmark_scripts_commit);
@@ -172,6 +175,7 @@ function renderMetadata() {
     ["Processor", machine.cpu_brand || "Unknown"],
     ["Architecture / cores", `${machine.architecture || "unknown"} · ${machine.num_cores ?? "?"} online`],
     ["Memory", memory],
+    ["OCaml", state.manifest?.ocaml_version || "Unknown"],
   ];
   for (const [label, value] of items) {
     const item = makeElement("div", "meta-item");

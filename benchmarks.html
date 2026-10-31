@@ -21,8 +21,8 @@
   <main class="content-page">
     <section>
       <h2>What is measured?</h2>
-      <p>These runs measure how long HOL Light takes to load and check several large proof developments. Each theorem is reconstructed through the HOL Light kernel. The archive contains four benchmark families and five result files because s2n-bignum records ARM and x86 separately.</p>
-      <p>The reports record source commits and machine information. Those fields matter: a timing comparison is most useful when the proof sources, CPU, architecture, memory, and level of parallelism are comparable.</p>
+      <p>These runs measure how long HOL Light takes to load and check several large proof developments. Each theorem is reconstructed through the HOL Light kernel. The latest run contains five benchmark families and six result files because s2n-bignum records ARM and x86 separately. Older runs predate the Navier-Stokes benchmark and contain four families and five reports.</p>
+      <p>The run manifests record source commits, the OCaml compiler version, and machine information. Those fields matter: a timing comparison is most useful when the proof sources, compiler, CPU, architecture, memory, and level of parallelism are comparable.</p>
     </section>
 
     <section id="holtest">
@@ -49,6 +49,12 @@
       <p>The benchmark uses the OCaml 5 parallel bytecode route. Its proof-producing computations distribute the presentation checks and 633 reducibility checks over as many as 128 OCaml domains. A successful report contains <code>FOUR_COLOR</code>, <code>FOUR_COLOR_PLANAR_GRAPH</code>, and <code>FOUR_COLOR_MAP</code>.</p>
     </section>
 
+    <section id="navier-stokes">
+      <h2>Navier-Stokes</h2>
+      <p><a href="https://github.com/hol-light-family/Navier_Stokes">Navier_Stokes</a> formalizes finite-time blowup for the incompressible Navier-Stokes equations and derives the breakdown alternatives (C) and (D) from the Clay Millennium Prize problem statement.</p>
+      <p>The first stage loads <code>check.ml</code>, which checks the complete development and its headline theorems. The second loads <code>audit/check.ml</code>, which checks an independent formalization of the Clay statements, equivalence theorems, and 24 statement sanity theorems. Each reported theorem must have no hypotheses, each stage must reach its completion marker, and the session must use only HOL Light's three standard axioms.</p>
+    </section>
+
     <section id="statuses">
       <h2>Result statuses</h2>
       <dl class="definition-list">
@@ -57,7 +63,7 @@
         <div><dt>Skip</dt><dd>The suite deliberately omitted a test because an optional dependency was unavailable.</dd></div>
         <div><dt>Missing</dt><dd>No complete output was produced, usually because a run was interrupted.</dd></div>
       </dl>
-      <p class="status-note"><strong>Failure markers</strong> are case-insensitive log lines such as <code>error:</code>, <code>exception:</code>, and <code>Error in included file</code>; <code>### Error: skip</code> is excluded. Holtest also requires a <code>.ready</code> file, while Flyspeck and 4CT require their completion markers and 4CT's final theorem bindings. See <a href="https://github.com/hol-light-family/benchmark-scripts/blob/main/common/check-failures.sh"><code>common/check-failures.sh</code></a> for the shared marker rules.</p>
+      <p class="status-note"><strong>Failure markers</strong> are case-insensitive log lines such as <code>error:</code>, <code>exception:</code>, and <code>Error in included file</code>; <code>### Error: skip</code> is excluded. Holtest also requires a <code>.ready</code> file. Flyspeck, Navier-Stokes, and 4CT require their completion markers; Navier-Stokes also checks theorem hypotheses, conclusions, and the axiom count, while 4CT requires its final theorem bindings. See <a href="https://github.com/hol-light-family/benchmark-scripts/blob/main/common/check-failures.sh"><code>common/check-failures.sh</code></a> for the shared marker rules.</p>
     </section>
 
     <section id="timing">

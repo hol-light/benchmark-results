@@ -116,7 +116,7 @@ main { padding: 28px 0 48px; }
 
 .metadata-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   border: 1px solid var(--border);
   border-radius: 4px;
   margin-bottom: 32px;
@@ -323,6 +323,7 @@ footer {
 .comparison-label { color: var(--muted); font-size: 11px; text-transform: uppercase; }
 .comparison-arrow { color: var(--muted); }
 .comparison-heading .commit-link { color: var(--link); font: 13px var(--mono); }
+.comparison-runtime { color: var(--muted); font: 12px var(--mono); }
 .environment-warning {
   margin-bottom: 14px;
   padding: 7px 10px;
@@ -393,8 +394,9 @@ footer {
   .header-actions { align-items: stretch; flex-direction: column; }
   .run-picker select { min-width: min(360px, 55vw); }
   .metadata-grid { grid-template-columns: 1fr 1fr; }
-  .meta-item:nth-child(2) { border-right: 0; }
-  .meta-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .meta-item:nth-child(2n) { border-right: 0; }
+  .meta-item:nth-child(n+3) { border-top: 1px solid var(--border); }
+  .meta-item:last-child { grid-column: 1 / -1; border-right: 0; }
   .results-heading { align-items: flex-start; flex-direction: column; }
   .filters { width: 100%; }
   .search-field { flex: 1; }

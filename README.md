@@ -15,12 +15,12 @@ Each run lives in a directory named:
 
 A run directory contains the unmodified result JSON files and a
 `manifest.json` that gives each report its display label, records the exact
-`benchmark-scripts` commit used for the run, and maps source names to their
-repository URLs so commit links work for forks. `runs.json` is the root index
-used by the webpage.
+`benchmark-scripts` commit and OCaml compiler version used for the run, and
+maps source names to their repository URLs so commit links work for forks.
+`runs.json` is the root index used by the webpage.
 
-The 2026-10-20 run has four benchmark families but five physical reports,
-because s2n-bignum records ARM and x86 separately:
+Runs before the Navier-Stokes benchmark have four benchmark families but five
+physical reports, because s2n-bignum records ARM and x86 separately:
 
 ```text
 2026-10-20-d30e8239887b2348a063f82232a864de1cc2df15/
@@ -29,6 +29,19 @@ because s2n-bignum records ARM and x86 separately:
 ├── s2n-bignum-arm-results.json
 ├── s2n-bignum-x86-results.json
 ├── flyspeck-results.json
+└── 4ct-results.json
+```
+
+Newer runs add Navier-Stokes as a fifth family and sixth report:
+
+```text
+<run>/
+├── manifest.json
+├── hol-light-results.json
+├── s2n-bignum-arm-results.json
+├── s2n-bignum-x86-results.json
+├── flyspeck-results.json
+├── navier-stokes-results.json
 └── 4ct-results.json
 ```
 
@@ -64,7 +77,7 @@ a baseline and comparison run to see:
 - elapsed time, speed ratio, and faster/slower result for every comparable test,
 - geometric-mean improvement for each benchmark and for the full run,
 - aggregate elapsed-time ratios, and
-- a warning when CPU model, architecture, or total RAM differs between runs.
+- a warning when the OCaml version, CPU model, architecture, or total RAM differs between runs.
 
 The selected run IDs are stored in the URL as `baseline` and `comparison`
 query parameters. Copying the browser URL therefore shares the same comparison.
@@ -92,11 +105,11 @@ run's manifest, and its report files with relative URLs.
 1. Create `<date>-<hol-light-commit>/`.
 2. Copy the result JSON files into it.
 3. Add `manifest.json`, following the existing run, including the full
-   `benchmark_scripts_commit` that produced the reports. For forked HOL Light
+   `benchmark_scripts_commit` and `ocaml_version` that produced the reports. For forked HOL Light
    runs, set `hol_light_label` (for example, `HOL Light (aqjune-aws)`) and the
    matching `repositories["HOL Light"]` URL.
-4. Prepend an entry to `runs.json` with the same `hol_light_label` so the
-   newest run loads by default.
+4. Prepend an entry to `runs.json` with the same `hol_light_label` and
+   `ocaml_version` so the newest run loads by default.
 
 Keep full commit hashes in both the directory name and JSON provenance fields.
 Do not combine the two s2n-bignum reports: their common schema and distinct

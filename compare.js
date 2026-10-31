@@ -44,7 +44,8 @@ function shortHash(hash) {
 }
 
 function runLabel(run) {
-  return `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}`;
+  const compiler = run.ocaml_version ? ` · OCaml ${run.ocaml_version}` : "";
+  return `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}${compiler}`;
 }
 
 function formatDuration(value) {
@@ -209,10 +210,18 @@ function commitLink(bundle) {
 function renderHeading() {
   elements.heading.replaceChildren();
   const baseline = makeElement("div", "comparison-run");
-  baseline.append(makeElement("span", "comparison-label", "Baseline"), commitLink(state.baseline));
+  baseline.append(
+    makeElement("span", "comparison-label", "Baseline"),
+    commitLink(state.baseline),
+    makeElement("span", "comparison-runtime", `OCaml ${state.baseline.manifest.ocaml_version || "unknown"}`),
+  );
   const arrow = makeElement("span", "comparison-arrow", "→");
   const candidate = makeElement("div", "comparison-run");
-  candidate.append(makeElement("span", "comparison-label", "Comparison"), commitLink(state.candidate));
+  candidate.append(
+    makeElement("span", "comparison-label", "Comparison"),
+    commitLink(state.candidate),
+    makeElement("span", "comparison-runtime", `OCaml ${state.candidate.manifest.ocaml_version || "unknown"}`),
+  );
   elements.heading.append(baseline, arrow, candidate);
 }
 
@@ -240,6 +249,11 @@ function renderEnvironmentWarning() {
   }
   if (baseline.memory_total_bytes !== candidate.memory_total_bytes) {
     differences.push(`RAM: ${formatMemory(baseline)} → ${formatMemory(candidate)}`);
+  }
+  const baselineOcaml = state.baseline.manifest.ocaml_version;
+  const candidateOcaml = state.candidate.manifest.ocaml_version;
+  if (baselineOcaml !== candidateOcaml) {
+    differences.push(`OCaml: ${baselineOcaml || "unknown"} → ${candidateOcaml || "unknown"}`);
   }
 
   elements.environmentWarning.replaceChildren();

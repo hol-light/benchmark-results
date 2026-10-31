@@ -3,6 +3,7 @@
   "date": "2026-10-24",
   "hol_light_label": "HOL Light (aqjune-aws)",
   "hol_light_commit": "4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff",
+  "ocaml_version": "5.5.0",
   "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
   "benchmark_scripts_dirty": true,
   "repositories": {

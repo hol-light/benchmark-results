@@ -5,6 +5,7 @@
       "date": "2026-10-30",
       "hol_light_label": "HOL Light",
       "hol_light_commit": "6090208e0bfe25dfdc47b9666bb000e32c0d37e3",
+      "ocaml_version": "5.5.2",
       "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
       "manifest": "2026-10-30-6090208e0bfe25dfdc47b9666bb000e32c0d37e3/manifest.json"
     },
@@ -13,6 +14,7 @@
       "date": "2026-10-24",
       "hol_light_label": "HOL Light (aqjune-aws)",
       "hol_light_commit": "4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff",
+      "ocaml_version": "5.5.0",
       "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
       "manifest": "2026-10-24-4fb26437c1f10d07c93ff7c3748a6d6f9aecc3ff/manifest.json"
     },
@@ -21,6 +23,7 @@
       "date": "2026-10-20",
       "hol_light_label": "HOL Light (aqjune-aws)",
       "hol_light_commit": "4c16a8bd753719d8efd643a791ad384cff355635",
+      "ocaml_version": "5.4.0",
       "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
       "manifest": "2026-10-20-4c16a8bd753719d8efd643a791ad384cff355635/manifest.json"
     },
@@ -29,6 +32,7 @@
       "date": "2026-10-20",
       "hol_light_label": "HOL Light",
       "hol_light_commit": "d30e8239887b2348a063f82232a864de1cc2df15",
+      "ocaml_version": "5.4.0",
       "benchmark_scripts_commit": "becc7fa55422cc19916216f22302c64a31195dc0",
       "manifest": "2026-10-20-d30e8239887b2348a063f82232a864de1cc2df15/manifest.json"
     }

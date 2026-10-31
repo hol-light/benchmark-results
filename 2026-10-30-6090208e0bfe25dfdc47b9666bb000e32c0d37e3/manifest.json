@@ -3,14 +3,15 @@
   "date": "2026-10-30",
   "hol_light_label": "HOL Light",
   "hol_light_commit": "6090208e0bfe25dfdc47b9666bb000e32c0d37e3",
+  "ocaml_version": "5.5.2",
   "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
   "benchmark_scripts_dirty": true,
   "repositories": {
     "HOL Light": "https://github.com/jrh13/hol-light",
     "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
     "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
-    "Navier_Stokes": "https://github.com/hol-light-family/Navier_Stokes",
-    "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts"
+    "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts",
+    "Navier-Stokes": "https://github.com/hol-light-family/Navier_Stokes"
   },
   "reports": [
     {
