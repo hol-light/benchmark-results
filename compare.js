@@ -170,6 +170,18 @@ function compareReport(label, baselineReport, candidateReport) {
   });
   const comparable = rows.filter((row) => row.comparable);
   const ratio = geometricMean(comparable.map((row) => row.ratio));
+  // Classify tests that could not be timed against each other.
+  let added = 0;
+  let removed = 0;
+  let skipped = 0;
+  const otherChanges = new Map();
+  for (const row of rows) {
+    if (row.comparable) continue;
+    if (!row.baseline) added += 1;
+    else if (!row.candidate) removed += 1;
+    else if (row.baseline.status === "skip" && row.candidate.status === "skip") skipped += 1;
+    else otherChanges.set(row.reason, (otherChanges.get(row.reason) || 0) + 1);
+  }
   return {
     label,
     rows,
@@ -181,6 +193,10 @@ function compareReport(label, baselineReport, candidateReport) {
     faster: comparable.filter((row) => row.improvement > 0.05).length,
     slower: comparable.filter((row) => row.improvement < -0.05).length,
     same: comparable.filter((row) => Math.abs(row.improvement) <= 0.05).length,
+    added,
+    removed,
+    skipped,
+    otherChanges: [...otherChanges.entries()].sort((left, right) => right[1] - left[1]),
   };
 }
 
@@ -461,6 +477,10 @@ function renderBenchmarks() {
       makeElement("span", "", `${comparison.faster} faster`),
       makeElement("span", "", `${comparison.slower} slower`),
       makeElement("span", "", `${comparison.same} unchanged`),
+      makeElement("span", "", `${comparison.added} added`),
+      ...(comparison.removed ? [makeElement("span", "", `${comparison.removed} removed`)] : []),
+      makeElement("span", "", `${comparison.skipped} skipped in both`),
+      ...comparison.otherChanges.map(([reason, count]) => makeElement("span", "", `${count} ${reason}`)),
       makeElement("span", "", `Aggregate: ${formatDuration(comparison.baselineTotal)} → ${formatDuration(comparison.candidateTotal)}`),
     );
     details.append(stats);
