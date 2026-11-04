@@ -21,39 +21,13 @@
   <main class="content-page">
     <section>
       <h2>What is measured?</h2>
-      <p>These runs measure how long HOL Light takes to load and check several large proof developments. Each theorem is reconstructed through the HOL Light kernel. The latest run contains five benchmark families and six result files because s2n-bignum records ARM and x86 separately. Older runs predate the Navier-Stokes benchmark and contain four families and five reports.</p>
+      <p>These runs measure how long HOL Light takes to load and check several large proof developments. Each theorem is reconstructed through the HOL Light kernel. The benchmark families are described below. Each run's manifest lists the result files it contains, so older runs may lack benchmarks that were added later; s2n-bignum records ARM and x86 as separate result files.</p>
       <p>The run manifests record source commits, the OCaml compiler version, and machine information. Those fields matter: a timing comparison is most useful when the proof sources, compiler, CPU, architecture, memory, and level of parallelism are comparable.</p>
     </section>
 
-    <section id="holtest">
-      <h2>HOL Light regression suite</h2>
-      <p><a href="https://github.com/jrh13/hol-light">HOL Light</a> includes <code>holtest.mk</code>, a broad regression suite covering its libraries, examples, decision procedures, formalized mathematics, and supported external tools.</p>
-      <p>The runner executes independent test targets concurrently. Each test has its own log and timing. A test may be skipped when an optional external program is unavailable; the archived runs normally skip the legacy zChaff/MiniSat-p test.</p>
-    </section>
-
-    <section id="s2n-bignum">
-      <h2>s2n-bignum: ARM and x86</h2>
-      <p><a href="https://github.com/awslabs/s2n-bignum">s2n-bignum</a> contains optimized assembly routines for cryptographic big-integer arithmetic, together with HOL Light proofs of functional correctness and related safety properties.</p>
-      <p>ARM and x86 are separate reports. The runner assembles each architecture's source and checks the proof against the resulting object code. Foreign machine code is not executed, so the non-native architecture only needs a cross-assembler rather than an emulator. Proof binaries are built and checked concurrently with a memory-based job limit.</p>
-    </section>
-
-    <section id="flyspeck">
-      <h2>Flyspeck</h2>
-      <p><a href="https://github.com/hol-light-family/Flyspeck">Flyspeck</a> is the formal proof of the Kepler conjecture. The benchmark loads <code>load_flyspeck.ml</code> and evaluates the complete <code>Build.build_sequence_full</code>.</p>
-      <p>The run verifies the archived linear-program certificates and loads the text formalization. The nonlinear inequalities are imported against recorded digests rather than recomputed; their original recomputation required a large external Azure workload. The tame-hypermap classification is verified separately in Isabelle, as documented by Flyspeck.</p>
-    </section>
-
-    <section id="four-colour">
-      <h2>Four Colour Theorem</h2>
-      <p>HOL Light's <a href="https://github.com/jrh13/hol-light/tree/master/4CT"><code>4CT/</code> development</a> proves the Four Colour Theorem for hypermaps, planar graphs, and plane maps.</p>
-      <p>The benchmark uses the OCaml 5 parallel bytecode route. Its proof-producing computations distribute the presentation checks and 633 reducibility checks over as many as 128 OCaml domains. A successful report contains <code>FOUR_COLOR</code>, <code>FOUR_COLOR_PLANAR_GRAPH</code>, and <code>FOUR_COLOR_MAP</code>.</p>
-    </section>
-
-    <section id="navier-stokes">
-      <h2>Navier-Stokes</h2>
-      <p><a href="https://github.com/hol-light-family/Navier_Stokes">Navier_Stokes</a> formalizes finite-time blowup for the incompressible Navier-Stokes equations and derives the breakdown alternatives (C) and (D) from the Clay Millennium Prize problem statement.</p>
-      <p>The first stage loads <code>check.ml</code>, which checks the complete development and its headline theorems. The second loads <code>audit/check.ml</code>, which checks an independent formalization of the Clay statements, equivalence theorems, and 24 statement sanity theorems. Each reported theorem must have no hypotheses, each stage must reach its completion marker, and the session must use only HOL Light's three standard axioms.</p>
-    </section>
+    <div id="benchmark-sections">
+      <noscript><p>The benchmark descriptions need JavaScript. They are also in <code>benchmarks-registry.js</code>.</p></noscript>
+    </div>
 
     <section id="statuses">
       <h2>Result statuses</h2>
@@ -63,7 +37,7 @@
         <div><dt>Skip</dt><dd>The suite deliberately omitted a test because an optional dependency was unavailable.</dd></div>
         <div><dt>Missing</dt><dd>No complete output was produced, usually because a run was interrupted.</dd></div>
       </dl>
-      <p class="status-note"><strong>Failure markers</strong> are case-insensitive log lines such as <code>error:</code>, <code>exception:</code>, and <code>Error in included file</code>; <code>### Error: skip</code> is excluded. Holtest also requires a <code>.ready</code> file. Flyspeck, Navier-Stokes, and 4CT require their completion markers; Navier-Stokes also checks theorem hypotheses, conclusions, and the axiom count, while 4CT requires its final theorem bindings. See <a href="https://github.com/hol-light-family/benchmark-scripts/blob/main/common/check-failures.sh"><code>common/check-failures.sh</code></a> for the shared marker rules.</p>
+      <p class="status-note"><strong>Failure markers</strong> are case-insensitive log lines such as <code>error:</code>, <code>exception:</code>, and <code>Error in included file</code>; <code>### Error: skip</code> is excluded. Each benchmark's further requirements are listed in its section above. See <a href="https://github.com/hol-light-family/benchmark-scripts/blob/main/common/check-failures.sh"><code>common/check-failures.sh</code></a> for the shared marker rules.</p>
     </section>
 
     <section id="timing">
@@ -79,5 +53,8 @@
   </main>
 
   <footer>HOL Light benchmark documentation.</footer>
+
+  <script src="benchmarks-registry.js" defer></script>
+  <script src="benchmarks.js" defer></script>
 </body>
 </html>

@@ -13,14 +13,6 @@ const resultsRoot = window.location.protocol === "file:"
   ? remoteResultsRoot
   : new URL("./", window.location.href);
 
-const sourceRepositories = {
-  "HOL Light": "https://github.com/jrh13/hol-light",
-  "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
-  "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
-  "Navier-Stokes": "https://github.com/hol-light-family/Navier_Stokes",
-  "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts",
-};
-
 const elements = {
   runSelect: document.querySelector("#run-select"),
   notice: document.querySelector("#notice"),
@@ -153,20 +145,46 @@ async function loadPublishedRun(manifestPath) {
   }
 }
 
+function externalLink(className, text, href, title) {
+  const link = makeElement("a", className, text);
+  link.href = href;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  if (title) link.title = title;
+  return link;
+}
+
+// Map of source name -> { hash, repository }, in registry order. Report fields
+// named <source>_commit that the registry does not know are still listed,
+// linked when the manifest gives a repository under that name.
+function sourceCommits() {
+  const repositories = state.manifest?.repositories || {};
+  const known = new Map(BENCHMARK_REGISTRY.sources.map((source) => [source.commitField, source]));
+  const commits = new Map();
+  const add = (name, hash, fallbackRepository) => {
+    if (hash && !commits.has(name)) {
+      commits.set(name, { hash, repository: repositories[name] || fallbackRepository || null });
+    }
+  };
+  for (const source of BENCHMARK_REGISTRY.sources) {
+    for (const { data } of state.reports) add(source.name, data[source.commitField], source.repository);
+  }
+  for (const { data } of state.reports) {
+    for (const [field, hash] of Object.entries(data)) {
+      if (!field.endsWith("_commit") || known.has(field) || typeof hash !== "string") continue;
+      add(field.slice(0, -"_commit".length).replaceAll("_", "-"), hash, null);
+    }
+  }
+  const { name, repository } = BENCHMARK_REGISTRY.scripts;
+  add(name, state.manifest?.benchmark_scripts_commit, repository);
+  return commits;
+}
+
 function renderMetadata() {
   elements.metadata.replaceChildren();
   const first = state.reports[0]?.data || {};
   const machine = first.machine || {};
-  const commits = new Map();
-  for (const { data } of state.reports) {
-    if (data.hol_light_commit) commits.set("HOL Light", data.hol_light_commit);
-    if (data.s2n_bignum_commit) commits.set("s2n-bignum", data.s2n_bignum_commit);
-    if (data.flyspeck_commit) commits.set("Flyspeck", data.flyspeck_commit);
-    if (data.navier_stokes_commit) commits.set("Navier-Stokes", data.navier_stokes_commit);
-  }
-  if (state.manifest?.benchmark_scripts_commit) {
-    commits.set("benchmark-scripts", state.manifest.benchmark_scripts_commit);
-  }
+  const commits = sourceCommits();
 
   const memory = machine.memory_total_gib !== null && machine.memory_total_gib !== undefined
     ? `${machine.memory_total_gib} GiB`
@@ -189,19 +207,19 @@ function renderMetadata() {
   const sourceItem = makeElement("div", "meta-item");
   sourceItem.append(makeElement("span", "meta-label", "Source commits"));
   const commitList = makeElement("ul", "commit-list");
-  for (const [name, hash] of commits) {
-    const repository = state.manifest?.repositories?.[name] || sourceRepositories[name];
+  for (const [name, { hash, repository }] of commits) {
     const row = document.createElement("li");
-    const repoLink = makeElement("a", "repo-link", name);
-    repoLink.href = repository;
-    repoLink.target = "_blank";
-    repoLink.rel = "noopener noreferrer";
-    const commitLink = makeElement("a", "commit-link", shortHash(hash));
-    commitLink.href = `${repository}/commit/${hash}`;
-    commitLink.target = "_blank";
-    commitLink.rel = "noopener noreferrer";
-    commitLink.title = hash;
-    row.append(repoLink, document.createTextNode(" @ "), commitLink);
+    if (repository) {
+      row.append(
+        externalLink("repo-link", name, repository),
+        document.createTextNode(" @ "),
+        externalLink("commit-link", shortHash(hash), `${repository}/commit/${hash}`, hash),
+      );
+    } else {
+      const commit = makeElement("span", "commit-link", shortHash(hash));
+      commit.title = hash;
+      row.append(document.createTextNode(`${name} @ `), commit);
+    }
     commitList.append(row);
   }
   if (!commits.size) commitList.append(makeElement("li", "", "Unknown"));
@@ -216,6 +234,13 @@ function renderHeading() {
   const holLightLabel = state.manifest?.hol_light_label || "HOL Light";
   const subtitle = makeElement("p", "", commit ? `${holLightLabel} ${commit}` : "Ad hoc report set");
   elements.runHeading.append(title, subtitle);
+  const notes = state.manifest?.notes || [];
+  if (notes.length) {
+    const list = makeElement("ul", "run-notes");
+    list.setAttribute("aria-label", "Run notes");
+    for (const note of notes) list.append(makeElement("li", "", note));
+    elements.runHeading.append(list);
+  }
 }
 
 function renderSummary() {
@@ -226,7 +251,17 @@ function renderSummary() {
     const card = makeElement("article", "summary-card");
     const top = makeElement("div", "card-top");
     const heading = makeElement("div");
-    heading.append(makeElement("h3", "", report.label));
+    const title = makeElement("h3");
+    const benchmark = benchmarkForReport(report.label);
+    if (benchmark) {
+      const link = makeElement("a", "card-link", report.label);
+      link.href = `benchmarks.html#${benchmark.id}`;
+      link.title = `What ${benchmark.title} measures`;
+      title.append(link);
+    } else {
+      title.textContent = report.label;
+    }
+    heading.append(title);
     const variant = data.arch ? `${data.arch.toUpperCase()} proofs` : report.fileName;
     heading.append(makeElement("div", "card-total", variant));
     top.append(heading, makeElement("div", "card-total", `${data.total ?? data.tests.length} tests`));

@@ -174,12 +174,15 @@ function compareReport(label, baselineReport, candidateReport) {
   let added = 0;
   let removed = 0;
   let skipped = 0;
+  let untimed = 0;
   const otherChanges = new Map();
   for (const row of rows) {
     if (row.comparable) continue;
     if (!row.baseline) added += 1;
     else if (!row.candidate) removed += 1;
     else if (row.baseline.status === "skip" && row.candidate.status === "skip") skipped += 1;
+    // Passed in both runs, but one of them has no positive elapsed time.
+    else if (row.baseline.status === "pass" && row.candidate.status === "pass") untimed += 1;
     else otherChanges.set(row.reason, (otherChanges.get(row.reason) || 0) + 1);
   }
   return {
@@ -196,6 +199,7 @@ function compareReport(label, baselineReport, candidateReport) {
     added,
     removed,
     skipped,
+    untimed,
     otherChanges: [...otherChanges.entries()].sort((left, right) => right[1] - left[1]),
   };
 }
@@ -239,6 +243,17 @@ function renderHeading() {
     makeElement("span", "comparison-runtime", `OCaml ${state.candidate.manifest.ocaml_version || "unknown"}`),
   );
   elements.heading.append(baseline, arrow, candidate);
+
+  const notes = [
+    ...(state.baseline.manifest.notes || []).map((note) => `Baseline: ${note}`),
+    ...(state.candidate.manifest.notes || []).map((note) => `Comparison: ${note}`),
+  ];
+  if (notes.length) {
+    const list = makeElement("ul", "run-notes");
+    list.setAttribute("aria-label", "Run notes");
+    for (const note of notes) list.append(makeElement("li", "", note));
+    elements.heading.append(list);
+  }
 }
 
 function machineForRun(bundle) {
@@ -480,6 +495,7 @@ function renderBenchmarks() {
       makeElement("span", "", `${comparison.added} added`),
       ...(comparison.removed ? [makeElement("span", "", `${comparison.removed} removed`)] : []),
       makeElement("span", "", `${comparison.skipped} skipped in both`),
+      ...(comparison.untimed ? [makeElement("span", "", `${comparison.untimed} passed without timing`)] : []),
       ...comparison.otherChanges.map(([reason, count]) => makeElement("span", "", `${count} ${reason}`)),
       makeElement("span", "", `Aggregate: ${formatDuration(comparison.baselineTotal)} → ${formatDuration(comparison.candidateTotal)}`),
     );

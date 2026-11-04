@@ -11,6 +11,7 @@
     "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
     "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
     "Navier-Stokes": "https://github.com/hol-light-family/Navier_Stokes",
+    "catalan-is-irrational": "https://github.com/hol-light-family/catalan-is-irrational",
     "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts"
   },
   "reports": [
@@ -35,8 +36,16 @@
       "file": "navier-stokes-results.json"
     },
     {
+      "label": "Catalan's constant irrational",
+      "file": "catalan-is-irrational-results.json"
+    },
+    {
       "label": "Four Colour Theorem",
       "file": "4ct-results.json"
     }
+  ],
+  "notes": [
+    "s2n-bignum ARM was re-run on 2026-11-04 in the same workspace, because the first attempt stopped at the first failing proof and reported every proof as missing. The re-run used benchmark-scripts ecd575a, which keeps going past failing proofs.",
+    "Catalan's constant irrational was added after this run: it ran on 2026-11-04 with the same HOL Light build, on an otherwise idle machine rather than next to Flyspeck, Navier-Stokes, and 4CT, and was collected with benchmark-scripts a921b73."
   ]
 }

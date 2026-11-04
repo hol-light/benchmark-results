@@ -19,20 +19,9 @@ A run directory contains the unmodified result JSON files and a
 maps source names to their repository URLs so commit links work for forks.
 `runs.json` is the root index used by the webpage.
 
-Runs before the Navier-Stokes benchmark have four benchmark families but five
-physical reports, because s2n-bignum records ARM and x86 separately:
-
-```text
-2026-10-20-d30e8239887b2348a063f82232a864de1cc2df15/
-├── manifest.json
-├── hol-light-results.json
-├── s2n-bignum-arm-results.json
-├── s2n-bignum-x86-results.json
-├── flyspeck-results.json
-└── 4ct-results.json
-```
-
-Newer runs add Navier-Stokes as a fifth family and sixth report:
+A run contains one result file per report listed in its manifest. Benchmarks
+added later are simply absent from older runs; s2n-bignum records ARM and x86
+as separate reports. A current run looks like this:
 
 ```text
 <run>/
@@ -42,8 +31,14 @@ Newer runs add Navier-Stokes as a fifth family and sixth report:
 ├── s2n-bignum-x86-results.json
 ├── flyspeck-results.json
 ├── navier-stokes-results.json
+├── catalan-is-irrational-results.json
 └── 4ct-results.json
 ```
+
+A manifest may also have a `notes` list of strings, shown under the run
+heading on the results and comparison pages. Use it to record anything about
+how the run was produced that the reports themselves do not show, such as a
+report that was re-run or added later.
 
 ## View locally
 
@@ -87,6 +82,19 @@ times in both runs. Benchmark sections and test rows default to descending
 speedup. Click any table heading to sort by that column or reverse its order.
 Benchmark sections are collapsed by default, and the **Slower only** filter
 isolates regressions.
+
+## Add a benchmark
+
+The pages show whatever reports a run's manifest lists, so a new benchmark
+needs no page changes to appear in results and comparisons. Its description,
+its summary-card link, and its source-commit link come from one file,
+`benchmarks-registry.js`:
+
+1. Add the benchmark's repository to `sources`, with the report field that
+   holds its commit (for example, `catalan_is_irrational_commit`).
+2. Add an entry to `benchmarks` with an `id`, a `title`, the manifest report
+   labels it covers (`reports`), its `description`, and its `passCriteria`.
+   The entry becomes a section of `benchmarks.html`.
 
 ## Publish with GitHub Pages
 
