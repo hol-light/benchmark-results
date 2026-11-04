@@ -189,6 +189,17 @@ function formatMemory(machine) {
   return machine.memory_total_bytes ?? "unknown";
 }
 
+// The kernel's MemTotal shifts by a few KiB between boots of the same
+// machine, so only a difference of more than 1% counts as different RAM.
+function memoryDiffers(baseline, candidate) {
+  const left = Number(baseline.memory_total_bytes);
+  const right = Number(candidate.memory_total_bytes);
+  if (!(left > 0) || !(right > 0)) {
+    return baseline.memory_total_bytes !== candidate.memory_total_bytes;
+  }
+  return Math.abs(left - right) > 0.01 * Math.max(left, right);
+}
+
 function renderEnvironmentWarning() {
   const baseline = machineForRun(state.baseline);
   const candidate = machineForRun(state.candidate);
@@ -200,7 +211,7 @@ function renderEnvironmentWarning() {
   if (baseline.architecture !== candidate.architecture) {
     differences.push(`architecture: ${baseline.architecture || "unknown"} → ${candidate.architecture || "unknown"}`);
   }
-  if (baseline.memory_total_bytes !== candidate.memory_total_bytes) {
+  if (memoryDiffers(baseline, candidate)) {
     differences.push(`RAM: ${formatMemory(baseline)} → ${formatMemory(candidate)}`);
   }
   const baselineOcaml = state.baseline.manifest.ocaml_version;

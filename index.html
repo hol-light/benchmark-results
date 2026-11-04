@@ -18,13 +18,6 @@
           <a class="nav-link" href="compare.html">Compare runs</a>
           <a class="nav-link" href="benchmarks.html">Explain benchmarks</a>
         </nav>
-        <label class="run-picker" for="run-filter">
-          <span>Runs</span>
-          <select id="run-filter">
-            <option value="all">All published runs</option>
-            <option value="official">Official HOL Light only</option>
-          </select>
-        </label>
       </div>
     </div>
   </header>
@@ -32,7 +25,7 @@
   <main>
     <div id="notice" class="notice" role="status" hidden></div>
 
-    <p class="history-intro">The latest five runs of each benchmark, newest first. <strong>Change</strong> is the geometric-mean speed change against the previous run listed for that report, over the tests that passed with a timing in both; positive means faster. Follow a date for that run's full results, or a change for the test-by-test comparison.</p>
+    <p class="history-intro">The latest five official HOL Light runs of each benchmark, newest first; runs of forks are on <a href="runs.html">Summary per run</a> and <a href="compare.html">Compare runs</a>. <strong>Change</strong> is the geometric-mean speed change against the previous run listed for that report, over the tests that passed with a timing in both; positive means faster. Follow a date for that run's full results, or a change for the test-by-test comparison.</p>
 
     <div id="benchmark-history" aria-busy="true">
       <p class="empty-results">Loading runs…</p>

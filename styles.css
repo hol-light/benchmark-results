@@ -403,7 +403,6 @@ footer {
 .history-table td { vertical-align: middle; }
 .history-table .commit-link { color: var(--link); font: 12px var(--mono); }
 .history-run { white-space: nowrap; }
-.history-notes { color: var(--muted); font-size: 11px; border-bottom: 1px dotted var(--muted); cursor: help; }
 .history-result .status-pill + .status-pill { margin-left: 4px; }
 .history-change a { font-variant-numeric: tabular-nums; }
 .history-detail { display: block; color: var(--muted); font-size: 11px; }

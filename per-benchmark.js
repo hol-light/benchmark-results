@@ -1,6 +1,7 @@
 "use strict";
 
-// Per-benchmark view: the latest runs of every report, newest first.
+// Per-benchmark view: the latest official HOL Light runs of every report,
+// newest first. Fork runs ("HOL Light (<owner>)") are left out.
 
 const HISTORY_LENGTH = 5;
 // Load at most this many of the newest runs. A report that appears in fewer
@@ -10,7 +11,6 @@ const SCAN_LIMIT = 20;
 const elements = {
   notice: document.querySelector("#notice"),
   history: document.querySelector("#benchmark-history"),
-  runFilter: document.querySelector("#run-filter"),
 };
 
 const state = {
@@ -33,12 +33,6 @@ function formatDuration(value) {
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = Math.round(seconds % 60);
   return hours ? `${hours}h ${minutes}m` : `${minutes}m ${secs}s`;
-}
-
-function selectedRuns() {
-  return elements.runFilter.value === "official"
-    ? state.runs.filter((run) => !runOwner(run))
-    : state.runs;
 }
 
 // Load the newest runs until every report seen has HISTORY_LENGTH + 1 runs
@@ -120,12 +114,6 @@ function runCell(bundle) {
   link.href = `runs.html?run=${encodeURIComponent(bundle.index.id)}`;
   link.title = `Full results of ${runLabel(bundle.index)}`;
   cell.append(link);
-  const notes = bundle.manifest.notes || [];
-  if (notes.length) {
-    const marker = makeElement("span", "history-notes", `${notes.length} note${notes.length === 1 ? "" : "s"}`);
-    marker.title = notes.join("\n\n");
-    cell.append(document.createTextNode(" "), marker);
-  }
   return cell;
 }
 
@@ -201,8 +189,7 @@ function historyTable(label, history) {
 }
 
 function render() {
-  const runIds = new Set(selectedRuns().map((run) => run.id));
-  const bundles = state.bundles.filter((bundle) => bundle && runIds.has(bundle.index.id));
+  const bundles = state.bundles.filter(Boolean);
   const fragment = document.createDocumentFragment();
 
   for (const group of benchmarkGroups(bundles)) {
@@ -230,41 +217,21 @@ function render() {
 
   elements.history.replaceChildren(fragment);
   if (!elements.history.children.length) {
-    elements.history.append(makeElement("p", "empty-results", "No published runs match this filter."));
+    elements.history.append(makeElement("p", "empty-results", "No official runs have been published yet."));
   }
 }
 
 async function initialize() {
   try {
-    state.runs = await fetchRuns();
+    state.runs = (await fetchRuns()).filter((run) => !runOwner(run));
   } catch (error) {
     elements.history.replaceChildren();
     showNotice(`Could not load runs.json: ${error.message}`, true);
     return;
   }
-  // Load for the broadest filter once; switching filters only re-renders.
   state.bundles = await loadBundles(state.runs);
   elements.history.removeAttribute("aria-busy");
   render();
 }
-
-elements.runFilter.addEventListener("change", () => {
-  // The official filter may need older runs than "all" loaded.
-  const loadedIds = new Set(state.bundles.filter(Boolean).map((bundle) => bundle.index.id));
-  const missing = selectedRuns().slice(0, SCAN_LIMIT).filter((run) => !loadedIds.has(run.id));
-  if (!missing.length) {
-    render();
-    return;
-  }
-  elements.history.setAttribute("aria-busy", "true");
-  loadBundles(selectedRuns()).then((bundles) => {
-    const byId = new Map(state.bundles.filter(Boolean).map((bundle) => [bundle.index.id, bundle]));
-    for (const bundle of bundles.filter(Boolean)) byId.set(bundle.index.id, bundle);
-    // Keep runs.json order.
-    state.bundles = state.runs.map((run) => byId.get(run.id)).filter(Boolean);
-    elements.history.removeAttribute("aria-busy");
-    render();
-  });
-});
 
 initialize();
