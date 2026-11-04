@@ -34,6 +34,11 @@ function formatDuration(value) {
   return hours ? `${hours}h ${minutes}m ${secs}s` : `${minutes}m ${secs}s`;
 }
 
+function rowVerdict(row) {
+  if (!row.counted) return `Within ${TIME_NOISE_SECONDS} s`;
+  return verdict(row.improvement);
+}
+
 function verdict(improvement) {
   if (improvement > 0.05) return `${improvement.toFixed(2)}% faster`;
   if (improvement < -0.05) return `${Math.abs(improvement).toFixed(2)}% slower`;
@@ -84,6 +89,9 @@ function compareReport(label, baselineReport, candidateReport) {
       baseline,
       candidate,
       comparable: true,
+      // Counted in speed averages and faster/slower: changed by more than
+      // TIME_NOISE_SECONDS.
+      counted: timeChangeIsSignificant(baselineSeconds, candidateSeconds),
       baselineSeconds,
       candidateSeconds,
       ratio,
@@ -91,7 +99,10 @@ function compareReport(label, baselineReport, candidateReport) {
     };
   });
   const comparable = rows.filter((row) => row.comparable);
-  const ratio = geometricMean(comparable.map((row) => row.ratio));
+  const counted = comparable.filter((row) => row.counted);
+  const ratio = geometricMean(counted.map((row) => row.ratio));
+  const faster = counted.filter((row) => row.improvement > 0.05).length;
+  const slower = counted.filter((row) => row.improvement < -0.05).length;
   // Classify tests that could not be timed against each other.
   let added = 0;
   let removed = 0;
@@ -111,13 +122,14 @@ function compareReport(label, baselineReport, candidateReport) {
     label,
     rows,
     comparable,
+    counted,
     ratio,
     improvement: ratio === null ? null : improvementFromRatio(ratio),
     baselineTotal: comparable.reduce((sum, row) => sum + row.baselineSeconds, 0),
     candidateTotal: comparable.reduce((sum, row) => sum + row.candidateSeconds, 0),
-    faster: comparable.filter((row) => row.improvement > 0.05).length,
-    slower: comparable.filter((row) => row.improvement < -0.05).length,
-    same: comparable.filter((row) => Math.abs(row.improvement) <= 0.05).length,
+    faster,
+    slower,
+    same: comparable.length - faster - slower,
     added,
     removed,
     skipped,
@@ -246,10 +258,11 @@ function metricCard(label, value, detail, className = "") {
 function renderOverall() {
   elements.overall.replaceChildren();
   const comparable = state.comparisons.flatMap((comparison) => comparison.comparable);
-  const ratio = geometricMean(comparable.map((row) => row.ratio));
+  const counted = comparable.filter((row) => row.counted);
+  const ratio = geometricMean(counted.map((row) => row.ratio));
   const improvement = ratio === null ? null : improvementFromRatio(ratio);
-  const faster = comparable.filter((row) => row.improvement > 0.05).length;
-  const slower = comparable.filter((row) => row.improvement < -0.05).length;
+  const faster = counted.filter((row) => row.improvement > 0.05).length;
+  const slower = counted.filter((row) => row.improvement < -0.05).length;
   const baselineTotal = comparable.reduce((sum, row) => sum + row.baselineSeconds, 0);
   const candidateTotal = comparable.reduce((sum, row) => sum + row.candidateSeconds, 0);
   const aggregateRatio = candidateTotal > 0 ? baselineTotal / candidateTotal : null;
@@ -258,7 +271,7 @@ function renderOverall() {
     metricCard(
       "Average improvement",
       improvement === null ? "—" : formatSignedPercent(improvement),
-      "Geometric mean across comparable tests",
+      `Geometric mean over ${counted.length.toLocaleString()} tests that changed by more than ${TIME_NOISE_SECONDS} s`,
       improvement === null ? "" : performanceClass(improvement),
     ),
     metricCard(
@@ -270,7 +283,7 @@ function renderOverall() {
     metricCard(
       "Comparable tests",
       comparable.length.toLocaleString(),
-      `${faster} faster · ${slower} slower`,
+      `${faster} faster · ${slower} slower · ${comparable.length - faster - slower} unchanged`,
     ),
     metricCard(
       "Aggregate time ratio",
@@ -287,10 +300,10 @@ function makeComparisonRow(row) {
   tr.append(makeElement("td", "numeric", formatDuration(row.baseline?.elapsed_seconds)));
   tr.append(makeElement("td", "numeric", formatDuration(row.candidate?.elapsed_seconds)));
   if (row.comparable) {
-    const className = performanceClass(row.improvement);
+    const className = row.counted ? performanceClass(row.improvement) : "perf-same";
     tr.append(makeElement("td", `numeric ${className}`, formatSignedPercent(row.improvement)));
     tr.append(makeElement("td", `numeric ${className}`, formatRatio(row.ratio)));
-    tr.append(makeElement("td", className, verdict(row.improvement)));
+    tr.append(makeElement("td", className, rowVerdict(row)));
   } else {
     tr.className = "not-comparable";
     tr.append(makeElement("td", "numeric", "—"));
@@ -306,7 +319,7 @@ function sortValue(row, key) {
   if (key === "candidate") return row.comparable ? row.candidateSeconds : null;
   if (key === "improvement") return row.comparable ? row.improvement : null;
   if (key === "ratio") return row.comparable ? row.ratio : null;
-  if (key === "result") return row.comparable ? verdict(row.improvement) : row.reason;
+  if (key === "result") return row.comparable ? rowVerdict(row) : row.reason;
   return null;
 }
 
@@ -387,7 +400,7 @@ function renderBenchmarks() {
   for (const comparison of comparisons) {
     const filteredRows = comparison.rows.filter((row) => {
       if (query && !`${comparison.label} ${row.name}`.toLowerCase().includes(query)) return false;
-      if (slowerOnly && (!row.comparable || row.improvement >= -0.05)) return false;
+      if (slowerOnly && (!row.counted || row.improvement >= -0.05)) return false;
       return true;
     });
     const sort = state.sortBySuite.get(comparison.label) || {
@@ -413,9 +426,11 @@ function renderBenchmarks() {
     const summaryMetric = makeElement(
       "span",
       `comparison-summary-metric ${comparison.improvement === null ? "" : performanceClass(comparison.improvement)}`,
-      comparison.improvement === null
-        ? "No comparable timing"
-        : `${formatSignedPercent(comparison.improvement)} average · ${formatRatio(comparison.ratio)}`,
+      comparison.improvement !== null
+        ? `${formatSignedPercent(comparison.improvement)} average · ${formatRatio(comparison.ratio)}`
+        : comparison.comparable.length
+          ? `No change beyond ${TIME_NOISE_SECONDS} s`
+          : "No comparable timing",
     );
     summary.append(summaryMain, summaryMetric);
     details.append(summary);

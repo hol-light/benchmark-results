@@ -139,18 +139,32 @@ function changeCell(entry, previous) {
     baseline: previous.bundle.index.id,
     comparison: entry.bundle.index.id,
   });
+  const plural = (count) => `${count} test${count === 1 ? "" : "s"}`;
+  let text;
+  let title;
+  if (change.improvement !== null) {
+    text = formatSignedPercent(change.improvement);
+    title = `${formatRatio(change.ratio)} speed ratio over ${plural(change.counted)}, against ${runLabel(previous.bundle.index)}`;
+  } else if (change.withinNoise) {
+    text = `within ${TIME_NOISE_SECONDS} s`;
+    title = `Every test timed in both runs changed by ${TIME_NOISE_SECONDS} s or less`;
+  } else {
+    text = "no common timings";
+    title = `No test passed with a timing in both this run and ${previous.bundle.index.date}`;
+  }
   const link = makeElement(
     "a",
-    change.improvement === null ? "" : performanceClass(change.improvement),
-    change.improvement === null ? "no common timings" : formatSignedPercent(change.improvement),
+    change.improvement === null ? "perf-same" : performanceClass(change.improvement),
+    text,
   );
   link.href = `compare.html?${params}`;
-  link.title = change.improvement === null
-    ? `No test passed with a timing in both this run and ${previous.bundle.index.date}`
-    : `${formatRatio(change.ratio)} speed ratio over ${change.comparable} tests, against ${runLabel(previous.bundle.index)}`;
+  link.title = title;
   cell.append(link);
-  if (change.comparable) {
-    cell.append(makeElement("span", "history-detail", `${change.comparable} test${change.comparable === 1 ? "" : "s"}`));
+  if (change.counted) {
+    const detail = change.withinNoise
+      ? `${plural(change.counted)} · ${change.withinNoise} within ${TIME_NOISE_SECONDS} s`
+      : plural(change.counted);
+    cell.append(makeElement("span", "history-detail", detail));
   }
   return cell;
 }

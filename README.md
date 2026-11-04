@@ -88,7 +88,9 @@ The selected run IDs are stored in the URL as `baseline` and `comparison`
 query parameters. Copying the browser URL therefore shares the same comparison.
 
 Tests contribute to averages only when they passed and have positive elapsed
-times in both runs. Benchmark sections and test rows default to descending
+times in both runs, and their time changed by more than 3 seconds; a test
+within 3 seconds counts as unchanged. The threshold is `TIME_NOISE_SECONDS` in
+`common.js`, used by both the comparison and the per-benchmark pages. Benchmark sections and test rows default to descending
 speedup. Click any table heading to sort by that column or reverse its order.
 Benchmark sections are collapsed by default, and the **Slower only** filter
 isolates regressions.

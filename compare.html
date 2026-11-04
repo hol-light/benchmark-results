@@ -62,7 +62,7 @@
 
       <section class="method-note" aria-labelledby="method-title">
         <h2 id="method-title">Calculation</h2>
-        <p>Speed ratio is <code>baseline time / comparison time</code>. Values above 1.0× are faster. Average improvement uses the geometric mean of per-test speed ratios, which gives equal weight to proportional changes in fast and slow tests. Only tests that passed and have positive elapsed times in both runs are included.</p>
+        <p>Speed ratio is <code>baseline time / comparison time</code>. Values above 1.0× are faster. Average improvement uses the geometric mean of per-test speed ratios, which gives equal weight to proportional changes in fast and slow tests. Only tests that passed and have positive elapsed times in both runs are compared. A test whose time changed by 3 seconds or less counts as unchanged and is left out of the averages and the faster/slower counts; the aggregate time ratio still includes it.</p>
       </section>
     </section>
 

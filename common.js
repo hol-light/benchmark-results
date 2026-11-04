@@ -89,6 +89,14 @@ function comparableTest(baseline, candidate) {
     && candidateTime > 0;
 }
 
+// Timing changes of at most this many seconds are treated as noise: such a
+// test counts as unchanged and is left out of speed averages.
+const TIME_NOISE_SECONDS = 3;
+
+function timeChangeIsSignificant(baselineSeconds, candidateSeconds) {
+  return Math.abs(candidateSeconds - baselineSeconds) > TIME_NOISE_SECONDS;
+}
+
 function geometricMean(values) {
   if (!values.length) return null;
   return Math.exp(values.reduce((sum, value) => sum + Math.log(value), 0) / values.length);
@@ -101,22 +109,31 @@ function improvementFromRatio(ratio) {
 }
 
 // Geometric-mean speed ratio of one report against another, over the tests
-// comparable in both: { ratio, improvement, comparable } (ratio and
-// improvement are null when no test is comparable).
+// comparable in both whose time changed by more than TIME_NOISE_SECONDS:
+// { ratio, improvement, counted, withinNoise }. counted is the number of
+// tests in the average, withinNoise the comparable tests left out; ratio and
+// improvement are null when no test is counted.
 function reportSpeedChange(baselineData, candidateData) {
   const baselineTests = new Map((baselineData?.tests || []).map((test) => [test.name, test]));
   const ratios = [];
+  let withinNoise = 0;
   for (const test of candidateData?.tests || []) {
     const baseline = baselineTests.get(test.name);
-    if (comparableTest(baseline, test)) {
-      ratios.push(Number(baseline.elapsed_seconds) / Number(test.elapsed_seconds));
+    if (!comparableTest(baseline, test)) continue;
+    const baselineSeconds = Number(baseline.elapsed_seconds);
+    const candidateSeconds = Number(test.elapsed_seconds);
+    if (timeChangeIsSignificant(baselineSeconds, candidateSeconds)) {
+      ratios.push(baselineSeconds / candidateSeconds);
+    } else {
+      withinNoise += 1;
     }
   }
   const ratio = geometricMean(ratios);
   return {
     ratio,
     improvement: ratio === null ? null : improvementFromRatio(ratio),
-    comparable: ratios.length,
+    counted: ratios.length,
+    withinNoise,
   };
 }
 
