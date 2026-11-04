@@ -123,3 +123,4 @@ Keep full commit hashes in both the directory name and JSON provenance fields.
 Do not combine the two s2n-bignum reports: their common schema and distinct
 `arch` fields let the dashboard display them as variants of one benchmark
 family without creating a second aggregate format.
+
