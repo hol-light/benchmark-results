@@ -1,17 +1,11 @@
 "use strict";
 
 const state = {
+  runs: [],
   reports: [],
   manifest: null,
   collapsedSuites: new Set(),
 };
-
-const remoteResultsRoot = new URL(
-  "https://raw.githubusercontent.com/hol-light/benchmark-results/main/",
-);
-const resultsRoot = window.location.protocol === "file:"
-  ? remoteResultsRoot
-  : new URL("./", window.location.href);
 
 const elements = {
   runSelect: document.querySelector("#run-select"),
@@ -31,13 +25,6 @@ const elements = {
   resultCount: document.querySelector("#result-count"),
 };
 
-function makeElement(tag, className, text) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text !== undefined) node.textContent = text;
-  return node;
-}
-
 function showNotice(message, isError = false) {
   elements.notice.textContent = message;
   elements.notice.className = isError ? "notice error" : "notice";
@@ -47,10 +34,6 @@ function showNotice(message, isError = false) {
 function clearNotice() {
   elements.notice.hidden = true;
   elements.notice.textContent = "";
-}
-
-function shortHash(hash) {
-  return hash ? hash.slice(0, 10) : "unknown";
 }
 
 function formatDuration(value) {
@@ -66,29 +49,12 @@ function formatDuration(value) {
   return `${minutes}m ${secs}s`;
 }
 
-function statusPill(status, count) {
-  const pill = makeElement("span", `status-pill status-${status}`);
-  pill.textContent = count === undefined ? status : `${count} ${status}`;
-  return pill;
-}
-
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
-  return response.json();
-}
-
 function resetCollapsedSuites() {
   state.collapsedSuites = new Set(
     state.reports
       .filter(({ data }) => !data.counts?.fail && !data.counts?.missing)
       .map(({ label }) => label),
   );
-}
-
-function runOwner(run) {
-  const match = String(run.hol_light_label || "").match(/^HOL Light \(([^)]+)\)$/);
-  return match ? match[1] : null;
 }
 
 function populateRunSelect(runs, valueForRun) {
@@ -103,9 +69,7 @@ function populateRunSelect(runs, valueForRun) {
   }
 
   const addRunOption = (run) => {
-    const compiler = run.ocaml_version ? ` · OCaml ${run.ocaml_version}` : "";
-    const label = `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}${compiler}`;
-    elements.runSelect.add(new Option(label, valueForRun(run)));
+    elements.runSelect.add(new Option(runLabel(run), valueForRun(run)));
   };
 
   for (const run of officialRuns) addRunOption(run);
@@ -143,15 +107,6 @@ async function loadPublishedRun(manifestPath) {
   } finally {
     elements.runSelect.disabled = false;
   }
-}
-
-function externalLink(className, text, href, title) {
-  const link = makeElement("a", className, text);
-  link.href = href;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
-  if (title) link.title = title;
-  return link;
 }
 
 // Map of source name -> { hash, repository }, in registry order. Report fields
@@ -409,15 +364,29 @@ function render() {
   renderResults();
 }
 
+// The run named by ?run=<id>, else the newest official run.
+function initialPublishedRun(runs) {
+  const requested = new URL(window.location.href).searchParams.get("run");
+  return runs.find((run) => run.id === requested) || defaultPublishedRun(runs);
+}
+
+function selectRun(run, updateUrl) {
+  if (updateUrl) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("run", run.id);
+    window.history.replaceState(null, "", url);
+  }
+  return loadPublishedRun(run.manifest);
+}
+
 async function initializePublishedRuns() {
   try {
-    const index = await fetchJson(new URL("runs.json", resultsRoot));
-    const runs = index.runs || [];
-    populateRunSelect(runs, (run) => run.manifest);
-    const initialRun = defaultPublishedRun(runs);
+    state.runs = await fetchRuns();
+    populateRunSelect(state.runs, (run) => run.id);
+    const initialRun = initialPublishedRun(state.runs);
     if (initialRun) {
-      elements.runSelect.value = initialRun.manifest;
-      await loadPublishedRun(initialRun.manifest);
+      elements.runSelect.value = initialRun.id;
+      await selectRun(initialRun, false);
     }
   } catch (error) {
     elements.runSelect.replaceChildren(new Option("Published runs unavailable", ""));
@@ -426,8 +395,8 @@ async function initializePublishedRuns() {
 }
 
 elements.runSelect.addEventListener("change", () => {
-  const value = elements.runSelect.value;
-  if (value) loadPublishedRun(value);
+  const run = state.runs.find((entry) => entry.id === elements.runSelect.value);
+  if (run) selectRun(run, true);
 });
 elements.search.addEventListener("input", renderResults);
 elements.statusFilter.addEventListener("change", renderResults);

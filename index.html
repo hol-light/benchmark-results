@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="HOL Light benchmark results">
+  <meta name="description" content="Latest HOL Light benchmark results for each benchmark">
   <title>HOL Light benchmark results</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,12 +12,17 @@
     <div class="header-inner">
       <h1>HOL Light benchmark results</h1>
       <div class="header-actions">
-        <a class="nav-link" href="benchmarks.html">Explain benchmarks</a>
-        <a class="nav-link" href="compare.html">Compare runs</a>
-        <label class="run-picker" for="run-select">
-          <span>Published run</span>
-          <select id="run-select" disabled>
-            <option>Loading runs…</option>
+        <nav class="site-nav" aria-label="Site navigation">
+          <a class="nav-link" href="index.html" aria-current="page">Per benchmark</a>
+          <a class="nav-link" href="runs.html">Summary per run</a>
+          <a class="nav-link" href="compare.html">Compare runs</a>
+          <a class="nav-link" href="benchmarks.html">Explain benchmarks</a>
+        </nav>
+        <label class="run-picker" for="run-filter">
+          <span>Runs</span>
+          <select id="run-filter">
+            <option value="all">All published runs</option>
+            <option value="official">Official HOL Light only</option>
           </select>
         </label>
       </div>
@@ -27,66 +32,11 @@
   <main>
     <div id="notice" class="notice" role="status" hidden></div>
 
-    <section id="dashboard" hidden>
-      <div id="run-heading" class="run-heading"></div>
-      <div id="metadata" class="metadata-grid"></div>
+    <p class="history-intro">The latest five runs of each benchmark, newest first. <strong>Change</strong> is the geometric-mean speed change against the previous run listed for that report, over the tests that passed with a timing in both; positive means faster. Follow a date for that run's full results, or a change for the test-by-test comparison.</p>
 
-      <section aria-labelledby="summary-title">
-        <div class="section-heading">
-          <h2 id="summary-title">Summary</h2>
-          <div id="overall" class="overall"></div>
-        </div>
-        <div id="summary-cards" class="summary-grid"></div>
-      </section>
-
-      <section class="results-section" aria-labelledby="results-title">
-        <div class="section-heading results-heading">
-          <h2 id="results-title">Tests</h2>
-          <div class="filters">
-            <div class="fold-controls" aria-label="Suite row controls">
-              <button id="expand-all" type="button">Expand all</button>
-              <button id="collapse-all" type="button">Collapse all</button>
-            </div>
-            <label class="search-field">
-              <span class="sr-only">Search tests</span>
-              <input id="search" type="search" placeholder="Search tests">
-            </label>
-            <label>
-              <span class="sr-only">Filter by status</span>
-              <select id="status-filter">
-                <option value="all">All statuses</option>
-                <option value="fail">Failed</option>
-                <option value="missing">Missing</option>
-                <option value="skip">Skipped</option>
-                <option value="pass">Passed</option>
-              </select>
-            </label>
-          </div>
-        </div>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Suite</th>
-                <th>Test</th>
-                <th>Status</th>
-                <th class="numeric">Elapsed</th>
-                <th>Proof output</th>
-              </tr>
-            </thead>
-            <tbody id="results-body"></tbody>
-          </table>
-          <div id="empty-results" class="empty-results" hidden>No tests match these filters.</div>
-        </div>
-        <p id="result-count" class="result-count"></p>
-      </section>
-    </section>
-
-    <section id="empty-state" class="empty-state">
-      <h2>No results loaded</h2>
-      <p>Select a published run above.</p>
-    </section>
+    <div id="benchmark-history" aria-busy="true">
+      <p class="empty-results">Loading runs…</p>
+    </div>
   </main>
 
   <footer>
@@ -94,6 +44,7 @@
   </footer>
 
   <script src="benchmarks-registry.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="common.js" defer></script>
+  <script src="per-benchmark.js" defer></script>
 </body>
 </html>

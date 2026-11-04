@@ -59,14 +59,24 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000/>.
 
-The page initially shows the newest official HOL Light run. The run selector
-lists official results first and groups fork-specific runs below an owner
-separator. When hosted, it uses same-origin relative URLs; when opened directly,
-it uses the raw GitHub URLs above.
+When hosted, the pages use same-origin relative URLs; when opened directly,
+they use the raw GitHub URLs above.
+
+## Pages
+
+| Page | Shows |
+| --- | --- |
+| `index.html` (**Per benchmark**) | For every benchmark report, its latest five runs, newest first: the HOL Light commit, OCaml version, pass/fail counts, total test time, and the speed change against the previous run with that report. A filter restricts it to official HOL Light runs. |
+| `runs.html` (**Summary per run**) | All results of one run. It opens the newest official HOL Light run, or the run named by `?run=<run id>`. The run selector lists official results first and groups fork-specific runs below an owner separator. |
+| `compare.html` (**Compare runs**) | Test-by-test timing of two runs (below). |
+| `benchmarks.html` (**Explain benchmarks**) | What each benchmark measures and what a pass requires. |
+
+Shared helpers live in `common.js`, and everything specific to individual
+benchmarks in `benchmarks-registry.js`.
 
 ## Compare runs
 
-Open `compare.html` or use **Compare runs** in the results page header. Select
+Open `compare.html` or use **Compare runs** in the page header. Select
 a baseline and comparison run to see:
 
 - elapsed time, speed ratio, and faster/slower result for every comparable test,
@@ -105,8 +115,8 @@ This repository has no build step. In the GitHub repository settings:
 3. Select the branch containing these files and the `/ (root)` directory.
 4. Save.
 
-GitHub Pages will serve `index.html`, which loads `runs.json`, each selected
-run's manifest, and its report files with relative URLs.
+GitHub Pages will serve `index.html`, which loads `runs.json`, the recent runs'
+manifests, and their report files with relative URLs.
 
 ## Add another run
 

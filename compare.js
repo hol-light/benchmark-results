@@ -1,12 +1,5 @@
 "use strict";
 
-const remoteResultsRoot = new URL(
-  "https://raw.githubusercontent.com/hol-light/benchmark-results/main/",
-);
-const resultsRoot = window.location.protocol === "file:"
-  ? remoteResultsRoot
-  : new URL("./", window.location.href);
-
 const elements = {
   baseline: document.querySelector("#baseline-run"),
   candidate: document.querySelector("#candidate-run"),
@@ -27,26 +20,9 @@ const state = {
   baseline: null,
   candidate: null,
   comparisons: [],
-  cache: new Map(),
   sortBySuite: new Map(),
   openSuites: new Set(),
 };
-
-function makeElement(tag, className, text) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text !== undefined) node.textContent = text;
-  return node;
-}
-
-function shortHash(hash) {
-  return hash ? hash.slice(0, 10) : "unknown";
-}
-
-function runLabel(run) {
-  const compiler = run.ocaml_version ? ` · OCaml ${run.ocaml_version}` : "";
-  return `${run.date} · ${run.hol_light_label || "HOL Light"} ${shortHash(run.hol_light_commit)}${compiler}`;
-}
 
 function formatDuration(value) {
   if (value === null || value === undefined || !Number.isFinite(Number(value))) return "—";
@@ -58,41 +34,10 @@ function formatDuration(value) {
   return hours ? `${hours}h ${minutes}m ${secs}s` : `${minutes}m ${secs}s`;
 }
 
-function formatRatio(ratio) {
-  return Number.isFinite(ratio) ? `${ratio.toFixed(3)}×` : "—";
-}
-
-function improvementFromRatio(ratio) {
-  return (1 - 1 / ratio) * 100;
-}
-
-function formatSignedPercent(value) {
-  if (!Number.isFinite(value)) return "—";
-  const sign = value > 0 ? "+" : value < 0 ? "−" : "";
-  return `${sign}${Math.abs(value).toFixed(2)}%`;
-}
-
-function performanceClass(improvement) {
-  if (improvement > 0.05) return "perf-faster";
-  if (improvement < -0.05) return "perf-slower";
-  return "perf-same";
-}
-
 function verdict(improvement) {
   if (improvement > 0.05) return `${improvement.toFixed(2)}% faster`;
   if (improvement < -0.05) return `${Math.abs(improvement).toFixed(2)}% slower`;
   return "No material change";
-}
-
-function geometricMean(values) {
-  if (!values.length) return null;
-  return Math.exp(values.reduce((sum, value) => sum + Math.log(value), 0) / values.length);
-}
-
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
-  return response.json();
 }
 
 function showNotice(message, isError = false) {
@@ -106,31 +51,8 @@ function clearNotice() {
   elements.notice.textContent = "";
 }
 
-async function loadBundle(run) {
-  if (state.cache.has(run.id)) return state.cache.get(run.id);
-
-  const manifestUrl = new URL(run.manifest, resultsRoot);
-  const manifest = await fetchJson(manifestUrl);
-  const baseUrl = new URL("./", manifestUrl);
-  const reports = await Promise.all(manifest.reports.map(async (entry) => ({
-    label: entry.label,
-    fileName: entry.file,
-    data: await fetchJson(new URL(entry.file, baseUrl)),
-  })));
-  const bundle = { index: run, manifest, reports };
-  state.cache.set(run.id, bundle);
-  return bundle;
-}
-
-function comparableTest(baseline, candidate) {
-  const baselineTime = Number(baseline?.elapsed_seconds);
-  const candidateTime = Number(candidate?.elapsed_seconds);
-  return baseline?.status === "pass"
-    && candidate?.status === "pass"
-    && Number.isFinite(baselineTime)
-    && Number.isFinite(candidateTime)
-    && baselineTime > 0
-    && candidateTime > 0;
+function loadBundle(run) {
+  return loadRunBundle(run);
 }
 
 function compareReport(label, baselineReport, candidateReport) {
