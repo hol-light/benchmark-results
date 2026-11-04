@@ -1,0 +1,85 @@
+{
+  "navier_stokes_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-03-16.59.1793725193/Navier_Stokes",
+  "navier_stokes_commit": "b7720d6cb5562ee143c3d5e3b59f8caae73d0e34",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-03-16.59.1793725193/hol-light",
+  "hol_light_commit": "31fe213ce4f7ee7296366511335998ebeb956900",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-11-03-16.59.1793725193/logs/navier-stokes-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 2,
+  "counts": {
+    "pass": 2,
+    "fail": 0,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 3504.0,
+  "start_unixtime": 1793739950.0,
+  "end_unixtime": 1793743454.0,
+  "tests": [
+    {
+      "name": "Navier_Stokes/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-03-16.59.1793725193/logs/navier-stokes-run.log",
+      "status": "pass",
+      "elapsed_seconds": 3461.0,
+      "start_unixtime": 1793739978.0,
+      "end_unixtime": 1793743439.0,
+      "theorems": [
+        "NS_BREAKDOWN_PERIODIC",
+        "NS_BREAKDOWN_R3",
+        "NS_THEOREM_1_1_FULL",
+        "NS_THEOREM_1_1",
+        "NS_THEOREM_3_1_HEAT",
+        "NS_THEOREM_3_1",
+        "NS_HEAT_SWIRL_PDE"
+      ],
+      "axioms_count": 3,
+      "problems": []
+    },
+    {
+      "name": "Navier_Stokes/audit/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-03-16.59.1793725193/logs/navier-stokes-run.log",
+      "status": "pass",
+      "elapsed_seconds": 14.0,
+      "start_unixtime": 1793743439.0,
+      "end_unixtime": 1793743453.0,
+      "theorems": [
+        "CLAY_BLIND_C_PROVED",
+        "CLAY_BLIND_D_PROVED",
+        "NS_CLAY_C_EQUIV_BLIND",
+        "NS_CLAY_D_EQUIV_BLIND",
+        "NS_SANITY_ZERO_SOLVES_R3",
+        "NS_SANITY_ZERO_SOLVES_PERIODIC",
+        "NS_SANITY_TAYLOR_GREEN",
+        "NS_SANITY_TG_WRONG_PRESSURE",
+        "NS_SANITY_TG_ANTIVISCOUS",
+        "NS_SANITY_ENERGY_TEETH",
+        "NS_SANITY_DECAY_TEETH",
+        "NS_SANITY_SMOOTH_TEETH",
+        "NS_SANITY_EQUATIONS_TEETH",
+        "NS_SANITY_BLOWUP_MEANING",
+        "NS_SANITY_FORCE_SUPPORT",
+        "NS_SANITY_FULL_NOT_VACUOUS",
+        "NS_SANITY_ERRATUM_BITES",
+        "NS_SANITY_FORCED_R3",
+        "NS_SANITY_FORCED_R3_CLASS",
+        "NS_SANITY_FORCE_MUST_ACT",
+        "NS_SANITY_NEGATIVE_TIMES_IRRELEVANT",
+        "NS_SANITY_STEP_SMOOTH",
+        "NS_SANITY_INDICES",
+        "NS_SANITY_ENERGY_MORE",
+        "NS_SANITY_SMOOTH_MORE",
+        "NS_SANITY_DECAY_MORE",
+        "NS_SANITY_INDEX_BRIDGE",
+        "NS_SANITY_PRESSURE_SHIFT"
+      ],
+      "axioms_count": 3,
+      "problems": []
+    }
+  ]
+}
