@@ -1,0 +1,1614 @@
+{
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/hol-light",
+  "hol_light_commit": "e16caa816b37eabf2f87f8bd68c9b744f4499123",
+  "log_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 199,
+  "counts": {
+    "pass": 198,
+    "fail": 0,
+    "skip": 1,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 76877.63,
+  "tests": [
+    {
+      "name": "Library/agm",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/agm",
+      "elapsed_seconds": 30.336,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/apery",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/apery",
+      "elapsed_seconds": 1428.366,
+      "user_seconds": 0.01,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Library/bdd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/bdd",
+      "elapsed_seconds": 29.088,
+      "user_seconds": 0.012,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/bdd_examples",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/bdd_examples",
+      "elapsed_seconds": 29.885,
+      "user_seconds": 0.009,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Library/binary",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/binary",
+      "elapsed_seconds": 29.173,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Library/binomial",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/binomial",
+      "elapsed_seconds": 30.067,
+      "user_seconds": 0.008,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/bitblast",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/bitblast",
+      "elapsed_seconds": 829.53,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/bitblast_generic",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/bitblast_generic",
+      "elapsed_seconds": 70.875,
+      "user_seconds": 0.013,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Library/bitmatch",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/bitmatch",
+      "elapsed_seconds": 47.51,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Library/bitsize",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/bitsize",
+      "elapsed_seconds": 29.097,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/bondy",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/bondy",
+      "elapsed_seconds": 29.299,
+      "user_seconds": 0.013,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/borsuk",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/borsuk",
+      "elapsed_seconds": 919.874,
+      "user_seconds": 0.009,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/brunn_minkowski",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/brunn_minkowski",
+      "elapsed_seconds": 897.802,
+      "user_seconds": 0.012,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/card",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/card",
+      "elapsed_seconds": 56.446,
+      "user_seconds": 0.01,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/carleson",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/carleson",
+      "elapsed_seconds": 1008.195,
+      "user_seconds": 0.01,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/carleson_hunt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/carleson_hunt",
+      "elapsed_seconds": 1040.86,
+      "user_seconds": 0.009,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/combin",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/combin",
+      "elapsed_seconds": 31.164,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/complexpolygon",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/complexpolygon",
+      "elapsed_seconds": 856.367,
+      "user_seconds": 0.015,
+      "system_seconds": 0.005,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/cong",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/cong",
+      "elapsed_seconds": 28.959,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/cooper",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/cooper",
+      "elapsed_seconds": 35.438,
+      "user_seconds": 0.009,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Library/cyclotomic",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/cyclotomic",
+      "elapsed_seconds": 317.048,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/dickson",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/dickson",
+      "elapsed_seconds": 28.997,
+      "user_seconds": 0.012,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/digit_serial_methods",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/digit_serial_methods",
+      "elapsed_seconds": 890.755,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/division_algebras",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/division_algebras",
+      "elapsed_seconds": 926.338,
+      "user_seconds": 0.008,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/dlo",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/dlo",
+      "elapsed_seconds": 29.547,
+      "user_seconds": 0.009,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/doomsday",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/doomsday",
+      "elapsed_seconds": 30.134,
+      "user_seconds": 0.01,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Library/fieldtheory",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/fieldtheory",
+      "elapsed_seconds": 244.694,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/fifteen_theorem",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/fifteen_theorem",
+      "elapsed_seconds": 5089.164,
+      "user_seconds": 0.009,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Library/finite_fields",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/finite_fields",
+      "elapsed_seconds": 307.891,
+      "user_seconds": 0.013,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Library/floor",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/floor",
+      "elapsed_seconds": 29.943,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/forster",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/forster",
+      "elapsed_seconds": 29.504,
+      "user_seconds": 0.015,
+      "system_seconds": 0.004,
+      "status": "pass"
+    },
+    {
+      "name": "Library/galois",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/galois",
+      "elapsed_seconds": 305.692,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/gcdrecurrence",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/gcdrecurrence",
+      "elapsed_seconds": 39.687,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/godel_completeness",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/godel_completeness",
+      "elapsed_seconds": 2355.267,
+      "user_seconds": 0.012,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Library/grouptheory",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/grouptheory",
+      "elapsed_seconds": 109.363,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/hilbert_waring",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/hilbert_waring",
+      "elapsed_seconds": 213.36599999999999,
+      "user_seconds": 0.012,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/harmonicsum",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/harmonicsum",
+      "elapsed_seconds": 37.002,
+      "user_seconds": 0.009,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/hol88",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/hol88",
+      "elapsed_seconds": 29.373,
+      "user_seconds": 0.013,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/holby",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/holby",
+      "elapsed_seconds": 29.266,
+      "user_seconds": 0.015,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Library/integer",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/integer",
+      "elapsed_seconds": 31.297,
+      "user_seconds": 0.014,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/inverse_bug_puzzle_miz3",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/inverse_bug_puzzle_miz3",
+      "elapsed_seconds": 135.894,
+      "user_seconds": 0.01,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/inverse_bug_puzzle_tac",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/inverse_bug_puzzle_tac",
+      "elapsed_seconds": 131.355,
+      "user_seconds": 0.012,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "RichterHilbertAxiomGeometry/inverse_bug_puzzle_read",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/RichterHilbertAxiomGeometry/inverse_bug_puzzle_read",
+      "elapsed_seconds": 132.01,
+      "user_seconds": 0.013,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/isum",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/isum",
+      "elapsed_seconds": 29.078,
+      "user_seconds": 0.013,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/jacobi",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/jacobi",
+      "elapsed_seconds": 51.043,
+      "user_seconds": 0.012,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/kb",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/kb",
+      "elapsed_seconds": 32.898,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/lagrange_lemma",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/lagrange_lemma",
+      "elapsed_seconds": 136.315,
+      "user_seconds": 0.01,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/lucas_lehmer",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/lucas_lehmer",
+      "elapsed_seconds": 143.748,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/mangoldt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/mangoldt",
+      "elapsed_seconds": 862.936,
+      "user_seconds": 0.009,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Library/matroids",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/matroids",
+      "elapsed_seconds": 59.309,
+      "user_seconds": 0.012,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/mccarthy",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/mccarthy",
+      "elapsed_seconds": 29.05,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/miller_rabin",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/miller_rabin",
+      "elapsed_seconds": 53.055,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/misiurewicz",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/misiurewicz",
+      "elapsed_seconds": 990.412,
+      "user_seconds": 0.015,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/mizar",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/mizar",
+      "elapsed_seconds": 29.134,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Library/modmul_group",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/modmul_group",
+      "elapsed_seconds": 125.006,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Library/multiplicative",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/multiplicative",
+      "elapsed_seconds": 41.248,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/multiwf",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/multiwf",
+      "elapsed_seconds": 29.17,
+      "user_seconds": 0.01,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/padics",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/padics",
+      "elapsed_seconds": 245.605,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/pell",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/pell",
+      "elapsed_seconds": 48.71,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Library/permutations",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/permutations",
+      "elapsed_seconds": 35.112,
+      "user_seconds": 0.014,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/planar_graph",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/planar_graph",
+      "elapsed_seconds": 1111.22,
+      "user_seconds": 0.012,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Library/primitive",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/primitive",
+      "elapsed_seconds": 49.459,
+      "user_seconds": 0.015,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/products",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/products",
+      "elapsed_seconds": 30.17,
+      "user_seconds": 0.012,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/prog",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/prog",
+      "elapsed_seconds": 29.581,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/prover9",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/prover9",
+      "elapsed_seconds": 44.341,
+      "user_seconds": 0.011,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/pseudoprime",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/pseudoprime",
+      "elapsed_seconds": 56.619,
+      "user_seconds": 0.01,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/puiseux",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/puiseux",
+      "elapsed_seconds": 249.095,
+      "user_seconds": 0.015,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/q",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/q",
+      "elapsed_seconds": 28.952,
+      "user_seconds": 0.015,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/rectypes",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/rectypes",
+      "elapsed_seconds": 778.321,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Library/ring_det",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/ring_det",
+      "elapsed_seconds": 193.529,
+      "user_seconds": 0.009,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "Library/ring_groups",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/ring_groups",
+      "elapsed_seconds": 220.328,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Library/ringtheory",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/ringtheory",
+      "elapsed_seconds": 171.939,
+      "user_seconds": 0.01,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/safetyliveness",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/safetyliveness",
+      "elapsed_seconds": 29.014,
+      "user_seconds": 0.011,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/sarkovskii",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/sarkovskii",
+      "elapsed_seconds": 911.95,
+      "user_seconds": 0.015,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/schnirelmann",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/schnirelmann",
+      "elapsed_seconds": 75.91499999999999,
+      "user_seconds": 0.01,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/solovay",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/solovay",
+      "elapsed_seconds": 220.422,
+      "user_seconds": 0.01,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/sos",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/sos",
+      "elapsed_seconds": 29.37,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/ste",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/ste",
+      "elapsed_seconds": 29.193,
+      "user_seconds": 0.01,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/sylvester_gallai",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/sylvester_gallai",
+      "elapsed_seconds": 394.938,
+      "user_seconds": 0.015,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/symmetric_group",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/symmetric_group",
+      "elapsed_seconds": 116.648,
+      "user_seconds": 0.014,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Autoformalization/three_squares",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Autoformalization/three_squares",
+      "elapsed_seconds": 889.754,
+      "user_seconds": 0.014,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/vitali",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/vitali",
+      "elapsed_seconds": 887.237,
+      "user_seconds": 0.014,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/wo",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/wo",
+      "elapsed_seconds": 40.271,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Library/words",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/words",
+      "elapsed_seconds": 46.801,
+      "user_seconds": 0.014,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Library/word_automata",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/word_automata",
+      "elapsed_seconds": 48.646,
+      "user_seconds": 0.011,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Examples/zolotarev",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Examples/zolotarev",
+      "elapsed_seconds": 57.785,
+      "user_seconds": 0.011,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Library/analysis-transc",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/analysis-transc",
+      "elapsed_seconds": 44.654,
+      "user_seconds": 0.013,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Library/prime-pratt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/prime-pratt",
+      "elapsed_seconds": 37.939,
+      "user_seconds": 0.014,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/prime-pocklington",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/prime-pocklington",
+      "elapsed_seconds": 38.67,
+      "user_seconds": 0.014,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Library/rstc-reduct",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Library/rstc-reduct",
+      "elapsed_seconds": 30.855,
+      "user_seconds": 0.01,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Arithmetic/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Arithmetic/make",
+      "elapsed_seconds": 54.925,
+      "user_seconds": 0.011,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Boyer_Moore/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Boyer_Moore/make",
+      "elapsed_seconds": 29.948,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Cadical/make-test",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Cadical/make-test",
+      "elapsed_seconds": 35.015,
+      "user_seconds": 0.01,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Complex/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Complex/make",
+      "elapsed_seconds": 63.239,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Divstep/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Divstep/make",
+      "elapsed_seconds": 293.298,
+      "user_seconds": 0.011,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "EC/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/EC/make",
+      "elapsed_seconds": 7857.054,
+      "user_seconds": 0.013,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "GL/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/GL/make",
+      "elapsed_seconds": 73.03999999999999,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Geometric_Algebra/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Geometric_Algebra/make",
+      "elapsed_seconds": 717.56,
+      "user_seconds": 0.012,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "IEEE/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/IEEE/make",
+      "elapsed_seconds": 46.626,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "IsabelleLight/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/IsabelleLight/make",
+      "elapsed_seconds": 29.237,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Jordan/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Jordan/make",
+      "elapsed_seconds": 144.629,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Logic/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Logic/make",
+      "elapsed_seconds": 87.95400000000001,
+      "user_seconds": 0.014,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Mizarlight/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Mizarlight/make",
+      "elapsed_seconds": 31.817,
+      "user_seconds": 0.02,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "miz3/make-test",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/miz3/make-test",
+      "elapsed_seconds": 52.555,
+      "user_seconds": 0.014,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Minisat/make-test",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Minisat/make-test",
+      "elapsed_seconds": null,
+      "user_seconds": null,
+      "system_seconds": null,
+      "status": "skip"
+    },
+    {
+      "name": "Model/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Model/make",
+      "elapsed_seconds": 70.92,
+      "user_seconds": 0.01,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/make",
+      "elapsed_seconds": 842.758,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/make_complex",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/make_complex",
+      "elapsed_seconds": 996.642,
+      "user_seconds": 0.015,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Ntrie/ntrie",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Ntrie/ntrie",
+      "elapsed_seconds": 30.065,
+      "user_seconds": 0.011,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Permutation/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Permutation/make",
+      "elapsed_seconds": 29.761,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Probability/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Probability/make",
+      "elapsed_seconds": 1041.453,
+      "user_seconds": 0.012,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "QBF/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/QBF/make",
+      "elapsed_seconds": 29.615,
+      "user_seconds": 0.012,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "Quaternions/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Quaternions/make",
+      "elapsed_seconds": 686.3389999999999,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "RichterHilbertAxiomGeometry/miz3/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/RichterHilbertAxiomGeometry/miz3/make",
+      "elapsed_seconds": 88.923,
+      "user_seconds": 0.014,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "RichterHilbertAxiomGeometry/HilbertAxiom_read",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/RichterHilbertAxiomGeometry/HilbertAxiom_read",
+      "elapsed_seconds": 73.625,
+      "user_seconds": 0.011,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Rqe/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Rqe/make",
+      "elapsed_seconds": 85.444,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Unity/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Unity/make",
+      "elapsed_seconds": 33.547,
+      "user_seconds": 0.011,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "WZ/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/WZ/make",
+      "elapsed_seconds": 1161.083,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/cross",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/cross",
+      "elapsed_seconds": 355.888,
+      "user_seconds": 0.015,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/cvectors",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/cvectors",
+      "elapsed_seconds": 402.069,
+      "user_seconds": 0.014,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/flyspeck",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/flyspeck",
+      "elapsed_seconds": 910.571,
+      "user_seconds": 0.013,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/gamma",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/gamma",
+      "elapsed_seconds": 996.183,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/geom",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/geom",
+      "elapsed_seconds": 894.62,
+      "user_seconds": 0.015,
+      "system_seconds": 0.006,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/homology",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/homology",
+      "elapsed_seconds": 328.998,
+      "user_seconds": 0.013,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/lpspaces",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/lpspaces",
+      "elapsed_seconds": 889.505,
+      "user_seconds": 0.014,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/msum",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/msum",
+      "elapsed_seconds": 105.71000000000001,
+      "user_seconds": 0.011,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/paracompact",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/paracompact",
+      "elapsed_seconds": 311.549,
+      "user_seconds": 0.01,
+      "system_seconds": 0.014,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/specialtopologies",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/specialtopologies",
+      "elapsed_seconds": 233.777,
+      "user_seconds": 0.01,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "Multivariate/tarski",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Multivariate/tarski",
+      "elapsed_seconds": 396.35,
+      "user_seconds": 0.011,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "RichterHilbertAxiomGeometry/Topology",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/RichterHilbertAxiomGeometry/Topology",
+      "elapsed_seconds": 135.77,
+      "user_seconds": 0.012,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "RichterHilbertAxiomGeometry/TarskiAxiomGeometry_read",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/RichterHilbertAxiomGeometry/TarskiAxiomGeometry_read",
+      "elapsed_seconds": 31.17,
+      "user_seconds": 0.01,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "Functionspaces/make",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Functionspaces/make",
+      "elapsed_seconds": 918.481,
+      "user_seconds": 0.015,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "Formal_ineqs/make-ineqs",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/Formal_ineqs/make-ineqs",
+      "elapsed_seconds": 990.289,
+      "user_seconds": 0.017,
+      "system_seconds": 0.005,
+      "status": "pass"
+    },
+    {
+      "name": "100/arithmetic_geometric_mean",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/arithmetic_geometric_mean",
+      "elapsed_seconds": 40.624,
+      "user_seconds": 0.01,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/arithmetic",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/arithmetic",
+      "elapsed_seconds": 28.93,
+      "user_seconds": 0.009,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/ballot",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/ballot",
+      "elapsed_seconds": 30.789,
+      "user_seconds": 0.012,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/bernoulli",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/bernoulli",
+      "elapsed_seconds": 45.231,
+      "user_seconds": 0.012,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/bertrand-primerecip",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/bertrand-primerecip",
+      "elapsed_seconds": 106.923,
+      "user_seconds": 0.016,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "100/birthday",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/birthday",
+      "elapsed_seconds": 29.641,
+      "user_seconds": 0.009,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/buffon",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/buffon",
+      "elapsed_seconds": 927.636,
+      "user_seconds": 0.013,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "100/cantor",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/cantor",
+      "elapsed_seconds": 29.006,
+      "user_seconds": 0.012,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/cayley_hamilton",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/cayley_hamilton",
+      "elapsed_seconds": 398.996,
+      "user_seconds": 0.01,
+      "system_seconds": 0.014,
+      "status": "pass"
+    },
+    {
+      "name": "100/ceva",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/ceva",
+      "elapsed_seconds": 435.677,
+      "user_seconds": 0.012,
+      "system_seconds": 0.014,
+      "status": "pass"
+    },
+    {
+      "name": "100/circle",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/circle",
+      "elapsed_seconds": 889.484,
+      "user_seconds": 0.013,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/chords",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/chords",
+      "elapsed_seconds": 421.859,
+      "user_seconds": 0.015,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "100/combinations",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/combinations",
+      "elapsed_seconds": 29.984,
+      "user_seconds": 0.014,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/constructible",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/constructible",
+      "elapsed_seconds": 862.721,
+      "user_seconds": 0.013,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/cosine",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/cosine",
+      "elapsed_seconds": 857.256,
+      "user_seconds": 0.012,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/cubedissection",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/cubedissection",
+      "elapsed_seconds": 974.671,
+      "user_seconds": 0.01,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/cubic",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/cubic",
+      "elapsed_seconds": 43.172,
+      "user_seconds": 0.011,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/derangements",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/derangements",
+      "elapsed_seconds": 49.64,
+      "user_seconds": 0.013,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/desargues",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/desargues",
+      "elapsed_seconds": 372.091,
+      "user_seconds": 0.015,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/descartes",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/descartes",
+      "elapsed_seconds": 916.288,
+      "user_seconds": 0.014,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/dirichlet",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/dirichlet",
+      "elapsed_seconds": 871.134,
+      "user_seconds": 0.013,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/div3",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/div3",
+      "elapsed_seconds": 38.726,
+      "user_seconds": 0.016,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/divharmonic",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/divharmonic",
+      "elapsed_seconds": 39.378,
+      "user_seconds": 0.015,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "100/e_is_transcendental",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/e_is_transcendental",
+      "elapsed_seconds": 68.211,
+      "user_seconds": 0.013,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/euler",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/euler",
+      "elapsed_seconds": 29.815,
+      "user_seconds": 0.016,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/feuerbach",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/feuerbach",
+      "elapsed_seconds": 407.085,
+      "user_seconds": 0.013,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/fourier",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/fourier",
+      "elapsed_seconds": 896.07,
+      "user_seconds": 0.012,
+      "system_seconds": 0.014,
+      "status": "pass"
+    },
+    {
+      "name": "100/four_squares",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/four_squares",
+      "elapsed_seconds": 41.861,
+      "user_seconds": 0.015,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "100/friendship",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/friendship",
+      "elapsed_seconds": 43.227,
+      "user_seconds": 0.012,
+      "system_seconds": 0.014,
+      "status": "pass"
+    },
+    {
+      "name": "100/fta",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/fta",
+      "elapsed_seconds": 34.791,
+      "user_seconds": 0.011,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/gcd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/gcd",
+      "elapsed_seconds": 34.515,
+      "user_seconds": 0.014,
+      "system_seconds": 0.016,
+      "status": "pass"
+    },
+    {
+      "name": "100/green",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/green",
+      "elapsed_seconds": 998.273,
+      "user_seconds": 0.013,
+      "system_seconds": 0.014,
+      "status": "pass"
+    },
+    {
+      "name": "100/heron",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/heron",
+      "elapsed_seconds": 834.149,
+      "user_seconds": 0.016,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "100/isoperimetric",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/isoperimetric",
+      "elapsed_seconds": 1004.809,
+      "user_seconds": 0.012,
+      "system_seconds": 0.019,
+      "status": "pass"
+    },
+    {
+      "name": "100/inclusion_exclusion",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/inclusion_exclusion",
+      "elapsed_seconds": 29.907,
+      "user_seconds": 0.011,
+      "system_seconds": 0.021,
+      "status": "pass"
+    },
+    {
+      "name": "100/independence",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/independence",
+      "elapsed_seconds": 999.801,
+      "user_seconds": 0.013,
+      "system_seconds": 0.018,
+      "status": "pass"
+    },
+    {
+      "name": "100/isosceles",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/isosceles",
+      "elapsed_seconds": 895.365,
+      "user_seconds": 0.015,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/konigsberg",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/konigsberg",
+      "elapsed_seconds": 30.903,
+      "user_seconds": 0.012,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/lagrange",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/lagrange",
+      "elapsed_seconds": 36.634,
+      "user_seconds": 0.014,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/leibniz",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/leibniz",
+      "elapsed_seconds": 39.895,
+      "user_seconds": 0.013,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/lhopital",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/lhopital",
+      "elapsed_seconds": 34.196,
+      "user_seconds": 0.017,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/liouville",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/liouville",
+      "elapsed_seconds": 36.179,
+      "user_seconds": 0.015,
+      "system_seconds": 0.014,
+      "status": "pass"
+    },
+    {
+      "name": "100/minkowski",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/minkowski",
+      "elapsed_seconds": 834.188,
+      "user_seconds": 0.013,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/morley",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/morley",
+      "elapsed_seconds": 894.595,
+      "user_seconds": 0.013,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/pascal",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/pascal",
+      "elapsed_seconds": 650.224,
+      "user_seconds": 0.012,
+      "system_seconds": 0.015,
+      "status": "pass"
+    },
+    {
+      "name": "100/perfect",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/perfect",
+      "elapsed_seconds": 35.52,
+      "user_seconds": 0.015,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "100/pick",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/pick",
+      "elapsed_seconds": 950.995,
+      "user_seconds": 0.015,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/piseries",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/piseries",
+      "elapsed_seconds": 46.085,
+      "user_seconds": 0.013,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/platonic",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/platonic",
+      "elapsed_seconds": 1084.982,
+      "user_seconds": 0.012,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/pnt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/pnt",
+      "elapsed_seconds": 1001.63,
+      "user_seconds": 0.014,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/polyhedron",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/polyhedron",
+      "elapsed_seconds": 628.688,
+      "user_seconds": 0.013,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/ptolemy",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/ptolemy",
+      "elapsed_seconds": 858.246,
+      "user_seconds": 0.013,
+      "system_seconds": 0.013,
+      "status": "pass"
+    },
+    {
+      "name": "100/pythagoras",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/pythagoras",
+      "elapsed_seconds": 104.669,
+      "user_seconds": 0.013,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/quartic",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/quartic",
+      "elapsed_seconds": 121.086,
+      "user_seconds": 0.017,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "100/ramsey",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/ramsey",
+      "elapsed_seconds": 29.481,
+      "user_seconds": 0.016,
+      "system_seconds": 0.009,
+      "status": "pass"
+    },
+    {
+      "name": "100/ratcountable",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/ratcountable",
+      "elapsed_seconds": 56.474,
+      "user_seconds": 0.014,
+      "system_seconds": 0.012,
+      "status": "pass"
+    },
+    {
+      "name": "100/realsuncountable",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/realsuncountable",
+      "elapsed_seconds": 60.879,
+      "user_seconds": 0.013,
+      "system_seconds": 0.007,
+      "status": "pass"
+    },
+    {
+      "name": "100/reciprocity",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/reciprocity",
+      "elapsed_seconds": 41.79,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "100/stirling",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/stirling",
+      "elapsed_seconds": 40.014,
+      "user_seconds": 0.015,
+      "system_seconds": 0.004,
+      "status": "pass"
+    },
+    {
+      "name": "100/subsequence",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/subsequence",
+      "elapsed_seconds": 29.124,
+      "user_seconds": 0.014,
+      "system_seconds": 0.005,
+      "status": "pass"
+    },
+    {
+      "name": "100/thales",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/thales",
+      "elapsed_seconds": 394.98199999999997,
+      "user_seconds": 0.009,
+      "system_seconds": 0.011,
+      "status": "pass"
+    },
+    {
+      "name": "100/transcendence",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/transcendence",
+      "elapsed_seconds": 1383.545,
+      "user_seconds": 0.01,
+      "system_seconds": 0.01,
+      "status": "pass"
+    },
+    {
+      "name": "100/triangular",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/triangular",
+      "elapsed_seconds": 76.765,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "100/two_squares",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/two_squares",
+      "elapsed_seconds": 35.719,
+      "user_seconds": 0.012,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "100/unsolvability",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/unsolvability",
+      "elapsed_seconds": 1187.768,
+      "user_seconds": 0.012,
+      "system_seconds": 0.008,
+      "status": "pass"
+    },
+    {
+      "name": "100/wilson",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/holtest-logs/100/wilson",
+      "elapsed_seconds": 39.278,
+      "user_seconds": 0.011,
+      "system_seconds": 0.008,
+      "status": "pass"
+    }
+  ]
+}

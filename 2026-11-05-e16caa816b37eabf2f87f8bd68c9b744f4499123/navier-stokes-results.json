@@ -1,0 +1,68 @@
+{
+  "navier_stokes_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/Navier_Stokes",
+  "navier_stokes_commit": "b7720d6cb5562ee143c3d5e3b59f8caae73d0e34",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/hol-light",
+  "hol_light_commit": "e16caa816b37eabf2f87f8bd68c9b744f4499123",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/logs/navier-stokes-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 2,
+  "counts": {
+    "pass": 0,
+    "fail": 2,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 3360.0,
+  "start_unixtime": 1793866081.0,
+  "end_unixtime": 1793869441.0,
+  "tests": [
+    {
+      "name": "Navier_Stokes/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/logs/navier-stokes-run.log",
+      "status": "fail",
+      "elapsed_seconds": 3317.0,
+      "start_unixtime": 1793866109.0,
+      "end_unixtime": 1793869426.0,
+      "theorems": [],
+      "axioms_count": null,
+      "problems": [
+        "missing NAVIER_STOKES_CHECK_DONE",
+        "failure marker in log",
+        "NS_BREAKDOWN_PERIODIC not reported",
+        "NS_BREAKDOWN_R3 not reported",
+        "NS_THEOREM_1_1_FULL not reported",
+        "NS_THEOREM_1_1 not reported",
+        "NS_THEOREM_3_1_HEAT not reported",
+        "NS_THEOREM_3_1 not reported",
+        "NS_HEAT_SWIRL_PDE not reported",
+        "AXIOMS_COUNT not reported"
+      ]
+    },
+    {
+      "name": "Navier_Stokes/audit/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-05-02.40.1793846400/logs/navier-stokes-run.log",
+      "status": "fail",
+      "elapsed_seconds": 14.0,
+      "start_unixtime": 1793869426.0,
+      "end_unixtime": 1793869440.0,
+      "theorems": [],
+      "axioms_count": null,
+      "problems": [
+        "missing NAVIER_STOKES_AUDIT_CHECK_DONE",
+        "failure marker in log",
+        "CLAY_BLIND_C_PROVED not reported",
+        "CLAY_BLIND_D_PROVED not reported",
+        "NS_CLAY_C_EQUIV_BLIND not reported",
+        "NS_CLAY_D_EQUIV_BLIND not reported",
+        "sanity theorem count mismatch",
+        "AXIOMS_COUNT not reported"
+      ]
+    }
+  ]
+}
