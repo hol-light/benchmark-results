@@ -1,0 +1,47 @@
+{
+  "id": "2026-11-06-7421c2e3b7becc0f4a324add1b15410c618d92c4",
+  "date": "2026-11-06",
+  "hol_light_label": "HOL Light",
+  "hol_light_commit": "7421c2e3b7becc0f4a324add1b15410c618d92c4",
+  "ocaml_version": "5.5.2",
+  "benchmark_scripts_commit": "396ccc84eb021763ebe2d86fb1c90836c9714fcf",
+  "benchmark_scripts_dirty": true,
+  "repositories": {
+    "HOL Light": "https://github.com/jrh13/hol-light",
+    "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
+    "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
+    "Navier-Stokes": "https://github.com/hol-light-family/Navier_Stokes",
+    "catalan-is-irrational": "https://github.com/hol-light-family/catalan-is-irrational",
+    "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts"
+  },
+  "reports": [
+    {
+      "label": "HOL Light",
+      "file": "hol-light-results.json"
+    },
+    {
+      "label": "s2n-bignum ARM",
+      "file": "s2n-bignum-arm-results.json"
+    },
+    {
+      "label": "s2n-bignum x86",
+      "file": "s2n-bignum-x86-results.json"
+    },
+    {
+      "label": "Flyspeck",
+      "file": "flyspeck-results.json"
+    },
+    {
+      "label": "Navier-Stokes",
+      "file": "navier-stokes-results.json"
+    },
+    {
+      "label": "Catalan's constant irrational",
+      "file": "catalan-is-irrational-results.json"
+    },
+    {
+      "label": "Four Colour Theorem",
+      "file": "4ct-results.json"
+    }
+  ]
+}
