@@ -108,6 +108,28 @@ function holLightCell(bundle) {
   return cell;
 }
 
+// The registry source, other than HOL Light, whose commit this report's runs
+// record (for example s2n-bignum), or null when the report only depends on
+// HOL Light itself.
+function benchmarkSource(history) {
+  return BENCHMARK_REGISTRY.sources.find((source) => source.name !== "HOL Light"
+    && history.some((entry) => entry.data[source.commitField])) || null;
+}
+
+function sourceCommitCell(bundle, data, source) {
+  const cell = document.createElement("td");
+  const hash = data[source.commitField];
+  if (!hash) {
+    cell.textContent = "—";
+    return cell;
+  }
+  const repository = bundle.manifest.repositories?.[source.name] || source.repository;
+  cell.append(repository
+    ? externalLink("commit-link", shortHash(hash), `${repository}/commit/${hash}`, hash)
+    : makeElement("span", "commit-link", shortHash(hash)));
+  return cell;
+}
+
 function runCell(bundle) {
   const cell = makeElement("td", "history-run");
   const link = makeElement("a", "", bundle.manifest.date || bundle.index.date);
@@ -160,12 +182,6 @@ function changeCell(entry, previous) {
   link.href = `compare.html?${params}`;
   link.title = title;
   cell.append(link);
-  if (change.counted) {
-    const detail = change.withinNoise
-      ? `${plural(change.counted)} · ${change.withinNoise} within ${TIME_NOISE_SECONDS} s`
-      : plural(change.counted);
-    cell.append(makeElement("span", "history-detail", detail));
-  }
   return cell;
 }
 
@@ -175,8 +191,11 @@ function historyTable(label, history) {
   const caption = makeElement("caption", "sr-only", `Latest runs of ${label}`);
   const head = document.createElement("thead");
   const headRow = document.createElement("tr");
+  const source = benchmarkSource(history.slice(0, HISTORY_LENGTH));
   for (const [title, numeric] of [
-    ["Run", false], ["HOL Light", false], ["OCaml", false], ["Result", false],
+    ["Run", false], ["HOL Light", false],
+    ...(source ? [[source.name, false]] : []),
+    ["OCaml", false], ["Result", false],
     ["Σ test time", true], ["Change", true],
   ]) {
     const th = makeElement("th", numeric ? "numeric" : "", title);
@@ -190,6 +209,7 @@ function historyTable(label, history) {
     row.append(
       runCell(entry.bundle),
       holLightCell(entry.bundle),
+      ...(source ? [sourceCommitCell(entry.bundle, entry.data, source)] : []),
       makeElement("td", "", entry.bundle.manifest.ocaml_version || "—"),
       resultCell(entry.data),
       makeElement("td", "numeric", formatDuration(entry.data.total_elapsed_seconds)),

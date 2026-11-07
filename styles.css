@@ -405,7 +405,6 @@ footer {
 .history-run { white-space: nowrap; }
 .history-result .status-pill + .status-pill { margin-left: 4px; }
 .history-change a { font-variant-numeric: tabular-nums; }
-.history-detail { display: block; color: var(--muted); font-size: 11px; }
 
 @media (max-width: 800px) {
   .header-inner { align-items: flex-start; padding: 12px 0; }
