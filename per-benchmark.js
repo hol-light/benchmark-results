@@ -3,7 +3,7 @@
 // Per-benchmark view: the latest official HOL Light runs of every report,
 // newest first. Fork runs ("HOL Light (<owner>)") are left out.
 
-const HISTORY_LENGTH = 5;
+const HISTORY_LENGTH = 8;
 // Load at most this many of the newest runs. A report that appears in fewer
 // runs than HISTORY_LENGTH within them shows what is available.
 const SCAN_LIMIT = 20;

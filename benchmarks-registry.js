@@ -46,6 +46,11 @@ const BENCHMARK_REGISTRY = {
       commitField: "catalan_is_irrational_commit",
       repository: "https://github.com/hol-light-family/catalan-is-irrational",
     },
+    {
+      name: "Poincare",
+      commitField: "poincare_commit",
+      repository: "https://github.com/hol-light-family/Poincare",
+    },
   ],
 
   // The scripts that produced a run; its commit comes from the manifest.
@@ -114,6 +119,16 @@ const BENCHMARK_REGISTRY = {
         "The benchmark loads <code>make.ml</code>, which loads HOL Light's <code>100/pnt.ml</code> and <code>Library/ring_det.ml</code> and then the development. Most of the development's own time goes to the exact rational arithmetic of its real-place certificate.",
       ],
       passCriteria: "The session must reach its completion marker; <code>CATALAN_CONSTANT_IRRATIONAL_HEADLINE</code>, <code>CATALAN_CONSTANT_IRRATIONAL</code>, and <code>CATALAN_IRRATIONAL</code> must have no hypotheses and exactly the expected conclusions; and the session must use only HOL Light's three standard axioms. The headline statement is written in the benchmark script using only HOL Light's own notions, so it is checked without trusting the development's definitions.",
+    },
+    {
+      id: "poincare",
+      title: "Poincare conjecture",
+      reports: ["Poincare conjecture"],
+      description: [
+        '<a href="https://github.com/hol-light-family/Poincare">Poincare</a> proves the Poincare conjecture: every closed, simply connected 3-manifold is homeomorphic to the 3-sphere, and in the smooth form diffeomorphic to it. It follows Perelman\'s proof as presented in Morgan and Tian, <em>Ricci Flow and the Poincare Conjecture</em> (2007), with Moise\'s theorem that every topological 3-manifold has a smooth structure.',
+        "The first stage loads <code>check.ml</code>, which loads HOL Light's <code>Multivariate/cauchy.ml</code>, <code>Multivariate/lpspaces.ml</code>, and <code>100/green.ml</code>, then the development's 1,090 files, and prints the headline theorems and the axioms. The second loads <code>audit/check.ml</code>, which checks an independent formalization of both forms of the conjecture, its equivalence with the development's statements, and 30 statement sanity theorems. It is the longest single-core benchmark: upstream reports about 7 hours of CPU time and a peak of about 17.5 GiB of memory.",
+      ],
+      passCriteria: "Each stage must reach its completion marker. For <code>check.ml</code>, <code>POINCARE_TOP</code>, <code>POINCARE_SMOOTH</code>, and <code>POINCARE_EMBEDDED</code> must have no hypotheses and conclude exactly their statement constant applied to <code>(:A)</code> for a type variable <code>A</code>; <code>MOI_SST_HEADLINE</code> must have no hypotheses and conclude <code>!u:A-&gt;bool. MOISE_SMOOTHING_STATEMENT u</code>. For <code>audit/check.ml</code>, the two equivalence theorems and the two proved independent statements must have no hypotheses and the expected conclusions, and every sanity theorem no hypotheses. The session must use only HOL Light's three standard axioms.",
     },
   ],
 };

@@ -1,0 +1,88 @@
+{
+  "poincare_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-11-14.04.1794405882/Poincare",
+  "poincare_commit": "808210eda56263437131a2fdd78ed296fc21ae63",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-11-14.04.1794405882/hol-light",
+  "hol_light_commit": "e5236a5839b4d08dc2536b325cea0af855e6c379",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-11-11-14.04.1794405882/logs/poincare-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 2,
+  "counts": {
+    "pass": 2,
+    "fail": 0,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 11847.0,
+  "start_unixtime": 1794486453.0,
+  "end_unixtime": 1794498300.0,
+  "tests": [
+    {
+      "name": "Poincare/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-11-14.04.1794405882/logs/poincare-run.log",
+      "status": "pass",
+      "elapsed_seconds": 11804.0,
+      "start_unixtime": 1794486481.0,
+      "end_unixtime": 1794498285.0,
+      "theorems": [
+        "POINCARE_TOP",
+        "POINCARE_SMOOTH",
+        "POINCARE_EMBEDDED",
+        "MOI_SST_HEADLINE"
+      ],
+      "axioms_count": 3,
+      "problems": []
+    },
+    {
+      "name": "Poincare/audit/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-11-14.04.1794405882/logs/poincare-run.log",
+      "status": "pass",
+      "elapsed_seconds": 14.0,
+      "start_unixtime": 1794498285.0,
+      "end_unixtime": 1794498299.0,
+      "theorems": [
+        "POINCARE_TOP_BLIND_EQUIV",
+        "POINCARE_SMOOTH_BLIND_EQUIV",
+        "BLIND_POINCARE_TOP_PROVED",
+        "BLIND_POINCARE_SMOOTH_PROVED",
+        "SIMPLY_CONNECTED_SPACE_EUCLIDEAN",
+        "SIMPLY_CONNECTED_SPACE_SPHERE_3",
+        "NOT_SIMPLY_CONNECTED_SPACE_CIRCLE",
+        "LOCALLY_EUCLIDEAN_SPACE_EUCLIDEAN",
+        "LOCALLY_EUCLIDEAN_SPACE_SPHERE_3",
+        "POINCARE_HYPOTHESES_SPHERE_3",
+        "POINCARE_STATEMENT_IMP_EMBEDDED",
+        "SPHERE3_ATLAS",
+        "SPHERE3_INCLUSION_IMMERSION",
+        "POINCARE_SMOOTH_HYPOTHESES_SPHERE_3",
+        "POINCARE_SMOOTH_CONCLUSION_SPHERE_3",
+        "SPHERE2_ATLAS",
+        "SPHERE2_INCLUSION_IMMERSION",
+        "OPEN_SET_ATLAS",
+        "SMOOTH_MANIFOLD_ATLAS_IMP_LOCALLY_EUCLIDEAN",
+        "SIMPLY_CONNECTED_SPACE_IMP_PATH_CONNECTED_SPACE",
+        "LOCALLY_EUCLIDEAN_SPACE_HOMEOMORPHIC",
+        "SIMPLY_CONNECTED_SPACE_HOMEOMORPHIC",
+        "POINCARE_CONVERSE",
+        "POINCARE_STATEMENT_NUM",
+        "POINCARE_SMOOTH_STATEMENT_NUM",
+        "POINCARE_EMBEDDED_STATEMENT_3",
+        "POINCARE_NEEDS_NONEMPTY",
+        "POINCARE_NEEDS_NO_BOUNDARY",
+        "NOT_LOCALLY_EUCLIDEAN_SPACE_SPHERE_2",
+        "LOCALLY_EUCLIDEAN_SPACE_DIMENSION_UNIQUE",
+        "NOT_SIMPLY_CONNECTED_SPACE_TWO_SPHERES",
+        "SMOOTH_MANIFOLD_ATLAS_OPEN_OVERLAP",
+        "SMOOTH_IMMERSION_DERIVATIVE_WORKS",
+        "NOT_SMOOTH_IMMERSION_CONST"
+      ],
+      "axioms_count": 3,
+      "problems": []
+    }
+  ]
+}

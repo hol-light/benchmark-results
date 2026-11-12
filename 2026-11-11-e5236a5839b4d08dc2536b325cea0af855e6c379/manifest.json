@@ -12,7 +12,8 @@
     "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
     "Navier-Stokes": "https://github.com/hol-light-family/Navier_Stokes",
     "catalan-is-irrational": "https://github.com/hol-light-family/catalan-is-irrational",
-    "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts"
+    "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts",
+    "Poincare": "https://github.com/hol-light-family/Poincare"
   },
   "reports": [
     {
@@ -42,6 +43,13 @@
     {
       "label": "Four Colour Theorem",
       "file": "4ct-results.json"
+    },
+    {
+      "label": "Poincare conjecture",
+      "file": "poincare-results.json"
     }
+  ],
+  "notes": [
+    "The Poincare conjecture report was added after the run, from a separate session in the same workspace (benchmark-scripts with the new poincare/ directory, not yet committed)."
   ]
 }

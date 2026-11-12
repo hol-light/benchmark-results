@@ -32,6 +32,7 @@ as separate reports. A current run looks like this:
 ├── flyspeck-results.json
 ├── navier-stokes-results.json
 ├── catalan-is-irrational-results.json
+├── poincare-results.json
 └── 4ct-results.json
 ```
 
@@ -66,7 +67,7 @@ they use the raw GitHub URLs above.
 
 | Page | Shows |
 | --- | --- |
-| `index.html` (**Per benchmark**) | For every benchmark report, its latest five official HOL Light runs, newest first: the commit, OCaml version, pass/fail counts, total test time, and the speed change against the previous official run with that report. Fork runs are left out. |
+| `index.html` (**Per benchmark**) | For every benchmark report, its latest eight official HOL Light runs, newest first: the commit, OCaml version, pass/fail counts, total test time, and the speed change against the previous official run with that report. Fork runs are left out. |
 | `runs.html` (**Summary per run**) | All results of one run. It opens the newest official HOL Light run, or the run named by `?run=<run id>`. The run selector lists official results first and groups fork-specific runs below an owner separator. |
 | `compare.html` (**Compare runs**) | Test-by-test timing of two runs (below). |
 | `benchmarks.html` (**Explain benchmarks**) | What each benchmark measures and what a pass requires. |
