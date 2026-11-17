@@ -1,0 +1,41 @@
+{
+  "catalan_is_irrational_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-16-23.10.1794870622/catalan-is-irrational",
+  "catalan_is_irrational_commit": "62ffc02478d72cacc262c57ec387111ccfef316a",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-16-23.10.1794870622/hol-light",
+  "hol_light_commit": "1d2fc1858c7cad9deb90f57dbf85e7ed2e784348",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-11-16-23.10.1794870622/logs/catalan-is-irrational-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872933376,
+    "memory_total_gib": 377.07
+  },
+  "total": 1,
+  "counts": {
+    "pass": 1,
+    "fail": 0,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 3179.0,
+  "start_unixtime": 1794888998.0,
+  "end_unixtime": 1794892177.0,
+  "tests": [
+    {
+      "name": "catalan-is-irrational/make.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-16-23.10.1794870622/logs/catalan-is-irrational-run.log",
+      "status": "pass",
+      "elapsed_seconds": 3153.0,
+      "start_unixtime": 1794889024.0,
+      "end_unixtime": 1794892177.0,
+      "theorems": [
+        "CATALAN_CONSTANT_IRRATIONAL_HEADLINE",
+        "CATALAN_CONSTANT_IRRATIONAL",
+        "CATALAN_IRRATIONAL"
+      ],
+      "axioms_count": 3,
+      "problems": []
+    }
+  ]
+}

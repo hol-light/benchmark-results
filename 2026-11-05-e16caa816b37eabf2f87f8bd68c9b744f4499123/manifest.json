@@ -4,6 +4,7 @@
   "hol_light_label": "HOL Light (jargh)",
   "hol_light_commit": "e16caa816b37eabf2f87f8bd68c9b744f4499123",
   "ocaml_version": "5.5.2",
+  "hol_light_version": "3.1.0+",
   "benchmark_scripts_commit": "396ccc84eb021763ebe2d86fb1c90836c9714fcf",
   "benchmark_scripts_dirty": true,
   "repositories": {

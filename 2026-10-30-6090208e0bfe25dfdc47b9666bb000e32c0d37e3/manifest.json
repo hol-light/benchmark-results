@@ -4,6 +4,7 @@
   "hol_light_label": "HOL Light",
   "hol_light_commit": "6090208e0bfe25dfdc47b9666bb000e32c0d37e3",
   "ocaml_version": "5.5.2",
+  "hol_light_version": "3.1.0+",
   "benchmark_scripts_commit": "0521b119c38a765c44e7ce4e4ab7e86046136c5f",
   "benchmark_scripts_dirty": true,
   "repositories": {

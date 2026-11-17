@@ -108,6 +108,10 @@ function holLightCell(bundle) {
   return cell;
 }
 
+function holLightVersionCell(bundle) {
+  return makeElement("td", "", bundle.manifest.hol_light_version || "—");
+}
+
 // The registry source, other than HOL Light, whose commit this report's runs
 // record (for example s2n-bignum), or null when the report only depends on
 // HOL Light itself.
@@ -193,7 +197,7 @@ function historyTable(label, history) {
   const headRow = document.createElement("tr");
   const source = benchmarkSource(history.slice(0, HISTORY_LENGTH));
   for (const [title, numeric] of [
-    ["Run", false], ["HOL Light", false],
+    ["Run", false], ["HOL Light", false], ["HOL Light version", false],
     ...(source ? [[source.name, false]] : []),
     ["OCaml", false], ["Result", false],
     ["Σ test time", true], ["Change", true],
@@ -209,6 +213,7 @@ function historyTable(label, history) {
     row.append(
       runCell(entry.bundle),
       holLightCell(entry.bundle),
+      holLightVersionCell(entry.bundle),
       ...(source ? [sourceCommitCell(entry.bundle, entry.data, source)] : []),
       makeElement("td", "", entry.bundle.manifest.ocaml_version || "—"),
       resultCell(entry.data),
