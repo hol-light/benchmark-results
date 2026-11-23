@@ -33,6 +33,7 @@ as separate reports. A current run looks like this:
 ├── navier-stokes-results.json
 ├── catalan-is-irrational-results.json
 ├── poincare-results.json
+├── lightcake-results.json
 └── 4ct-results.json
 ```
 

@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-23-1a0c0e6b182cd9e271946ba8d78f7942619f4acb",
+  "date": "2026-11-23",
+  "hol_light_label": "HOL Light",
+  "hol_light_commit": "1a0c0e6b182cd9e271946ba8d78f7942619f4acb",
+  "ocaml_version": "5.5.2",
+  "benchmark_scripts_commit": "ee79d2e28c97fb32c5a6f6b4acd6e49000941089",
+  "benchmark_scripts_dirty": true,
+  "repositories": {
+    "HOL Light": "https://github.com/jrh13/hol-light",
+    "s2n-bignum": "https://github.com/awslabs/s2n-bignum",
+    "Flyspeck": "https://github.com/hol-light-family/Flyspeck",
+    "Navier-Stokes": "https://github.com/hol-light-family/Navier_Stokes",
+    "catalan-is-irrational": "https://github.com/hol-light-family/catalan-is-irrational",
+    "Poincare": "https://github.com/hol-light-family/Poincare",
+    "LightCake": "https://github.com/hol-light-family/LightCake",
+    "benchmark-scripts": "https://github.com/hol-light-family/benchmark-scripts"
+  },
+  "reports": [
+    {
+      "label": "HOL Light",
+      "file": "hol-light-results.json"
+    },
+    {
+      "label": "s2n-bignum ARM",
+      "file": "s2n-bignum-arm-results.json"
+    },
+    {
+      "label": "s2n-bignum x86",
+      "file": "s2n-bignum-x86-results.json"
+    },
+    {
+      "label": "Flyspeck",
+      "file": "flyspeck-results.json"
+    },
+    {
+      "label": "Navier-Stokes",
+      "file": "navier-stokes-results.json"
+    },
+    {
+      "label": "Catalan's constant irrational",
+      "file": "catalan-is-irrational-results.json"
+    },
+    {
+      "label": "Poincare conjecture",
+      "file": "poincare-results.json"
+    },
+    {
+      "label": "CakeML compiler correctness (LightCake)",
+      "file": "lightcake-results.json"
+    },
+    {
+      "label": "Four Colour Theorem",
+      "file": "4ct-results.json"
+    }
+  ]
+}

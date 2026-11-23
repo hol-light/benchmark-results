@@ -51,6 +51,11 @@ const BENCHMARK_REGISTRY = {
       commitField: "poincare_commit",
       repository: "https://github.com/hol-light-family/Poincare",
     },
+    {
+      name: "LightCake",
+      commitField: "lightcake_commit",
+      repository: "https://github.com/hol-light-family/LightCake",
+    },
   ],
 
   // The scripts that produced a run; its commit comes from the manifest.
@@ -129,6 +134,16 @@ const BENCHMARK_REGISTRY = {
         "The first stage loads <code>check.ml</code>, which loads HOL Light's <code>Multivariate/cauchy.ml</code>, <code>Multivariate/lpspaces.ml</code>, and <code>100/green.ml</code>, then the development's 1,090 files, and prints the headline theorems and the axioms. The second loads <code>audit/check.ml</code>, which checks an independent formalization of both forms of the conjecture, its equivalence with the development's statements, and 30 statement sanity theorems. It is the longest single-core benchmark: upstream reports about 7 hours of CPU time and a peak of about 17.5 GiB of memory.",
       ],
       passCriteria: "Each stage must reach its completion marker. For <code>check.ml</code>, <code>POINCARE_TOP</code>, <code>POINCARE_SMOOTH</code>, and <code>POINCARE_EMBEDDED</code> must have no hypotheses and conclude exactly their statement constant applied to <code>(:A)</code> for a type variable <code>A</code>; <code>MOI_SST_HEADLINE</code> must have no hypotheses and conclude <code>!u:A-&gt;bool. MOISE_SMOOTHING_STATEMENT u</code>. For <code>audit/check.ml</code>, the two equivalence theorems and the two proved independent statements must have no hypotheses and the expected conclusions, and every sanity theorem no hypotheses. The session must use only HOL Light's three standard axioms.",
+    },
+    {
+      id: "lightcake",
+      title: "CakeML compiler correctness (LightCake)",
+      reports: ["CakeML compiler correctness (LightCake)"],
+      description: [
+        '<a href="https://github.com/hol-light-family/LightCake">LightCake</a> is a HOL Light port of the CakeML compiler correctness proof: HOL4\'s <code>compilerProofTheory.compile_correct</code> and its ag32 instance <code>ag32_configProofTheory.ag32_compile_correct</code>.',
+        "The benchmark loads <code>check.ml</code> in one HOL Light session. It loads <code>make.ml</code>, which loads HOL Light's <code>Library/words.ml</code>, <code>Library/rstc.ml</code>, and <code>Library/iter.ml</code>, then every file of the port, and then checks the headline theorems. The session is single-core.",
+      ],
+      passCriteria: "The session must print <code>CHECK_OK</code> with no <code>NOT LOADED</code> lines. <code>compilerProof_compile_correct</code> and <code>compile_correct_safe_for_space</code> must have no hypotheses and conclusions alpha-equivalent to the statements in <code>compile_correct_statement.ml</code>, and <code>ag32_compile_correct</code> likewise for <code>ag32_compile_correct_statement.ml</code>. The session must use only HOL Light's three standard axioms. The statement files are part of the port, so the benchmark trusts them.",
     },
   ],
 };
