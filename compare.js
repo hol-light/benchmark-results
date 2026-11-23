@@ -391,11 +391,16 @@ function renderBenchmarks() {
   const query = elements.search.value.trim().toLowerCase();
   const slowerOnly = elements.regressionsOnly.checked;
 
-  const comparisons = [...state.comparisons].sort((left, right) => {
-    if (left.ratio === null) return 1;
-    if (right.ratio === null) return -1;
-    return right.ratio - left.ratio;
-  });
+  // Same order as the per-benchmark page: registry order, then unregistered
+  // reports in the order they appear.
+  const registered = BENCHMARK_REGISTRY.benchmarks.flatMap((benchmark) => benchmark.reports);
+  const position = (label) => {
+    const index = registered.indexOf(label);
+    return index === -1 ? registered.length : index;
+  };
+  const comparisons = [...state.comparisons].sort(
+    (left, right) => position(left.label) - position(right.label),
+  );
 
   for (const comparison of comparisons) {
     const filteredRows = comparison.rows.filter((row) => {
