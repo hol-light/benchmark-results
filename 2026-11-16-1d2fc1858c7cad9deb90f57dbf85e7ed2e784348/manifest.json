@@ -4,6 +4,7 @@
   "hol_light_label": "HOL Light (aqjune-aws)",
   "hol_light_commit": "1d2fc1858c7cad9deb90f57dbf85e7ed2e784348",
   "ocaml_version": "5.5.2",
+  "hol_light_version": "3.2.0+",
   "benchmark_scripts_commit": "ee79d2e28c97fb32c5a6f6b4acd6e49000941089",
   "benchmark_scripts_dirty": false,
   "repositories": {
