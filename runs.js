@@ -99,7 +99,8 @@ async function loadPublishedRun(manifestPath) {
       data: await fetchJson(new URL(entry.file, baseUrl)),
     })));
     state.manifest = manifest;
-    state.reports = reports;
+    // Same order as the per-benchmark page.
+    state.reports = [...reports].sort((a, b) => reportPosition(a.label) - reportPosition(b.label));
     resetCollapsedSuites();
     render();
   } catch (error) {

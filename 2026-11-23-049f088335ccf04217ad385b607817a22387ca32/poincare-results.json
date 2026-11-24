@@ -1,0 +1,65 @@
+{
+  "poincare_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-23-21.34.1795469668/Poincare",
+  "poincare_commit": "808210eda56263437131a2fdd78ed296fc21ae63",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-23-21.34.1795469668/hol-light",
+  "hol_light_commit": "049f088335ccf04217ad385b607817a22387ca32",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-11-23-21.34.1795469668/logs/poincare-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 2,
+  "counts": {
+    "pass": 0,
+    "fail": 2,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 10130.0,
+  "start_unixtime": 1795487786.0,
+  "end_unixtime": 1795497916.0,
+  "tests": [
+    {
+      "name": "Poincare/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-23-21.34.1795469668/logs/poincare-run.log",
+      "status": "fail",
+      "elapsed_seconds": 10095.0,
+      "start_unixtime": 1795487813.0,
+      "end_unixtime": 1795497908.0,
+      "theorems": [],
+      "axioms_count": null,
+      "problems": [
+        "missing POINCARE_CHECK_DONE",
+        "failure marker in log",
+        "POINCARE_TOP not reported",
+        "POINCARE_SMOOTH not reported",
+        "POINCARE_EMBEDDED not reported",
+        "MOI_SST_HEADLINE not reported",
+        "AXIOMS_COUNT not reported"
+      ]
+    },
+    {
+      "name": "Poincare/audit/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-23-21.34.1795469668/logs/poincare-run.log",
+      "status": "fail",
+      "elapsed_seconds": 7.0,
+      "start_unixtime": 1795497908.0,
+      "end_unixtime": 1795497915.0,
+      "theorems": [],
+      "axioms_count": null,
+      "problems": [
+        "missing POINCARE_AUDIT_CHECK_DONE",
+        "failure marker in log",
+        "POINCARE_TOP_BLIND_EQUIV not reported",
+        "POINCARE_SMOOTH_BLIND_EQUIV not reported",
+        "BLIND_POINCARE_TOP_PROVED not reported",
+        "BLIND_POINCARE_SMOOTH_PROVED not reported",
+        "sanity theorem count mismatch",
+        "AXIOMS_COUNT not reported"
+      ]
+    }
+  ]
+}

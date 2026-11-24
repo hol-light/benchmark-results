@@ -152,3 +152,11 @@ const BENCHMARK_REGISTRY = {
 function benchmarkForReport(label) {
   return BENCHMARK_REGISTRY.benchmarks.find((benchmark) => benchmark.reports.includes(label)) || null;
 }
+
+// Display position of a report label: registry order, with labels the
+// registry does not know after all registered ones.
+function reportPosition(label) {
+  const registered = BENCHMARK_REGISTRY.benchmarks.flatMap((benchmark) => benchmark.reports);
+  const index = registered.indexOf(label);
+  return index === -1 ? registered.length : index;
+}
