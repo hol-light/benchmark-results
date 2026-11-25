@@ -1,6 +1,15 @@
 {
   "runs": [
     {
+      "id": "2026-11-24-096417cac706ff0818f739bbc19f2ed499e43283",
+      "date": "2026-11-24",
+      "hol_light_label": "HOL Light",
+      "hol_light_commit": "096417cac706ff0818f739bbc19f2ed499e43283",
+      "ocaml_version": "5.5.2",
+      "benchmark_scripts_commit": "0058daacd9e2892bd9d808b865cfbb37080145d8",
+      "manifest": "2026-11-24-096417cac706ff0818f739bbc19f2ed499e43283/manifest.json"
+    },
+    {
       "id": "2026-11-23-049f088335ccf04217ad385b607817a22387ca32",
       "date": "2026-11-23",
       "hol_light_label": "HOL Light (jargh)",
