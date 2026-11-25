@@ -1,0 +1,42 @@
+{
+  "lightcake_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-25-03.32.1795577549/LightCake",
+  "lightcake_commit": "3ec0fe8eea40ffa293e49a25fb17b243b25840ee",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-25-03.32.1795577549/hol-light",
+  "hol_light_commit": "9b6b206fe810c5a86c3d2d5c15b0b5e31a0e5354",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-11-25-03.32.1795577549/logs/lightcake-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 1,
+  "counts": {
+    "pass": 1,
+    "fail": 0,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 4488.0,
+  "start_unixtime": 1795595348.0,
+  "end_unixtime": 1795599836.0,
+  "tests": [
+    {
+      "name": "LightCake/check.ml",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-25-03.32.1795577549/logs/lightcake-run.log",
+      "status": "pass",
+      "elapsed_seconds": 4463.0,
+      "start_unixtime": 1795595372.0,
+      "end_unixtime": 1795599835.0,
+      "theorems": [
+        "compilerProof_compile_correct",
+        "compile_correct_safe_for_space",
+        "ag32_compile_correct"
+      ],
+      "axioms_count": 3,
+      "not_loaded": [],
+      "problems": []
+    }
+  ]
+}
