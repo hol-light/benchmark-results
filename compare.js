@@ -60,6 +60,16 @@ function loadBundle(run) {
   return loadRunBundle(run);
 }
 
+// Commit of the benchmark's own repository (e.g. s2n_bignum_commit), as
+// recorded in its report. HOL Light's commit is shown in the heading instead.
+function benchmarkCommit(report) {
+  const data = report?.data || {};
+  const key = Object.keys(data).find(
+    (name) => name.endsWith("_commit") && name !== "hol_light_commit",
+  );
+  return key ? data[key] : null;
+}
+
 function compareReport(label, baselineReport, candidateReport) {
   const baselineTests = new Map(
     (baselineReport?.data.tests || []).map((test) => [test.name, test]),
@@ -120,6 +130,8 @@ function compareReport(label, baselineReport, candidateReport) {
   }
   return {
     label,
+    baselineCommit: benchmarkCommit(baselineReport),
+    candidateCommit: benchmarkCommit(candidateReport),
     rows,
     comparable,
     counted,
@@ -422,6 +434,19 @@ function renderBenchmarks() {
       makeElement("strong", "", comparison.label),
       makeElement("span", "", `${comparison.comparable.length} comparable tests`),
     );
+    if (
+      comparison.baselineCommit
+      && comparison.candidateCommit
+      && comparison.baselineCommit !== comparison.candidateCommit
+    ) {
+      const difference = makeElement(
+        "span",
+        "commit-difference",
+        `commits are different: ${shortHash(comparison.baselineCommit)} vs. ${shortHash(comparison.candidateCommit)}`,
+      );
+      difference.title = `${comparison.baselineCommit} vs. ${comparison.candidateCommit}`;
+      summaryMain.append(difference);
+    }
     const summaryMetric = makeElement(
       "span",
       `comparison-summary-metric ${comparison.improvement === null ? "" : performanceClass(comparison.improvement)}`,

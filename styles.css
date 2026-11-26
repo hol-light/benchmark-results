@@ -340,6 +340,7 @@ footer {
   background: #fff8e7;
   font-size: 12px;
 }
+.commit-difference { color: #6d5007; font: 12px var(--mono); }
 .comparison-overall { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-bottom: 32px; }
 .metric-card { display: grid; gap: 3px; padding: 11px 12px; border: 1px solid var(--border); border-radius: 4px; }
 .metric-label, .metric-detail { color: var(--muted); font-size: 11px; }
