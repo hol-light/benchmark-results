@@ -1,0 +1,3981 @@
+{
+  "s2n_bignum_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum",
+  "s2n_bignum_commit": "3ab28d28cda13171b41b572cb97091d9737810b9",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/hol-light",
+  "hol_light_commit": "1cd947168aa4164279ad6df366f02501686c557d",
+  "arch": "arm",
+  "arch_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 346,
+  "counts": {
+    "pass": 346,
+    "fail": 0,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 81245.18,
+  "tests": [
+    {
+      "name": "curve25519/curve25519_ladderstep",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_ladderstep.correct",
+      "elapsed_seconds": 294.801846,
+      "start_unixtime": 1795802919.944288,
+      "end_unixtime": 1795803214.746134,
+      "specs": [
+        "CURVE25519_LADDERSTEP_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_ladderstep_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_ladderstep_alt.correct",
+      "elapsed_seconds": 306.958755,
+      "start_unixtime": 1795802919.959976,
+      "end_unixtime": 1795803226.918731,
+      "specs": [
+        "CURVE25519_LADDERSTEP_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_pxscalarmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_pxscalarmul.correct",
+      "elapsed_seconds": 298.57893,
+      "start_unixtime": 1795802919.937047,
+      "end_unixtime": 1795803218.515977,
+      "specs": [
+        "CURVE25519_PXSCALARMUL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_pxscalarmul_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_pxscalarmul_alt.correct",
+      "elapsed_seconds": 316.225054,
+      "start_unixtime": 1795802920.006501,
+      "end_unixtime": 1795803236.231555,
+      "specs": [
+        "CURVE25519_PXSCALARMUL_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519.correct",
+      "elapsed_seconds": 985.410823,
+      "start_unixtime": 1795802919.93519,
+      "end_unixtime": 1795803905.346013,
+      "specs": [
+        "CURVE25519_X25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519_alt.correct",
+      "elapsed_seconds": 634.883262,
+      "start_unixtime": 1795802919.973241,
+      "end_unixtime": 1795803554.856503,
+      "specs": [
+        "CURVE25519_X25519_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519_byte",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519_byte.correct",
+      "elapsed_seconds": 1046.827367,
+      "start_unixtime": 1795802919.948831,
+      "end_unixtime": 1795803966.776198,
+      "specs": [
+        "CURVE25519_X25519_BYTE_SUBROUTINE_CORRECT",
+        "CURVE25519_X25519_BYTE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519_byte_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519_byte_alt.correct",
+      "elapsed_seconds": 768.968369,
+      "start_unixtime": 1795802920.042682,
+      "end_unixtime": 1795803689.011051,
+      "specs": [
+        "CURVE25519_X25519_BYTE_ALT_SUBROUTINE_CORRECT",
+        "CURVE25519_X25519_BYTE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519base",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519base.correct",
+      "elapsed_seconds": 762.039937,
+      "start_unixtime": 1795802919.919958,
+      "end_unixtime": 1795803681.959895,
+      "specs": [
+        "CURVE25519_X25519BASE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519base_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519base_alt.correct",
+      "elapsed_seconds": 761.157203,
+      "start_unixtime": 1795802919.963808,
+      "end_unixtime": 1795803681.121011,
+      "specs": [
+        "CURVE25519_X25519BASE_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519base_byte",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519base_byte.correct",
+      "elapsed_seconds": 865.914144,
+      "start_unixtime": 1795802920.026286,
+      "end_unixtime": 1795803785.94043,
+      "specs": [
+        "CURVE25519_X25519BASE_BYTE_SUBROUTINE_CORRECT",
+        "CURVE25519_X25519BASE_BYTE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/curve25519_x25519base_byte_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/curve25519_x25519base_byte_alt.correct",
+      "elapsed_seconds": 831.432496,
+      "start_unixtime": 1795802919.927449,
+      "end_unixtime": 1795803751.359945,
+      "specs": [
+        "CURVE25519_X25519BASE_BYTE_ALT_SUBROUTINE_CORRECT",
+        "CURVE25519_X25519BASE_BYTE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_decode",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_decode.correct",
+      "elapsed_seconds": 187.379018,
+      "start_unixtime": 1795802919.954341,
+      "end_unixtime": 1795803107.333359,
+      "specs": [
+        "EDWARDS25519_DECODE_SUBROUTINE_CORRECT",
+        "EDWARDS25519_DECODE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_decode_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_decode_alt.correct",
+      "elapsed_seconds": 189.789952,
+      "start_unixtime": 1795802919.957558,
+      "end_unixtime": 1795803109.74751,
+      "specs": [
+        "EDWARDS25519_DECODE_ALT_SUBROUTINE_CORRECT",
+        "EDWARDS25519_DECODE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_encode",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_encode.correct",
+      "elapsed_seconds": 22.626505,
+      "start_unixtime": 1795802919.959829,
+      "end_unixtime": 1795802942.586334,
+      "specs": [
+        "EDWARDS25519_ENCODE_SUBROUTINE_CORRECT",
+        "EDWARDS25519_ENCODE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_epadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_epadd.correct",
+      "elapsed_seconds": 191.958294,
+      "start_unixtime": 1795802919.957495,
+      "end_unixtime": 1795803111.915789,
+      "specs": [
+        "EDWARDS25519_EPADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_epadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_epadd_alt.correct",
+      "elapsed_seconds": 207.304632,
+      "start_unixtime": 1795802919.970589,
+      "end_unixtime": 1795803127.275221,
+      "specs": [
+        "EDWARDS25519_EPADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_epdouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_epdouble.correct",
+      "elapsed_seconds": 179.714684,
+      "start_unixtime": 1795802919.960125,
+      "end_unixtime": 1795803099.674809,
+      "specs": [
+        "EDWARDS25519_EPDOUBLE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_epdouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_epdouble_alt.correct",
+      "elapsed_seconds": 192.238144,
+      "start_unixtime": 1795802919.974011,
+      "end_unixtime": 1795803112.212155,
+      "specs": [
+        "EDWARDS25519_EPDOUBLE_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_pdouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_pdouble.correct",
+      "elapsed_seconds": 173.534908,
+      "start_unixtime": 1795802919.942223,
+      "end_unixtime": 1795803093.477131,
+      "specs": [
+        "EDWARDS25519_PDOUBLE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_pdouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_pdouble_alt.correct",
+      "elapsed_seconds": 183.328164,
+      "start_unixtime": 1795802919.907159,
+      "end_unixtime": 1795803103.235323,
+      "specs": [
+        "EDWARDS25519_PDOUBLE_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_pepadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_pepadd.correct",
+      "elapsed_seconds": 181.506239,
+      "start_unixtime": 1795802919.952126,
+      "end_unixtime": 1795803101.458365,
+      "specs": [
+        "EDWARDS25519_PEPADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_pepadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_pepadd_alt.correct",
+      "elapsed_seconds": 190.884752,
+      "start_unixtime": 1795802919.961598,
+      "end_unixtime": 1795803110.84635,
+      "specs": [
+        "EDWARDS25519_PEPADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_scalarmulbase",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_scalarmulbase.correct",
+      "elapsed_seconds": 619.322927,
+      "start_unixtime": 1795802920.022975,
+      "end_unixtime": 1795803539.345902,
+      "specs": [
+        "EDWARDS25519_SCALARMULBASE_SUBROUTINE_CORRECT",
+        "EDWARDS25519_SCALARMULBASE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_scalarmulbase_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_scalarmulbase_alt.correct",
+      "elapsed_seconds": 592.086918,
+      "start_unixtime": 1795802919.947668,
+      "end_unixtime": 1795803512.034586,
+      "specs": [
+        "EDWARDS25519_SCALARMULBASE_ALT_SUBROUTINE_CORRECT",
+        "EDWARDS25519_SCALARMULBASE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_scalarmuldouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_scalarmuldouble.correct",
+      "elapsed_seconds": 865.597318,
+      "start_unixtime": 1795802919.9571,
+      "end_unixtime": 1795803785.554418,
+      "specs": [
+        "EDWARDS25519_SCALARMULDOUBLE_SUBROUTINE_CORRECT",
+        "EDWARDS25519_SCALARMULDOUBLE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/edwards25519_scalarmuldouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/edwards25519_scalarmuldouble_alt.correct",
+      "elapsed_seconds": 758.12133,
+      "start_unixtime": 1795802919.922409,
+      "end_unixtime": 1795803678.043739,
+      "specs": [
+        "EDWARDS25519_SCALARMULDOUBLE_ALT_SUBROUTINE_CORRECT",
+        "EDWARDS25519_SCALARMULDOUBLE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjadd.correct",
+      "elapsed_seconds": 741.684452,
+      "start_unixtime": 1795802919.965645,
+      "end_unixtime": 1795803661.650097,
+      "specs": [
+        "P256_MONTJADD_SUBROUTINE_CORRECT",
+        "P256_MONTJADD_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjadd_alt.correct",
+      "elapsed_seconds": 302.667905,
+      "start_unixtime": 1795802919.979956,
+      "end_unixtime": 1795803222.647861,
+      "specs": [
+        "P256_MONTJADD_ALT_SUBROUTINE_CORRECT",
+        "P256_MONTJADD_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjdouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjdouble.correct",
+      "elapsed_seconds": 422.58582,
+      "start_unixtime": 1795802919.954728,
+      "end_unixtime": 1795803342.540548,
+      "specs": [
+        "P256_MONTJDOUBLE_SUBROUTINE_CORRECT",
+        "P256_MONTJDOUBLE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjdouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjdouble_alt.correct",
+      "elapsed_seconds": 227.667987,
+      "start_unixtime": 1795802920.030308,
+      "end_unixtime": 1795803147.698295,
+      "specs": [
+        "P256_MONTJDOUBLE_ALT_SUBROUTINE_CORRECT",
+        "P256_MONTJDOUBLE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjmixadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjmixadd.correct",
+      "elapsed_seconds": 257.042253,
+      "start_unixtime": 1795802920.00897,
+      "end_unixtime": 1795803177.051223,
+      "specs": [
+        "P256_MONTJMIXADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjmixadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjmixadd_alt.correct",
+      "elapsed_seconds": 234.707532,
+      "start_unixtime": 1795802919.966819,
+      "end_unixtime": 1795803154.674351,
+      "specs": [
+        "P256_MONTJMIXADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjscalarmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjscalarmul.correct",
+      "elapsed_seconds": 1058.28474,
+      "start_unixtime": 1795802919.945816,
+      "end_unixtime": 1795803978.230556,
+      "specs": [
+        "P256_MONTJSCALARMUL_SUBROUTINE_CORRECT",
+        "P256_MONTJSCALARMUL_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_montjscalarmul_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_montjscalarmul_alt.correct",
+      "elapsed_seconds": 493.29555,
+      "start_unixtime": 1795802919.94609,
+      "end_unixtime": 1795803413.24164,
+      "specs": [
+        "P256_MONTJSCALARMUL_ALT_SUBROUTINE_CORRECT",
+        "P256_MONTJSCALARMUL_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_scalarmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_scalarmul.correct",
+      "elapsed_seconds": 1406.664801,
+      "start_unixtime": 1795802919.99051,
+      "end_unixtime": 1795804326.655311,
+      "specs": [
+        "P256_SCALARMUL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_scalarmul_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_scalarmul_alt.correct",
+      "elapsed_seconds": 828.424472,
+      "start_unixtime": 1795802919.944418,
+      "end_unixtime": 1795803748.36889,
+      "specs": [
+        "P256_SCALARMUL_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_scalarmulbase",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_scalarmulbase.correct",
+      "elapsed_seconds": 625.068841,
+      "start_unixtime": 1795802919.938586,
+      "end_unixtime": 1795803545.007427,
+      "specs": [
+        "P256_SCALARMULBASE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/p256_scalarmulbase_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/p256_scalarmulbase_alt.correct",
+      "elapsed_seconds": 542.104846,
+      "start_unixtime": 1795802920.046379,
+      "end_unixtime": 1795803462.151225,
+      "specs": [
+        "P256_SCALARMULBASE_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjadd.correct",
+      "elapsed_seconds": 2295.126365,
+      "start_unixtime": 1795802919.972309,
+      "end_unixtime": 1795805215.098674,
+      "specs": [
+        "P384_MONTJADD_SUBROUTINE_CORRECT",
+        "P384_MONTJADD_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjadd_alt.correct",
+      "elapsed_seconds": 618.014152,
+      "start_unixtime": 1795802920.053587,
+      "end_unixtime": 1795803538.067739,
+      "specs": [
+        "P384_MONTJADD_ALT_SUBROUTINE_CORRECT",
+        "P384_MONTJADD_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjdouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjdouble.correct",
+      "elapsed_seconds": 1023.105834,
+      "start_unixtime": 1795802920.059671,
+      "end_unixtime": 1795803943.165505,
+      "specs": [
+        "P384_MONTJDOUBLE_SUBROUTINE_CORRECT",
+        "P384_MONTJDOUBLE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjdouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjdouble_alt.correct",
+      "elapsed_seconds": 424.8529,
+      "start_unixtime": 1795802920.042412,
+      "end_unixtime": 1795803344.895312,
+      "specs": [
+        "P384_MONTJDOUBLE_ALT_SUBROUTINE_CORRECT",
+        "P384_MONTJDOUBLE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjmixadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjmixadd.correct",
+      "elapsed_seconds": 473.96285,
+      "start_unixtime": 1795802919.966847,
+      "end_unixtime": 1795803393.929697,
+      "specs": [
+        "P384_MONTJMIXADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjmixadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjmixadd_alt.correct",
+      "elapsed_seconds": 433.993861,
+      "start_unixtime": 1795802919.973,
+      "end_unixtime": 1795803353.966861,
+      "specs": [
+        "P384_MONTJMIXADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjscalarmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjscalarmul.correct",
+      "elapsed_seconds": 3262.79244,
+      "start_unixtime": 1795802919.948365,
+      "end_unixtime": 1795806182.740805,
+      "specs": [
+        "P384_MONTJSCALARMUL_SUBROUTINE_CORRECT",
+        "P384_MONTJSCALARMUL_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/p384_montjscalarmul_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/p384_montjscalarmul_alt.correct",
+      "elapsed_seconds": 1237.513925,
+      "start_unixtime": 1795802919.95498,
+      "end_unixtime": 1795804157.468905,
+      "specs": [
+        "P384_MONTJSCALARMUL_ALT_SUBROUTINE_CORRECT",
+        "P384_MONTJSCALARMUL_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jadd.correct",
+      "elapsed_seconds": 806.315566,
+      "start_unixtime": 1795802919.949587,
+      "end_unixtime": 1795803726.265153,
+      "specs": [
+        "P521_JADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jadd_alt.correct",
+      "elapsed_seconds": 1185.927768,
+      "start_unixtime": 1795802919.922769,
+      "end_unixtime": 1795804105.850537,
+      "specs": [
+        "P521_JADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jdouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jdouble.correct",
+      "elapsed_seconds": 852.254812,
+      "start_unixtime": 1795802919.956907,
+      "end_unixtime": 1795803772.211719,
+      "specs": [
+        "P521_JDOUBLE_SUBROUTINE_CORRECT",
+        "P521_JDOUBLE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jdouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jdouble_alt.correct",
+      "elapsed_seconds": 781.642664,
+      "start_unixtime": 1795802919.960143,
+      "end_unixtime": 1795803701.602807,
+      "specs": [
+        "P521_JDOUBLE_ALT_SUBROUTINE_CORRECT",
+        "P521_JDOUBLE_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jmixadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jmixadd.correct",
+      "elapsed_seconds": 1282.720197,
+      "start_unixtime": 1795802919.973938,
+      "end_unixtime": 1795804202.694135,
+      "specs": [
+        "P521_JMIXADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jmixadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jmixadd_alt.correct",
+      "elapsed_seconds": 941.110062,
+      "start_unixtime": 1795802919.958147,
+      "end_unixtime": 1795803861.068209,
+      "specs": [
+        "P521_JMIXADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jscalarmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jscalarmul.correct",
+      "elapsed_seconds": 1424.116515,
+      "start_unixtime": 1795802919.949089,
+      "end_unixtime": 1795804344.065604,
+      "specs": [
+        "P521_JSCALARMUL_SUBROUTINE_CORRECT",
+        "P521_JSCALARMUL_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/p521_jscalarmul_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/p521_jscalarmul_alt.correct",
+      "elapsed_seconds": 1148.276329,
+      "start_unixtime": 1795802919.943716,
+      "end_unixtime": 1795804068.220045,
+      "specs": [
+        "P521_JSCALARMUL_ALT_SUBROUTINE_CORRECT",
+        "P521_JSCALARMUL_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/secp256k1_jadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/secp256k1_jadd.correct",
+      "elapsed_seconds": 255.650353,
+      "start_unixtime": 1795802919.962381,
+      "end_unixtime": 1795803175.612734,
+      "specs": [
+        "SECP256K1_JADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/secp256k1_jadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/secp256k1_jadd_alt.correct",
+      "elapsed_seconds": 245.137979,
+      "start_unixtime": 1795802919.964838,
+      "end_unixtime": 1795803165.102817,
+      "specs": [
+        "SECP256K1_JADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/secp256k1_jdouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/secp256k1_jdouble.correct",
+      "elapsed_seconds": 198.599061,
+      "start_unixtime": 1795802919.956603,
+      "end_unixtime": 1795803118.555664,
+      "specs": [
+        "SECP256K1_JDOUBLE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/secp256k1_jdouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/secp256k1_jdouble_alt.correct",
+      "elapsed_seconds": 194.856767,
+      "start_unixtime": 1795802919.946322,
+      "end_unixtime": 1795803114.803089,
+      "specs": [
+        "SECP256K1_JDOUBLE_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/secp256k1_jmixadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/secp256k1_jmixadd.correct",
+      "elapsed_seconds": 225.177982,
+      "start_unixtime": 1795802920.006254,
+      "end_unixtime": 1795803145.184236,
+      "specs": [
+        "SECP256K1_JMIXADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/secp256k1_jmixadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/secp256k1_jmixadd_alt.correct",
+      "elapsed_seconds": 219.375287,
+      "start_unixtime": 1795802919.978563,
+      "end_unixtime": 1795803139.35385,
+      "specs": [
+        "SECP256K1_JMIXADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjadd.correct",
+      "elapsed_seconds": 304.070504,
+      "start_unixtime": 1795802920.013529,
+      "end_unixtime": 1795803224.084033,
+      "specs": [
+        "SM2_MONTJADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjadd_alt.correct",
+      "elapsed_seconds": 273.545456,
+      "start_unixtime": 1795802948.953993,
+      "end_unixtime": 1795803222.499449,
+      "specs": [
+        "SM2_MONTJADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjdouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjdouble.correct",
+      "elapsed_seconds": 227.795987,
+      "start_unixtime": 1795803099.866228,
+      "end_unixtime": 1795803327.662215,
+      "specs": [
+        "SM2_MONTJDOUBLE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjdouble_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjdouble_alt.correct",
+      "elapsed_seconds": 215.083903,
+      "start_unixtime": 1795803106.084046,
+      "end_unixtime": 1795803321.167949,
+      "specs": [
+        "SM2_MONTJDOUBLE_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjmixadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjmixadd.correct",
+      "elapsed_seconds": 255.031158,
+      "start_unixtime": 1795803107.841961,
+      "end_unixtime": 1795803362.873119,
+      "specs": [
+        "SM2_MONTJMIXADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjmixadd_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjmixadd_alt.correct",
+      "elapsed_seconds": 236.637063,
+      "start_unixtime": 1795803109.641347,
+      "end_unixtime": 1795803346.27841,
+      "specs": [
+        "SM2_MONTJMIXADD_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjscalarmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjscalarmul.correct",
+      "elapsed_seconds": 473.462975,
+      "start_unixtime": 1795803113.714142,
+      "end_unixtime": 1795803587.177117,
+      "specs": [
+        "SM2_MONTJSCALARMUL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/sm2_montjscalarmul_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/sm2_montjscalarmul_alt.correct",
+      "elapsed_seconds": 426.046401,
+      "start_unixtime": 1795803116.166187,
+      "end_unixtime": 1795803542.212588,
+      "specs": [
+        "SM2_MONTJSCALARMUL_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_add_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_add_p25519.correct",
+      "elapsed_seconds": 20.595984,
+      "start_unixtime": 1795803117.216817,
+      "end_unixtime": 1795803137.812801,
+      "specs": [
+        "BIGNUM_ADD_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_cmul_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_cmul_p25519.correct",
+      "elapsed_seconds": 21.169376,
+      "start_unixtime": 1795803118.332257,
+      "end_unixtime": 1795803139.501633,
+      "specs": [
+        "BIGNUM_CMUL_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_double_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_double_p25519.correct",
+      "elapsed_seconds": 20.513169,
+      "start_unixtime": 1795803118.584834,
+      "end_unixtime": 1795803139.098003,
+      "specs": [
+        "BIGNUM_DOUBLE_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_inv_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_inv_p25519.correct",
+      "elapsed_seconds": 218.524096,
+      "start_unixtime": 1795803121.253054,
+      "end_unixtime": 1795803339.77715,
+      "specs": [
+        "BIGNUM_INV_P25519_SUBROUTINE_CORRECT",
+        "BIGNUM_INV_P25519_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_invsqrt_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_invsqrt_p25519.correct",
+      "elapsed_seconds": 48.010826,
+      "start_unixtime": 1795803125.040427,
+      "end_unixtime": 1795803173.051253,
+      "specs": [
+        "BIGNUM_INVSQRT_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_invsqrt_p25519_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_invsqrt_p25519_alt.correct",
+      "elapsed_seconds": 48.101105,
+      "start_unixtime": 1795803133.678957,
+      "end_unixtime": 1795803181.780062,
+      "specs": [
+        "BIGNUM_INVSQRT_P25519_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_madd_n25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_madd_n25519.correct",
+      "elapsed_seconds": 33.812111,
+      "start_unixtime": 1795803144.191417,
+      "end_unixtime": 1795803178.003528,
+      "specs": [
+        "BIGNUM_MADD_N25519_SUBROUTINE_CORRECT",
+        "BIGNUM_MADD_N25519_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_madd_n25519_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_madd_n25519_alt.correct",
+      "elapsed_seconds": 33.177246,
+      "start_unixtime": 1795803145.50353,
+      "end_unixtime": 1795803178.680776,
+      "specs": [
+        "BIGNUM_MADD_N25519_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MADD_N25519_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_mod_m25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_mod_m25519.correct",
+      "elapsed_seconds": 25.480674,
+      "start_unixtime": 1795803145.8115,
+      "end_unixtime": 1795803171.292174,
+      "specs": [
+        "BIGNUM_MOD_M25519_SUBROUTINE_CORRECT",
+        "BIGNUM_MOD_M25519_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_mod_m25519_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_mod_m25519_4.correct",
+      "elapsed_seconds": 20.625446,
+      "start_unixtime": 1795803145.874683,
+      "end_unixtime": 1795803166.500129,
+      "specs": [
+        "BIGNUM_MOD_M25519_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_mod_n25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_mod_n25519.correct",
+      "elapsed_seconds": 25.807053,
+      "start_unixtime": 1795803151.560322,
+      "end_unixtime": 1795803177.367375,
+      "specs": [
+        "BIGNUM_MOD_N25519_SUBROUTINE_CORRECT",
+        "BIGNUM_MOD_N25519_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_mod_n25519_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_mod_n25519_4.correct",
+      "elapsed_seconds": 21.17712,
+      "start_unixtime": 1795803154.110801,
+      "end_unixtime": 1795803175.287921,
+      "specs": [
+        "BIGNUM_MOD_N25519_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_mod_p25519_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_mod_p25519_4.correct",
+      "elapsed_seconds": 20.922379,
+      "start_unixtime": 1795803161.182443,
+      "end_unixtime": 1795803182.104822,
+      "specs": [
+        "BIGNUM_MOD_P25519_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_mul_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_mul_p25519.correct",
+      "elapsed_seconds": 25.618271,
+      "start_unixtime": 1795803171.566245,
+      "end_unixtime": 1795803197.184516,
+      "specs": [
+        "BIGNUM_MUL_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_mul_p25519_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_mul_p25519_alt.correct",
+      "elapsed_seconds": 26.973199,
+      "start_unixtime": 1795803172.897274,
+      "end_unixtime": 1795803199.870473,
+      "specs": [
+        "BIGNUM_MUL_P25519_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_neg_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_neg_p25519.correct",
+      "elapsed_seconds": 20.528799,
+      "start_unixtime": 1795803177.680811,
+      "end_unixtime": 1795803198.20961,
+      "specs": [
+        "BIGNUM_NEG_P25519_SUBROUTINE_CORRECT",
+        "BIGNUM_NEG_P25519_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_optneg_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_optneg_p25519.correct",
+      "elapsed_seconds": 20.376499,
+      "start_unixtime": 1795803179.433629,
+      "end_unixtime": 1795803199.810128,
+      "specs": [
+        "BIGNUM_OPTNEG_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_sqr_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_sqr_p25519.correct",
+      "elapsed_seconds": 24.149981,
+      "start_unixtime": 1795803181.737754,
+      "end_unixtime": 1795803205.887735,
+      "specs": [
+        "BIGNUM_SQR_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_sqr_p25519_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_sqr_p25519_alt.correct",
+      "elapsed_seconds": 25.324473,
+      "start_unixtime": 1795803182.061842,
+      "end_unixtime": 1795803207.386315,
+      "specs": [
+        "BIGNUM_SQR_P25519_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_sqrt_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_sqrt_p25519.correct",
+      "elapsed_seconds": 43.470968,
+      "start_unixtime": 1795803183.433398,
+      "end_unixtime": 1795803226.904366,
+      "specs": [
+        "BIGNUM_SQRT_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_sqrt_p25519_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_sqrt_p25519_alt.correct",
+      "elapsed_seconds": 46.680673,
+      "start_unixtime": 1795803183.760809,
+      "end_unixtime": 1795803230.441482,
+      "specs": [
+        "BIGNUM_SQRT_P25519_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "curve25519/bignum_sub_p25519",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/curve25519/bignum_sub_p25519.correct",
+      "elapsed_seconds": 20.586386,
+      "start_unixtime": 1795803184.396193,
+      "end_unixtime": 1795803204.982579,
+      "specs": [
+        "BIGNUM_SUB_P25519_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_emontredc_8n",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_emontredc_8n.correct",
+      "elapsed_seconds": 1436.068505,
+      "start_unixtime": 1795803185.051621,
+      "end_unixtime": 1795804621.120126,
+      "specs": [
+        "BIGNUM_EMONTREDC_8N_SUBROUTINE_CORRECT",
+        "BIGNUM_EMONTREDC_8N_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_emontredc_8n_cdiff",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_emontredc_8n_cdiff.correct",
+      "elapsed_seconds": 651.611041,
+      "start_unixtime": 1795803188.165211,
+      "end_unixtime": 1795803839.776252,
+      "specs": [
+        "BIGNUM_EMONTREDC_8N_CDIFF_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_kmul_16_32",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_kmul_16_32.correct",
+      "elapsed_seconds": 804.3306,
+      "start_unixtime": 1795803188.531323,
+      "end_unixtime": 1795803992.861923,
+      "specs": [
+        "BIGNUM_KMUL_16_32_SUBROUTINE_CORRECT",
+        "BIGNUM_KMUL_16_32_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_kmul_32_64",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_kmul_32_64.correct",
+      "elapsed_seconds": 917.275108,
+      "start_unixtime": 1795803203.599883,
+      "end_unixtime": 1795804120.874991,
+      "specs": [
+        "BIGNUM_KMUL_32_64_SUBROUTINE_CORRECT",
+        "BIGNUM_KMUL_32_64_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_ksqr_16_32",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_ksqr_16_32.correct",
+      "elapsed_seconds": 295.753368,
+      "start_unixtime": 1795803204.576679,
+      "end_unixtime": 1795803500.330047,
+      "specs": [
+        "BIGNUM_KSQR_16_32_SUBROUTINE_CORRECT",
+        "BIGNUM_KSQR_16_32_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_ksqr_32_64",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_ksqr_32_64.correct",
+      "elapsed_seconds": 376.375604,
+      "start_unixtime": 1795803206.210021,
+      "end_unixtime": 1795803582.585625,
+      "specs": [
+        "BIGNUM_KSQR_32_64_SUBROUTINE_CORRECT",
+        "BIGNUM_KSQR_32_64_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_mul_4_8",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_mul_4_8.correct",
+      "elapsed_seconds": 24.621182,
+      "start_unixtime": 1795803206.350467,
+      "end_unixtime": 1795803230.971649,
+      "specs": [
+        "BIGNUM_MUL_4_8_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_mul_4_8_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_mul_4_8_alt.correct",
+      "elapsed_seconds": 23.99761,
+      "start_unixtime": 1795803211.432702,
+      "end_unixtime": 1795803235.430312,
+      "specs": [
+        "BIGNUM_MUL_4_8_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_mul_6_12",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_mul_6_12.correct",
+      "elapsed_seconds": 52.989453,
+      "start_unixtime": 1795803212.230707,
+      "end_unixtime": 1795803265.22016,
+      "specs": [
+        "BIGNUM_MUL_6_12_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_mul_6_12_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_mul_6_12_alt.correct",
+      "elapsed_seconds": 34.836048,
+      "start_unixtime": 1795803213.760023,
+      "end_unixtime": 1795803248.596071,
+      "specs": [
+        "BIGNUM_MUL_6_12_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_mul_8_16",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_mul_8_16.correct",
+      "elapsed_seconds": 793.323314,
+      "start_unixtime": 1795803221.219892,
+      "end_unixtime": 1795804014.543206,
+      "specs": [
+        "BIGNUM_MUL_8_16_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_mul_8_16_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_mul_8_16_alt.correct",
+      "elapsed_seconds": 67.688095,
+      "start_unixtime": 1795803224.972857,
+      "end_unixtime": 1795803292.660952,
+      "specs": [
+        "BIGNUM_MUL_8_16_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_sqr_4_8",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_sqr_4_8.correct",
+      "elapsed_seconds": 22.650369,
+      "start_unixtime": 1795803228.877935,
+      "end_unixtime": 1795803251.528304,
+      "specs": [
+        "BIGNUM_SQR_4_8_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_sqr_4_8_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_sqr_4_8_alt.correct",
+      "elapsed_seconds": 22.092465,
+      "start_unixtime": 1795803229.031454,
+      "end_unixtime": 1795803251.123919,
+      "specs": [
+        "BIGNUM_SQR_4_8_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_sqr_6_12",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_sqr_6_12.correct",
+      "elapsed_seconds": 94.527005,
+      "start_unixtime": 1795803230.480423,
+      "end_unixtime": 1795803325.007428,
+      "specs": [
+        "BIGNUM_SQR_6_12_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_sqr_6_12_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_sqr_6_12_alt.correct",
+      "elapsed_seconds": 28.945637,
+      "start_unixtime": 1795803233.310269,
+      "end_unixtime": 1795803262.255906,
+      "specs": [
+        "BIGNUM_SQR_6_12_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_sqr_8_16",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_sqr_8_16.correct",
+      "elapsed_seconds": 275.239236,
+      "start_unixtime": 1795803233.441063,
+      "end_unixtime": 1795803508.680299,
+      "specs": [
+        "BIGNUM_SQR_8_16_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "fastmul/bignum_sqr_8_16_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/fastmul/bignum_sqr_8_16_alt.correct",
+      "elapsed_seconds": 42.653577,
+      "start_unixtime": 1795803236.805036,
+      "end_unixtime": 1795803279.458613,
+      "specs": [
+        "BIGNUM_SQR_8_16_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_add",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_add.correct",
+      "elapsed_seconds": 23.353157,
+      "start_unixtime": 1795803237.367729,
+      "end_unixtime": 1795803260.720886,
+      "specs": [
+        "BIGNUM_ADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_amontifier",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_amontifier.correct",
+      "elapsed_seconds": 26.793794,
+      "start_unixtime": 1795803241.791027,
+      "end_unixtime": 1795803268.584821,
+      "specs": [
+        "BIGNUM_AMONTIFIER_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_amontmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_amontmul.correct",
+      "elapsed_seconds": 22.839401,
+      "start_unixtime": 1795803242.655806,
+      "end_unixtime": 1795803265.495207,
+      "specs": [
+        "BIGNUM_AMONTMUL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_amontredc",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_amontredc.correct",
+      "elapsed_seconds": 24.071105,
+      "start_unixtime": 1795803255.081137,
+      "end_unixtime": 1795803279.152242,
+      "specs": [
+        "BIGNUM_AMONTREDC_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_amontsqr",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_amontsqr.correct",
+      "elapsed_seconds": 23.107379,
+      "start_unixtime": 1795803257.582842,
+      "end_unixtime": 1795803280.690221,
+      "specs": [
+        "BIGNUM_AMONTSQR_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_bitfield",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_bitfield.correct",
+      "elapsed_seconds": 20.511816,
+      "start_unixtime": 1795803257.922104,
+      "end_unixtime": 1795803278.43392,
+      "specs": [
+        "BIGNUM_BITFIELD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_bitsize",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_bitsize.correct",
+      "elapsed_seconds": 20.253487,
+      "start_unixtime": 1795803267.083722,
+      "end_unixtime": 1795803287.337209,
+      "specs": [
+        "BIGNUM_BITSIZE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_cdiv",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_cdiv.correct",
+      "elapsed_seconds": 24.843766,
+      "start_unixtime": 1795803268.63865,
+      "end_unixtime": 1795803293.482416,
+      "specs": [
+        "BIGNUM_CDIV_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_cdiv_exact",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_cdiv_exact.correct",
+      "elapsed_seconds": 21.618391,
+      "start_unixtime": 1795803271.62056,
+      "end_unixtime": 1795803293.238951,
+      "specs": [
+        "BIGNUM_CDIV_EXACT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_cld",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_cld.correct",
+      "elapsed_seconds": 20.133755,
+      "start_unixtime": 1795803271.867006,
+      "end_unixtime": 1795803292.000761,
+      "specs": [
+        "BIGNUM_CLD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_clz",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_clz.correct",
+      "elapsed_seconds": 20.324073,
+      "start_unixtime": 1795803274.960689,
+      "end_unixtime": 1795803295.284762,
+      "specs": [
+        "BIGNUM_CLZ_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_cmadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_cmadd.correct",
+      "elapsed_seconds": 21.614646,
+      "start_unixtime": 1795803284.917604,
+      "end_unixtime": 1795803306.53225,
+      "specs": [
+        "BIGNUM_CMADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_cmnegadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_cmnegadd.correct",
+      "elapsed_seconds": 21.43255,
+      "start_unixtime": 1795803285.509477,
+      "end_unixtime": 1795803306.942027,
+      "specs": [
+        "BIGNUM_CMNEGADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_cmod",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_cmod.correct",
+      "elapsed_seconds": 23.253383,
+      "start_unixtime": 1795803285.935522,
+      "end_unixtime": 1795803309.188905,
+      "specs": [
+        "BIGNUM_CMOD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_cmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_cmul.correct",
+      "elapsed_seconds": 20.956575,
+      "start_unixtime": 1795803287.060679,
+      "end_unixtime": 1795803308.017254,
+      "specs": [
+        "BIGNUM_CMUL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_coprime",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_coprime.correct",
+      "elapsed_seconds": 32.302102,
+      "start_unixtime": 1795803293.73512,
+      "end_unixtime": 1795803326.037222,
+      "specs": [
+        "BIGNUM_COPRIME_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_copy",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_copy.correct",
+      "elapsed_seconds": 20.229606,
+      "start_unixtime": 1795803298.330199,
+      "end_unixtime": 1795803318.559805,
+      "specs": [
+        "BIGNUM_COPY_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_copy_row_from_table",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_copy_row_from_table.correct",
+      "elapsed_seconds": 27.996768,
+      "start_unixtime": 1795803299.018499,
+      "end_unixtime": 1795803327.015267,
+      "specs": [
+        "BIGNUM_COPY_ROW_FROM_TABLE_SUBROUTINE_CORRECT",
+        "BIGNUM_COPY_ROW_FROM_TABLE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_copy_row_from_table_8n",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_copy_row_from_table_8n.correct",
+      "elapsed_seconds": 34.797533,
+      "start_unixtime": 1795803299.60137,
+      "end_unixtime": 1795803334.398903,
+      "specs": [
+        "BIGNUM_COPY_ROW_FROM_TABLE_8N_SUBROUTINE_CORRECT",
+        "BIGNUM_COPY_ROW_FROM_TABLE_8N_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_copy_row_from_table_16",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_copy_row_from_table_16.correct",
+      "elapsed_seconds": 23.191712,
+      "start_unixtime": 1795803299.829656,
+      "end_unixtime": 1795803323.021368,
+      "specs": [
+        "BIGNUM_COPY_ROW_FROM_TABLE_16_SUBROUTINE_CORRECT",
+        "BIGNUM_COPY_ROW_FROM_TABLE_16_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_copy_row_from_table_32",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_copy_row_from_table_32.correct",
+      "elapsed_seconds": 25.53968,
+      "start_unixtime": 1795803301.671351,
+      "end_unixtime": 1795803327.211031,
+      "specs": [
+        "BIGNUM_COPY_ROW_FROM_TABLE_32_SUBROUTINE_CORRECT",
+        "BIGNUM_COPY_ROW_FROM_TABLE_32_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_ctd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_ctd.correct",
+      "elapsed_seconds": 20.082645,
+      "start_unixtime": 1795803312.906977,
+      "end_unixtime": 1795803332.989622,
+      "specs": [
+        "BIGNUM_CTD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_ctz",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_ctz.correct",
+      "elapsed_seconds": 20.306728,
+      "start_unixtime": 1795803313.289255,
+      "end_unixtime": 1795803333.595983,
+      "specs": [
+        "BIGNUM_CTZ_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_demont",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_demont.correct",
+      "elapsed_seconds": 22.264387,
+      "start_unixtime": 1795803314.404112,
+      "end_unixtime": 1795803336.668499,
+      "specs": [
+        "BIGNUM_DEMONT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_digit",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_digit.correct",
+      "elapsed_seconds": 20.385575,
+      "start_unixtime": 1795803315.615211,
+      "end_unixtime": 1795803336.000786,
+      "specs": [
+        "BIGNUM_DIGIT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_digitsize",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_digitsize.correct",
+      "elapsed_seconds": 20.173038,
+      "start_unixtime": 1795803324.923768,
+      "end_unixtime": 1795803345.096806,
+      "specs": [
+        "BIGNUM_DIGITSIZE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_divmod10",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_divmod10.correct",
+      "elapsed_seconds": 20.53825,
+      "start_unixtime": 1795803327.59958,
+      "end_unixtime": 1795803348.13783,
+      "specs": [
+        "BIGNUM_DIVMOD10_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_emontredc",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_emontredc.correct",
+      "elapsed_seconds": 22.075141,
+      "start_unixtime": 1795803329.410583,
+      "end_unixtime": 1795803351.485724,
+      "specs": [
+        "BIGNUM_EMONTREDC_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_eq",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_eq.correct",
+      "elapsed_seconds": 20.58961,
+      "start_unixtime": 1795803331.43509,
+      "end_unixtime": 1795803352.0247,
+      "specs": [
+        "BIGNUM_EQ_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_even",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_even.correct",
+      "elapsed_seconds": 20.017232,
+      "start_unixtime": 1795803332.477333,
+      "end_unixtime": 1795803352.494565,
+      "specs": [
+        "BIGNUM_EVEN_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_ge",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_ge.correct",
+      "elapsed_seconds": 22.059602,
+      "start_unixtime": 1795803333.421426,
+      "end_unixtime": 1795803355.481028,
+      "specs": [
+        "BIGNUM_GE_SUBROUTINE_CORRECT",
+        "BIGNUM_GE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_gt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_gt.correct",
+      "elapsed_seconds": 21.227626,
+      "start_unixtime": 1795803333.635332,
+      "end_unixtime": 1795803354.862958,
+      "specs": [
+        "BIGNUM_GT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_iszero",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_iszero.correct",
+      "elapsed_seconds": 20.200024,
+      "start_unixtime": 1795803334.09698,
+      "end_unixtime": 1795803354.297004,
+      "specs": [
+        "BIGNUM_ISZERO_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_le",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_le.correct",
+      "elapsed_seconds": 21.598284,
+      "start_unixtime": 1795803339.535815,
+      "end_unixtime": 1795803361.134099,
+      "specs": [
+        "BIGNUM_LE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_lt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_lt.correct",
+      "elapsed_seconds": 21.502835,
+      "start_unixtime": 1795803340.103338,
+      "end_unixtime": 1795803361.606173,
+      "specs": [
+        "BIGNUM_LT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_madd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_madd.correct",
+      "elapsed_seconds": 21.299902,
+      "start_unixtime": 1795803340.786517,
+      "end_unixtime": 1795803362.086419,
+      "specs": [
+        "BIGNUM_MADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_modadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_modadd.correct",
+      "elapsed_seconds": 20.890444,
+      "start_unixtime": 1795803342.432127,
+      "end_unixtime": 1795803363.322571,
+      "specs": [
+        "BIGNUM_MODADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_moddouble",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_moddouble.correct",
+      "elapsed_seconds": 20.832201,
+      "start_unixtime": 1795803343.095058,
+      "end_unixtime": 1795803363.927259,
+      "specs": [
+        "BIGNUM_MODDOUBLE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_modexp",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_modexp.correct",
+      "elapsed_seconds": 50.679133,
+      "start_unixtime": 1795803346.185153,
+      "end_unixtime": 1795803396.864286,
+      "specs": [
+        "BIGNUM_MODEXP_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_modifier",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_modifier.correct",
+      "elapsed_seconds": 28.52004,
+      "start_unixtime": 1795803348.965278,
+      "end_unixtime": 1795803377.485318,
+      "specs": [
+        "BIGNUM_MODIFIER_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_modinv",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_modinv.correct",
+      "elapsed_seconds": 44.751283,
+      "start_unixtime": 1795803351.29744,
+      "end_unixtime": 1795803396.048723,
+      "specs": [
+        "BIGNUM_MODINV_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_modoptneg",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_modoptneg.correct",
+      "elapsed_seconds": 20.815162,
+      "start_unixtime": 1795803351.517637,
+      "end_unixtime": 1795803372.332799,
+      "specs": [
+        "BIGNUM_MODOPTNEG_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_modsub",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_modsub.correct",
+      "elapsed_seconds": 20.848951,
+      "start_unixtime": 1795803352.737646,
+      "end_unixtime": 1795803373.586597,
+      "specs": [
+        "BIGNUM_MODSUB_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_montifier",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_montifier.correct",
+      "elapsed_seconds": 28.89508,
+      "start_unixtime": 1795803354.576876,
+      "end_unixtime": 1795803383.471956,
+      "specs": [
+        "BIGNUM_MONTIFIER_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_montmul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_montmul.correct",
+      "elapsed_seconds": 22.949075,
+      "start_unixtime": 1795803357.842082,
+      "end_unixtime": 1795803380.791157,
+      "specs": [
+        "BIGNUM_MONTMUL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_montredc",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_montredc.correct",
+      "elapsed_seconds": 24.05973,
+      "start_unixtime": 1795803358.415548,
+      "end_unixtime": 1795803382.475278,
+      "specs": [
+        "BIGNUM_MONTREDC_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_montsqr",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_montsqr.correct",
+      "elapsed_seconds": 23.598554,
+      "start_unixtime": 1795803359.009998,
+      "end_unixtime": 1795803382.608552,
+      "specs": [
+        "BIGNUM_MONTSQR_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_mul",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_mul.correct",
+      "elapsed_seconds": 23.672147,
+      "start_unixtime": 1795803360.401497,
+      "end_unixtime": 1795803384.073644,
+      "specs": [
+        "BIGNUM_MUL_SUBROUTINE_CORRECT",
+        "BIGNUM_MUL_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_muladd10",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_muladd10.correct",
+      "elapsed_seconds": 20.493311,
+      "start_unixtime": 1795803360.68906,
+      "end_unixtime": 1795803381.182371,
+      "specs": [
+        "BIGNUM_MULADD10_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_mux",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_mux.correct",
+      "elapsed_seconds": 20.107648,
+      "start_unixtime": 1795803361.226448,
+      "end_unixtime": 1795803381.334096,
+      "specs": [
+        "BIGNUM_MUX_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_mux16",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_mux16.correct",
+      "elapsed_seconds": 47.980757,
+      "start_unixtime": 1795803361.874739,
+      "end_unixtime": 1795803409.855496,
+      "specs": [
+        "BIGNUM_MUX16_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_negmodinv",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_negmodinv.correct",
+      "elapsed_seconds": 22.123576,
+      "start_unixtime": 1795803367.576515,
+      "end_unixtime": 1795803389.700091,
+      "specs": [
+        "BIGNUM_NEGMODINV_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_nonzero",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_nonzero.correct",
+      "elapsed_seconds": 20.130066,
+      "start_unixtime": 1795803367.959283,
+      "end_unixtime": 1795803388.089349,
+      "specs": [
+        "BIGNUM_NONZERO_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_normalize",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_normalize.correct",
+      "elapsed_seconds": 21.211545,
+      "start_unixtime": 1795803368.449916,
+      "end_unixtime": 1795803389.661461,
+      "specs": [
+        "BIGNUM_NORMALIZE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_odd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_odd.correct",
+      "elapsed_seconds": 19.926822,
+      "start_unixtime": 1795803369.245483,
+      "end_unixtime": 1795803389.172305,
+      "specs": [
+        "BIGNUM_ODD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_of_word",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_of_word.correct",
+      "elapsed_seconds": 20.64871,
+      "start_unixtime": 1795803369.783186,
+      "end_unixtime": 1795803390.431896,
+      "specs": [
+        "BIGNUM_OF_WORD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_optadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_optadd.correct",
+      "elapsed_seconds": 20.38453,
+      "start_unixtime": 1795803370.342262,
+      "end_unixtime": 1795803390.726792,
+      "specs": [
+        "BIGNUM_OPTADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_optneg",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_optneg.correct",
+      "elapsed_seconds": 20.515178,
+      "start_unixtime": 1795803378.737853,
+      "end_unixtime": 1795803399.253031,
+      "specs": [
+        "BIGNUM_OPTNEG_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_optsub",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_optsub.correct",
+      "elapsed_seconds": 20.894196,
+      "start_unixtime": 1795803380.057069,
+      "end_unixtime": 1795803400.951265,
+      "specs": [
+        "BIGNUM_OPTSUB_SUBROUTINE_CORRECT",
+        "BIGNUM_OPTSUB_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_optsubadd",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_optsubadd.correct",
+      "elapsed_seconds": 20.482972,
+      "start_unixtime": 1795803383.861394,
+      "end_unixtime": 1795803404.344366,
+      "specs": [
+        "BIGNUM_OPTSUBADD_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_pow2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_pow2.correct",
+      "elapsed_seconds": 20.184536,
+      "start_unixtime": 1795803387.166782,
+      "end_unixtime": 1795803407.351318,
+      "specs": [
+        "BIGNUM_POW2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_shl_small",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_shl_small.correct",
+      "elapsed_seconds": 20.991036,
+      "start_unixtime": 1795803387.588449,
+      "end_unixtime": 1795803408.579485,
+      "specs": [
+        "BIGNUM_SHL_SMALL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_shr_small",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_shr_small.correct",
+      "elapsed_seconds": 20.85843,
+      "start_unixtime": 1795803387.747714,
+      "end_unixtime": 1795803408.606144,
+      "specs": [
+        "BIGNUM_SHR_SMALL_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_sqr",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_sqr.correct",
+      "elapsed_seconds": 24.159834,
+      "start_unixtime": 1795803388.875771,
+      "end_unixtime": 1795803413.035605,
+      "specs": [
+        "BIGNUM_SQR_SUBROUTINE_CORRECT",
+        "BIGNUM_SQR_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/bignum_sub",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/bignum_sub.correct",
+      "elapsed_seconds": 23.179391,
+      "start_unixtime": 1795803389.124877,
+      "end_unixtime": 1795803412.304268,
+      "specs": [
+        "BIGNUM_SUB_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_bytereverse",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_bytereverse.correct",
+      "elapsed_seconds": 20.346593,
+      "start_unixtime": 1795803389.858344,
+      "end_unixtime": 1795803410.204937,
+      "specs": [
+        "WORD_BYTEREVERSE_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_clz",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_clz.correct",
+      "elapsed_seconds": 19.929245,
+      "start_unixtime": 1795803390.470124,
+      "end_unixtime": 1795803410.399369,
+      "specs": [
+        "WORD_CLZ_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_ctz",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_ctz.correct",
+      "elapsed_seconds": 19.955711,
+      "start_unixtime": 1795803394.441657,
+      "end_unixtime": 1795803414.397368,
+      "specs": [
+        "WORD_CTZ_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_divstep59",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_divstep59.correct",
+      "elapsed_seconds": 36.069046,
+      "start_unixtime": 1795803395.565968,
+      "end_unixtime": 1795803431.635014,
+      "specs": [
+        "WORD_DIVSTEP59_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_max",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_max.correct",
+      "elapsed_seconds": 20.011121,
+      "start_unixtime": 1795803396.085567,
+      "end_unixtime": 1795803416.096688,
+      "specs": [
+        "WORD_MAX_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_min",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_min.correct",
+      "elapsed_seconds": 19.792884,
+      "start_unixtime": 1795803396.049228,
+      "end_unixtime": 1795803415.842112,
+      "specs": [
+        "WORD_MIN_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_negmodinv",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_negmodinv.correct",
+      "elapsed_seconds": 20.004886,
+      "start_unixtime": 1795803396.799583,
+      "end_unixtime": 1795803416.804469,
+      "specs": [
+        "WORD_NEGMODINV_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_popcount",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_popcount.correct",
+      "elapsed_seconds": 23.300261,
+      "start_unixtime": 1795803397.113239,
+      "end_unixtime": 1795803420.4135,
+      "specs": [
+        "WORD_POPCOUNT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "generic/word_recip",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/generic/word_recip.correct",
+      "elapsed_seconds": 21.663096,
+      "start_unixtime": 1795803400.370927,
+      "end_unixtime": 1795803422.034023,
+      "specs": [
+        "WORD_RECIP_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_caddq",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_caddq.correct",
+      "elapsed_seconds": 75.567376,
+      "start_unixtime": 1795803402.448748,
+      "end_unixtime": 1795803478.016124,
+      "specs": [
+        "MLDSA_CADDQ_SUBROUTINE_CORRECT",
+        "MLDSA_CADDQ_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_chknorm",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_chknorm.correct",
+      "elapsed_seconds": 45.033034,
+      "start_unixtime": 1795803403.230994,
+      "end_unixtime": 1795803448.264028,
+      "specs": [
+        "MLDSA_CHKNORM_SUBROUTINE_CORRECT",
+        "MLDSA_CHKNORM_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_decompose_32",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_decompose_32.correct",
+      "elapsed_seconds": 141.372102,
+      "start_unixtime": 1795803405.630534,
+      "end_unixtime": 1795803547.002636,
+      "specs": [
+        "MLDSA_DECOMPOSE_32_SUBROUTINE_CORRECT",
+        "MLDSA_DECOMPOSE_32_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_decompose_88",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_decompose_88.correct",
+      "elapsed_seconds": 142.126454,
+      "start_unixtime": 1795803407.336715,
+      "end_unixtime": 1795803549.463169,
+      "specs": [
+        "MLDSA_DECOMPOSE_88_SUBROUTINE_CORRECT",
+        "MLDSA_DECOMPOSE_88_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_intt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_intt.correct",
+      "elapsed_seconds": 1162.61691,
+      "start_unixtime": 1795803410.718801,
+      "end_unixtime": 1795804573.335711,
+      "specs": [
+        "MLDSA_INTT_SUBROUTINE_CORRECT",
+        "MLDSA_INTT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_pointwise_acc_l4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_pointwise_acc_l4.correct",
+      "elapsed_seconds": 1477.206939,
+      "start_unixtime": 1795803413.691775,
+      "end_unixtime": 1795804890.898714,
+      "specs": [
+        "MLDSA_POINTWISE_ACC_L4_SUBROUTINE_CORRECT",
+        "MLDSA_POINTWISE_ACC_L4_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_pointwise_acc_l5",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_pointwise_acc_l5.correct",
+      "elapsed_seconds": 1216.581837,
+      "start_unixtime": 1795803414.980882,
+      "end_unixtime": 1795804631.562719,
+      "specs": [
+        "MLDSA_POINTWISE_ACC_L5_SUBROUTINE_CORRECT",
+        "MLDSA_POINTWISE_ACC_L5_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_pointwise_acc_l7",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_pointwise_acc_l7.correct",
+      "elapsed_seconds": 2434.496411,
+      "start_unixtime": 1795803414.992704,
+      "end_unixtime": 1795805849.489115,
+      "specs": [
+        "MLDSA_POINTWISE_ACC_L7_SUBROUTINE_CORRECT",
+        "MLDSA_POINTWISE_ACC_L7_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_ntt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_ntt.correct",
+      "elapsed_seconds": 1085.600573,
+      "start_unixtime": 1795803416.283424,
+      "end_unixtime": 1795804501.883997,
+      "specs": [
+        "MLDSA_NTT_SUBROUTINE_CORRECT",
+        "MLDSA_NTT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_pointwise",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_pointwise.correct",
+      "elapsed_seconds": 298.687533,
+      "start_unixtime": 1795803416.570251,
+      "end_unixtime": 1795803715.257784,
+      "specs": [
+        "MLDSA_POINTWISE_SUBROUTINE_CORRECT",
+        "MLDSA_POINTWISE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_poly_use_hint_32",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_poly_use_hint_32.correct",
+      "elapsed_seconds": 387.451342,
+      "start_unixtime": 1795803416.798355,
+      "end_unixtime": 1795803804.249697,
+      "specs": [
+        "MLDSA_USE_HINT_32_SUBROUTINE_CORRECT",
+        "MLDSA_USE_HINT_32_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_poly_use_hint_88",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_poly_use_hint_88.correct",
+      "elapsed_seconds": 586.517943,
+      "start_unixtime": 1795803418.705751,
+      "end_unixtime": 1795804005.223694,
+      "specs": [
+        "MLDSA_USE_HINT_88_SUBROUTINE_CORRECT",
+        "MLDSA_USE_HINT_88_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_polyz_unpack_17",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_polyz_unpack_17.correct",
+      "elapsed_seconds": 107.747465,
+      "start_unixtime": 1795803419.407124,
+      "end_unixtime": 1795803527.154589,
+      "specs": [
+        "MLDSA_POLYZ_UNPACK_17_SUBROUTINE_CORRECT",
+        "MLDSA_POLYZ_UNPACK_17_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_polyz_unpack_19",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_polyz_unpack_19.correct",
+      "elapsed_seconds": 108.822453,
+      "start_unixtime": 1795803419.633466,
+      "end_unixtime": 1795803528.455919,
+      "specs": [
+        "MLDSA_POLYZ_UNPACK_19_SUBROUTINE_CORRECT",
+        "MLDSA_POLYZ_UNPACK_19_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_rej_uniform_eta2_VARIABLE_TIME",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_rej_uniform_eta2_VARIABLE_TIME.correct",
+      "elapsed_seconds": 496.996717,
+      "start_unixtime": 1795803420.764992,
+      "end_unixtime": 1795803917.761709,
+      "specs": [
+        "MLDSA_REJ_UNIFORM_ETA2_SUBROUTINE_CORRECT",
+        "MLDSA_REJ_UNIFORM_ETA2_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_rej_uniform_eta4_VARIABLE_TIME",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_rej_uniform_eta4_VARIABLE_TIME.correct",
+      "elapsed_seconds": 353.189659,
+      "start_unixtime": 1795803422.313684,
+      "end_unixtime": 1795803775.503343,
+      "specs": [
+        "MLDSA_REJ_UNIFORM_ETA4_SUBROUTINE_CORRECT",
+        "MLDSA_REJ_UNIFORM_ETA4_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_basemul_k2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_basemul_k2.correct",
+      "elapsed_seconds": 237.313579,
+      "start_unixtime": 1795803422.541691,
+      "end_unixtime": 1795803659.85527,
+      "specs": [
+        "MLKEM_BASEMUL_K2_SUBROUTINE_CORRECT",
+        "MLKEM_BASEMUL_K2_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_basemul_k3",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_basemul_k3.correct",
+      "elapsed_seconds": 457.788817,
+      "start_unixtime": 1795803423.234836,
+      "end_unixtime": 1795803881.023653,
+      "specs": [
+        "MLKEM_BASEMUL_K3_SUBROUTINE_CORRECT",
+        "MLKEM_BASEMUL_K3_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_basemul_k4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_basemul_k4.correct",
+      "elapsed_seconds": 815.797164,
+      "start_unixtime": 1795803426.801873,
+      "end_unixtime": 1795804242.599037,
+      "specs": [
+        "MLKEM_BASEMUL_K4_SUBROUTINE_CORRECT",
+        "MLKEM_BASEMUL_K4_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_intt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_intt.correct",
+      "elapsed_seconds": 590.41138,
+      "start_unixtime": 1795803428.397377,
+      "end_unixtime": 1795804018.808757,
+      "specs": [
+        "MLKEM_INTT_SUBROUTINE_CORRECT",
+        "MLKEM_INTT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_mulcache_compute",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_mulcache_compute.correct",
+      "elapsed_seconds": 45.571354,
+      "start_unixtime": 1795803437.995553,
+      "end_unixtime": 1795803483.566907,
+      "specs": [
+        "MLKEM_MULCACHE_COMPUTE_SUBROUTINE_CORRECT",
+        "MLKEM_MULCACHE_COMPUTE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_ntt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_ntt.correct",
+      "elapsed_seconds": 352.312419,
+      "start_unixtime": 1795803454.640715,
+      "end_unixtime": 1795803806.953134,
+      "specs": [
+        "MLKEM_NTT_SUBROUTINE_CORRECT",
+        "MLKEM_NTT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_reduce",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_reduce.correct",
+      "elapsed_seconds": 43.203169,
+      "start_unixtime": 1795803468.615389,
+      "end_unixtime": 1795803511.818558,
+      "specs": [
+        "MLKEM_REDUCE_SUBROUTINE_CORRECT",
+        "MLKEM_REDUCE_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_tobytes",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_tobytes.correct",
+      "elapsed_seconds": 51.882146,
+      "start_unixtime": 1795803484.406172,
+      "end_unixtime": 1795803536.288318,
+      "specs": [
+        "MLKEM_TOBYTES_SUBROUTINE_CORRECT",
+        "MLKEM_TOBYTES_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_tomont",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_tomont.correct",
+      "elapsed_seconds": 37.373735,
+      "start_unixtime": 1795803489.945338,
+      "end_unixtime": 1795803527.319073,
+      "specs": [
+        "MLKEM_TOMONT_SUBROUTINE_CORRECT",
+        "MLKEM_TOMONT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mlkem/mlkem_rej_uniform_VARIABLE_TIME",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mlkem/mlkem_rej_uniform_VARIABLE_TIME.correct",
+      "elapsed_seconds": 710.59506,
+      "start_unixtime": 1795803506.734219,
+      "end_unixtime": 1795804217.329279,
+      "specs": [
+        "MLKEM_REJ_UNIFORM_SUBROUTINE_CORRECT",
+        "MLKEM_REJ_UNIFORM_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "mldsa/mldsa_rej_uniform_VARIABLE_TIME",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/mldsa/mldsa_rej_uniform_VARIABLE_TIME.correct",
+      "elapsed_seconds": 146.49493,
+      "start_unixtime": 1795803515.065089,
+      "end_unixtime": 1795803661.560019,
+      "specs": [
+        "MLDSA_REJ_UNIFORM_SUBROUTINE_CORRECT",
+        "MLDSA_REJ_UNIFORM_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_add_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_add_p256.correct",
+      "elapsed_seconds": 20.670811,
+      "start_unixtime": 1795803518.208466,
+      "end_unixtime": 1795803538.879277,
+      "specs": [
+        "BIGNUM_ADD_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_bigendian_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_bigendian_4.correct",
+      "elapsed_seconds": 21.829158,
+      "start_unixtime": 1795803518.409604,
+      "end_unixtime": 1795803540.238762,
+      "specs": [
+        "BIGNUM_BIGENDIAN_4_SUBROUTINE_CORRECT",
+        "BIGNUM_FROMBEBYTES_4_SUBROUTINE_CORRECT",
+        "BIGNUM_TOBEBYTES_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_cmul_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_cmul_p256.correct",
+      "elapsed_seconds": 21.780709,
+      "start_unixtime": 1795803533.599587,
+      "end_unixtime": 1795803555.380296,
+      "specs": [
+        "BIGNUM_CMUL_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_deamont_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_deamont_p256.correct",
+      "elapsed_seconds": 21.737134,
+      "start_unixtime": 1795803533.717308,
+      "end_unixtime": 1795803555.454442,
+      "specs": [
+        "BIGNUM_DEAMONT_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_demont_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_demont_p256.correct",
+      "elapsed_seconds": 21.269711,
+      "start_unixtime": 1795803534.810643,
+      "end_unixtime": 1795803556.080354,
+      "specs": [
+        "BIGNUM_DEMONT_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_double_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_double_p256.correct",
+      "elapsed_seconds": 20.68166,
+      "start_unixtime": 1795803542.672769,
+      "end_unixtime": 1795803563.354429,
+      "specs": [
+        "BIGNUM_DOUBLE_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_half_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_half_p256.correct",
+      "elapsed_seconds": 20.705873,
+      "start_unixtime": 1795803544.55869,
+      "end_unixtime": 1795803565.264563,
+      "specs": [
+        "BIGNUM_HALF_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_inv_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_inv_p256.correct",
+      "elapsed_seconds": 228.613432,
+      "start_unixtime": 1795803545.263381,
+      "end_unixtime": 1795803773.876813,
+      "specs": [
+        "BIGNUM_INV_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_littleendian_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_littleendian_4.correct",
+      "elapsed_seconds": 21.864207,
+      "start_unixtime": 1795803545.744336,
+      "end_unixtime": 1795803567.608543,
+      "specs": [
+        "BIGNUM_FROMLEBYTES_4_SUBROUTINE_CORRECT",
+        "BIGNUM_LITTLEENDIAN_4_SUBROUTINE_CORRECT",
+        "BIGNUM_TOLEBYTES_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_mod_n256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_mod_n256.correct",
+      "elapsed_seconds": 22.521841,
+      "start_unixtime": 1795803546.57887,
+      "end_unixtime": 1795803569.100711,
+      "specs": [
+        "BIGNUM_MOD_N256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_mod_n256_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_mod_n256_4.correct",
+      "elapsed_seconds": 20.504493,
+      "start_unixtime": 1795803548.607269,
+      "end_unixtime": 1795803569.111762,
+      "specs": [
+        "BIGNUM_MOD_N256_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_mod_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_mod_p256.correct",
+      "elapsed_seconds": 22.610471,
+      "start_unixtime": 1795803551.483077,
+      "end_unixtime": 1795803574.093548,
+      "specs": [
+        "BIGNUM_MOD_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_mod_p256_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_mod_p256_4.correct",
+      "elapsed_seconds": 20.664436,
+      "start_unixtime": 1795803553.454677,
+      "end_unixtime": 1795803574.119113,
+      "specs": [
+        "BIGNUM_MOD_P256_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_montinv_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_montinv_p256.correct",
+      "elapsed_seconds": 242.064089,
+      "start_unixtime": 1795803555.859484,
+      "end_unixtime": 1795803797.923573,
+      "specs": [
+        "BIGNUM_MONTINV_P256_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTINV_P256_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_montmul_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_montmul_p256.correct",
+      "elapsed_seconds": 65.170089,
+      "start_unixtime": 1795803561.251757,
+      "end_unixtime": 1795803626.421846,
+      "specs": [
+        "BIGNUM_AMONTMUL_P256_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_montmul_p256_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_montmul_p256_alt.correct",
+      "elapsed_seconds": 32.326283,
+      "start_unixtime": 1795803561.746248,
+      "end_unixtime": 1795803594.072531,
+      "specs": [
+        "BIGNUM_AMONTMUL_P256_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_P256_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_montsqr_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_montsqr_p256.correct",
+      "elapsed_seconds": 50.209692,
+      "start_unixtime": 1795803561.804973,
+      "end_unixtime": 1795803612.014665,
+      "specs": [
+        "BIGNUM_AMONTSQR_P256_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_montsqr_p256_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_montsqr_p256_alt.correct",
+      "elapsed_seconds": 28.27398,
+      "start_unixtime": 1795803562.468681,
+      "end_unixtime": 1795803590.742661,
+      "specs": [
+        "BIGNUM_AMONTSQR_P256_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_P256_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_mux_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_mux_4.correct",
+      "elapsed_seconds": 20.160806,
+      "start_unixtime": 1795803569.689818,
+      "end_unixtime": 1795803589.850624,
+      "specs": [
+        "BIGNUM_MUX_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_neg_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_neg_p256.correct",
+      "elapsed_seconds": 20.11999,
+      "start_unixtime": 1795803571.61018,
+      "end_unixtime": 1795803591.73017,
+      "specs": [
+        "BIGNUM_NEG_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_nonzero_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_nonzero_4.correct",
+      "elapsed_seconds": 19.938056,
+      "start_unixtime": 1795803573.982393,
+      "end_unixtime": 1795803593.920449,
+      "specs": [
+        "BIGNUM_NONZERO_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_optneg_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_optneg_p256.correct",
+      "elapsed_seconds": 20.317072,
+      "start_unixtime": 1795803575.433074,
+      "end_unixtime": 1795803595.750146,
+      "specs": [
+        "BIGNUM_OPTNEG_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_sub_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_sub_p256.correct",
+      "elapsed_seconds": 20.764476,
+      "start_unixtime": 1795803575.549165,
+      "end_unixtime": 1795803596.313641,
+      "specs": [
+        "BIGNUM_SUB_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_tomont_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_tomont_p256.correct",
+      "elapsed_seconds": 23.445531,
+      "start_unixtime": 1795803580.423806,
+      "end_unixtime": 1795803603.869337,
+      "specs": [
+        "BIGNUM_TOMONT_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p256/bignum_triple_p256",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p256/bignum_triple_p256.correct",
+      "elapsed_seconds": 20.809262,
+      "start_unixtime": 1795803580.459931,
+      "end_unixtime": 1795803601.269193,
+      "specs": [
+        "BIGNUM_TRIPLE_P256_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_add_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_add_p384.correct",
+      "elapsed_seconds": 22.020976,
+      "start_unixtime": 1795803589.015068,
+      "end_unixtime": 1795803611.036044,
+      "specs": [
+        "BIGNUM_ADD_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_ADD_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_bigendian_6",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_bigendian_6.correct",
+      "elapsed_seconds": 23.153732,
+      "start_unixtime": 1795803593.558461,
+      "end_unixtime": 1795803616.712193,
+      "specs": [
+        "BIGNUM_BIGENDIAN_6_SUBROUTINE_CORRECT",
+        "BIGNUM_FROMBEBYTES_6_SUBROUTINE_CORRECT",
+        "BIGNUM_TOBEBYTES_6_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_cmul_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_cmul_p384.correct",
+      "elapsed_seconds": 22.219253,
+      "start_unixtime": 1795803596.248614,
+      "end_unixtime": 1795803618.467867,
+      "specs": [
+        "BIGNUM_CMUL_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_deamont_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_deamont_p384.correct",
+      "elapsed_seconds": 24.42598,
+      "start_unixtime": 1795803597.150417,
+      "end_unixtime": 1795803621.576397,
+      "specs": [
+        "BIGNUM_DEAMONT_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_DEAMONT_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_demont_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_demont_p384.correct",
+      "elapsed_seconds": 22.743443,
+      "start_unixtime": 1795803598.09424,
+      "end_unixtime": 1795803620.837683,
+      "specs": [
+        "BIGNUM_DEMONT_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_double_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_double_p384.correct",
+      "elapsed_seconds": 21.517974,
+      "start_unixtime": 1795803600.358208,
+      "end_unixtime": 1795803621.876182,
+      "specs": [
+        "BIGNUM_DOUBLE_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_half_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_half_p384.correct",
+      "elapsed_seconds": 20.879632,
+      "start_unixtime": 1795803600.52089,
+      "end_unixtime": 1795803621.400522,
+      "specs": [
+        "BIGNUM_HALF_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_inv_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_inv_p384.correct",
+      "elapsed_seconds": 294.153441,
+      "start_unixtime": 1795803602.138785,
+      "end_unixtime": 1795803896.292226,
+      "specs": [
+        "BIGNUM_INV_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_littleendian_6",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_littleendian_6.correct",
+      "elapsed_seconds": 23.544546,
+      "start_unixtime": 1795803602.668865,
+      "end_unixtime": 1795803626.213411,
+      "specs": [
+        "BIGNUM_FROMLEBYTES_6_SUBROUTINE_CORRECT",
+        "BIGNUM_LITTLEENDIAN_6_SUBROUTINE_CORRECT",
+        "BIGNUM_LITTLEENDIAN_6_SUBROUTINE_SAFE",
+        "BIGNUM_TOLEBYTES_6_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_mod_n384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_mod_n384.correct",
+      "elapsed_seconds": 24.206616,
+      "start_unixtime": 1795803607.653217,
+      "end_unixtime": 1795803631.859833,
+      "specs": [
+        "BIGNUM_MOD_N384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_mod_n384_6",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_mod_n384_6.correct",
+      "elapsed_seconds": 21.047115,
+      "start_unixtime": 1795803610.274667,
+      "end_unixtime": 1795803631.321782,
+      "specs": [
+        "BIGNUM_MOD_N384_6_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_mod_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_mod_p384.correct",
+      "elapsed_seconds": 23.651445,
+      "start_unixtime": 1795803617.408928,
+      "end_unixtime": 1795803641.060373,
+      "specs": [
+        "BIGNUM_MOD_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_mod_p384_6",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_mod_p384_6.correct",
+      "elapsed_seconds": 20.739684,
+      "start_unixtime": 1795803618.3788,
+      "end_unixtime": 1795803639.118484,
+      "specs": [
+        "BIGNUM_MOD_P384_6_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_montinv_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_montinv_p384.correct",
+      "elapsed_seconds": 317.265957,
+      "start_unixtime": 1795803623.129022,
+      "end_unixtime": 1795803940.394979,
+      "specs": [
+        "BIGNUM_MONTINV_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTINV_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_montmul_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_montmul_p384.correct",
+      "elapsed_seconds": 160.281398,
+      "start_unixtime": 1795803624.846666,
+      "end_unixtime": 1795803785.128064,
+      "specs": [
+        "BIGNUM_AMONTMUL_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_montmul_p384_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_montmul_p384_alt.correct",
+      "elapsed_seconds": 74.85718,
+      "start_unixtime": 1795803627.177353,
+      "end_unixtime": 1795803702.034533,
+      "specs": [
+        "BIGNUM_AMONTMUL_P384_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_P384_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_P384_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_montsqr_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_montsqr_p384.correct",
+      "elapsed_seconds": 99.872645,
+      "start_unixtime": 1795803627.810118,
+      "end_unixtime": 1795803727.682763,
+      "specs": [
+        "BIGNUM_AMONTSQR_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_montsqr_p384_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_montsqr_p384_alt.correct",
+      "elapsed_seconds": 55.179687,
+      "start_unixtime": 1795803627.932918,
+      "end_unixtime": 1795803683.112605,
+      "specs": [
+        "BIGNUM_AMONTSQR_P384_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_P384_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_P384_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_mux_6",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_mux_6.correct",
+      "elapsed_seconds": 20.621687,
+      "start_unixtime": 1795803628.334231,
+      "end_unixtime": 1795803648.955918,
+      "specs": [
+        "BIGNUM_MUX_6_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_neg_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_neg_p384.correct",
+      "elapsed_seconds": 20.657519,
+      "start_unixtime": 1795803632.555924,
+      "end_unixtime": 1795803653.213443,
+      "specs": [
+        "BIGNUM_NEG_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_NEG_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_nonzero_6",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_nonzero_6.correct",
+      "elapsed_seconds": 19.987031,
+      "start_unixtime": 1795803632.741857,
+      "end_unixtime": 1795803652.728888,
+      "specs": [
+        "BIGNUM_NONZERO_6_SUBROUTINE_CORRECT",
+        "BIGNUM_NONZERO_6_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_optneg_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_optneg_p384.correct",
+      "elapsed_seconds": 20.882095,
+      "start_unixtime": 1795803637.721515,
+      "end_unixtime": 1795803658.60361,
+      "specs": [
+        "BIGNUM_OPTNEG_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_sub_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_sub_p384.correct",
+      "elapsed_seconds": 21.330923,
+      "start_unixtime": 1795803638.224106,
+      "end_unixtime": 1795803659.555029,
+      "specs": [
+        "BIGNUM_SUB_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_SUB_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_tomont_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_tomont_p384.correct",
+      "elapsed_seconds": 26.716832,
+      "start_unixtime": 1795803645.434073,
+      "end_unixtime": 1795803672.150905,
+      "specs": [
+        "BIGNUM_TOMONT_P384_SUBROUTINE_CORRECT",
+        "BIGNUM_TOMONT_P384_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p384/bignum_triple_p384",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p384/bignum_triple_p384.correct",
+      "elapsed_seconds": 21.629738,
+      "start_unixtime": 1795803647.463752,
+      "end_unixtime": 1795803669.09349,
+      "specs": [
+        "BIGNUM_TRIPLE_P384_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_add_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_add_p521.correct",
+      "elapsed_seconds": 21.893856,
+      "start_unixtime": 1795803655.339779,
+      "end_unixtime": 1795803677.233635,
+      "specs": [
+        "BIGNUM_ADD_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_ADD_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_cmul_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_cmul_p521.correct",
+      "elapsed_seconds": 23.014538,
+      "start_unixtime": 1795803659.068598,
+      "end_unixtime": 1795803682.083136,
+      "specs": [
+        "BIGNUM_CMUL_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_deamont_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_deamont_p521.correct",
+      "elapsed_seconds": 21.895303,
+      "start_unixtime": 1795803659.62098,
+      "end_unixtime": 1795803681.516283,
+      "specs": [
+        "BIGNUM_DEAMONT_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_demont_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_demont_p521.correct",
+      "elapsed_seconds": 26.297027,
+      "start_unixtime": 1795803664.965543,
+      "end_unixtime": 1795803691.26257,
+      "specs": [
+        "BIGNUM_DEMONT_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_double_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_double_p521.correct",
+      "elapsed_seconds": 20.614726,
+      "start_unixtime": 1795803665.961249,
+      "end_unixtime": 1795803686.575975,
+      "specs": [
+        "BIGNUM_DOUBLE_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_fromlebytes_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_fromlebytes_p521.correct",
+      "elapsed_seconds": 25.093574,
+      "start_unixtime": 1795803666.22598,
+      "end_unixtime": 1795803691.319554,
+      "specs": [
+        "BIGNUM_FROMLEBYTES_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_FROMLEBYTES_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_half_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_half_p521.correct",
+      "elapsed_seconds": 21.450869,
+      "start_unixtime": 1795803667.994239,
+      "end_unixtime": 1795803689.445108,
+      "specs": [
+        "BIGNUM_HALF_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_inv_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_inv_p521.correct",
+      "elapsed_seconds": 386.967906,
+      "start_unixtime": 1795803668.143525,
+      "end_unixtime": 1795804055.111431,
+      "specs": [
+        "BIGNUM_INV_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_INV_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_mod_n521_9",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_mod_n521_9.correct",
+      "elapsed_seconds": 22.826719,
+      "start_unixtime": 1795803675.476666,
+      "end_unixtime": 1795803698.303385,
+      "specs": [
+        "BIGNUM_MOD_N521_9_SUBROUTINE_CORRECT",
+        "BIGNUM_MOD_N521_9_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_mod_p521_9",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_mod_p521_9.correct",
+      "elapsed_seconds": 23.619685,
+      "start_unixtime": 1795803678.478466,
+      "end_unixtime": 1795803702.098151,
+      "specs": [
+        "BIGNUM_MOD_P521_9_SUBROUTINE_CORRECT",
+        "BIGNUM_MOD_P521_9_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_montmul_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_montmul_p521.correct",
+      "elapsed_seconds": 804.783732,
+      "start_unixtime": 1795803683.652384,
+      "end_unixtime": 1795804488.436116,
+      "specs": [
+        "BIGNUM_MONTMUL_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_montmul_p521_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_montmul_p521_alt.correct",
+      "elapsed_seconds": 131.599022,
+      "start_unixtime": 1795803684.454119,
+      "end_unixtime": 1795803816.053141,
+      "specs": [
+        "BIGNUM_MONTMUL_P521_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_montsqr_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_montsqr_p521.correct",
+      "elapsed_seconds": 340.27354,
+      "start_unixtime": 1795803687.576527,
+      "end_unixtime": 1795804027.850067,
+      "specs": [
+        "BIGNUM_MONTSQR_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_montsqr_p521_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_montsqr_p521_alt.correct",
+      "elapsed_seconds": 69.763592,
+      "start_unixtime": 1795803687.898395,
+      "end_unixtime": 1795803757.661987,
+      "specs": [
+        "BIGNUM_MONTSQR_P521_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_mul_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_mul_p521.correct",
+      "elapsed_seconds": 245.611727,
+      "start_unixtime": 1795803688.416982,
+      "end_unixtime": 1795803934.028709,
+      "specs": [
+        "BIGNUM_MUL_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_MUL_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_mul_p521_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_mul_p521_alt.correct",
+      "elapsed_seconds": 116.581965,
+      "start_unixtime": 1795803688.450214,
+      "end_unixtime": 1795803805.032179,
+      "specs": [
+        "BIGNUM_MUL_P521_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MUL_P521_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_neg_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_neg_p521.correct",
+      "elapsed_seconds": 21.189675,
+      "start_unixtime": 1795803689.524143,
+      "end_unixtime": 1795803710.713818,
+      "specs": [
+        "BIGNUM_NEG_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_NEG_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_optneg_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_optneg_p521.correct",
+      "elapsed_seconds": 20.870015,
+      "start_unixtime": 1795803692.966007,
+      "end_unixtime": 1795803713.836022,
+      "specs": [
+        "BIGNUM_OPTNEG_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_sqr_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_sqr_p521.correct",
+      "elapsed_seconds": 146.897386,
+      "start_unixtime": 1795803695.462142,
+      "end_unixtime": 1795803842.359528,
+      "specs": [
+        "BIGNUM_SQR_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_SQR_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_sqr_p521_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_sqr_p521_alt.correct",
+      "elapsed_seconds": 57.262071,
+      "start_unixtime": 1795803695.854084,
+      "end_unixtime": 1795803753.116155,
+      "specs": [
+        "BIGNUM_SQR_P521_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_SQR_P521_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_sub_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_sub_p521.correct",
+      "elapsed_seconds": 22.051371,
+      "start_unixtime": 1795803697.647367,
+      "end_unixtime": 1795803719.698738,
+      "specs": [
+        "BIGNUM_SUB_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_SUB_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_tolebytes_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_tolebytes_p521.correct",
+      "elapsed_seconds": 27.857263,
+      "start_unixtime": 1795803697.690467,
+      "end_unixtime": 1795803725.54773,
+      "specs": [
+        "BIGNUM_TOLEBYTES_P521_SUBROUTINE_CORRECT",
+        "BIGNUM_TOLEBYTES_P521_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_tomont_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_tomont_p521.correct",
+      "elapsed_seconds": 27.358809,
+      "start_unixtime": 1795803704.679968,
+      "end_unixtime": 1795803732.038777,
+      "specs": [
+        "BIGNUM_TOMONT_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "p521/bignum_triple_p521",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/p521/bignum_triple_p521.correct",
+      "elapsed_seconds": 22.361767,
+      "start_unixtime": 1795803707.990632,
+      "end_unixtime": 1795803730.352399,
+      "specs": [
+        "BIGNUM_TRIPLE_P521_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_add_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_add_p256k1.correct",
+      "elapsed_seconds": 20.712248,
+      "start_unixtime": 1795803708.432082,
+      "end_unixtime": 1795803729.14433,
+      "specs": [
+        "BIGNUM_ADD_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_cmul_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_cmul_p256k1.correct",
+      "elapsed_seconds": 21.047465,
+      "start_unixtime": 1795803708.461459,
+      "end_unixtime": 1795803729.508924,
+      "specs": [
+        "BIGNUM_CMUL_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_deamont_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_deamont_p256k1.correct",
+      "elapsed_seconds": 21.29476,
+      "start_unixtime": 1795803717.120753,
+      "end_unixtime": 1795803738.415513,
+      "specs": [
+        "BIGNUM_DEAMONT_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_demont_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_demont_p256k1.correct",
+      "elapsed_seconds": 21.040244,
+      "start_unixtime": 1795803720.272984,
+      "end_unixtime": 1795803741.313228,
+      "specs": [
+        "BIGNUM_DEMONT_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_double_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_double_p256k1.correct",
+      "elapsed_seconds": 20.602971,
+      "start_unixtime": 1795803721.675472,
+      "end_unixtime": 1795803742.278443,
+      "specs": [
+        "BIGNUM_DOUBLE_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_half_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_half_p256k1.correct",
+      "elapsed_seconds": 20.207983,
+      "start_unixtime": 1795803726.023844,
+      "end_unixtime": 1795803746.231827,
+      "specs": [
+        "BIGNUM_HALF_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_mod_n256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_mod_n256k1.correct",
+      "elapsed_seconds": 22.324296,
+      "start_unixtime": 1795803731.925555,
+      "end_unixtime": 1795803754.249851,
+      "specs": [
+        "BIGNUM_MOD_N256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_mod_n256k1_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_mod_n256k1_4.correct",
+      "elapsed_seconds": 20.591243,
+      "start_unixtime": 1795803732.668751,
+      "end_unixtime": 1795803753.259994,
+      "specs": [
+        "BIGNUM_MOD_N256K1_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_mod_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_mod_p256k1.correct",
+      "elapsed_seconds": 21.798308,
+      "start_unixtime": 1795803734.065945,
+      "end_unixtime": 1795803755.864253,
+      "specs": [
+        "BIGNUM_MOD_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_mod_p256k1_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_mod_p256k1_4.correct",
+      "elapsed_seconds": 20.28285,
+      "start_unixtime": 1795803735.506121,
+      "end_unixtime": 1795803755.788971,
+      "specs": [
+        "BIGNUM_MOD_P256K1_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_montmul_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_montmul_p256k1.correct",
+      "elapsed_seconds": 27.939287,
+      "start_unixtime": 1795803735.898546,
+      "end_unixtime": 1795803763.837833,
+      "specs": [
+        "BIGNUM_MONTMUL_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_montmul_p256k1_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_montmul_p256k1_alt.correct",
+      "elapsed_seconds": 26.620452,
+      "start_unixtime": 1795803736.708861,
+      "end_unixtime": 1795803763.329313,
+      "specs": [
+        "BIGNUM_MONTMUL_P256K1_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_montsqr_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_montsqr_p256k1.correct",
+      "elapsed_seconds": 26.475354,
+      "start_unixtime": 1795803738.39785,
+      "end_unixtime": 1795803764.873204,
+      "specs": [
+        "BIGNUM_MONTSQR_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_montsqr_p256k1_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_montsqr_p256k1_alt.correct",
+      "elapsed_seconds": 23.72066,
+      "start_unixtime": 1795803744.79041,
+      "end_unixtime": 1795803768.51107,
+      "specs": [
+        "BIGNUM_MONTSQR_P256K1_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_mul_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_mul_p256k1.correct",
+      "elapsed_seconds": 25.270315,
+      "start_unixtime": 1795803747.688984,
+      "end_unixtime": 1795803772.959299,
+      "specs": [
+        "BIGNUM_MUL_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_mul_p256k1_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_mul_p256k1_alt.correct",
+      "elapsed_seconds": 24.871217,
+      "start_unixtime": 1795803748.647658,
+      "end_unixtime": 1795803773.518875,
+      "specs": [
+        "BIGNUM_MUL_P256K1_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_neg_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_neg_p256k1.correct",
+      "elapsed_seconds": 20.485369,
+      "start_unixtime": 1795803752.625766,
+      "end_unixtime": 1795803773.111135,
+      "specs": [
+        "BIGNUM_NEG_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_optneg_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_optneg_p256k1.correct",
+      "elapsed_seconds": 20.33087,
+      "start_unixtime": 1795803754.758666,
+      "end_unixtime": 1795803775.089536,
+      "specs": [
+        "BIGNUM_OPTNEG_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_sqr_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_sqr_p256k1.correct",
+      "elapsed_seconds": 23.968828,
+      "start_unixtime": 1795803757.811486,
+      "end_unixtime": 1795803781.780314,
+      "specs": [
+        "BIGNUM_SQR_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_sqr_p256k1_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_sqr_p256k1_alt.correct",
+      "elapsed_seconds": 23.358949,
+      "start_unixtime": 1795803759.544719,
+      "end_unixtime": 1795803782.903668,
+      "specs": [
+        "BIGNUM_SQR_P256K1_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_sub_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_sub_p256k1.correct",
+      "elapsed_seconds": 20.440417,
+      "start_unixtime": 1795803759.628283,
+      "end_unixtime": 1795803780.0687,
+      "specs": [
+        "BIGNUM_SUB_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_tomont_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_tomont_p256k1.correct",
+      "elapsed_seconds": 21.027456,
+      "start_unixtime": 1795803760.665914,
+      "end_unixtime": 1795803781.69337,
+      "specs": [
+        "BIGNUM_TOMONT_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "secp256k1/bignum_triple_p256k1",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/secp256k1/bignum_triple_p256k1.correct",
+      "elapsed_seconds": 20.719287,
+      "start_unixtime": 1795803762.139051,
+      "end_unixtime": 1795803782.858338,
+      "specs": [
+        "BIGNUM_TRIPLE_P256K1_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak_f1600",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak_f1600.correct",
+      "elapsed_seconds": 102.394383,
+      "start_unixtime": 1795803762.221711,
+      "end_unixtime": 1795803864.616094,
+      "specs": [
+        "SHA3_KECCAK_F1600_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK_F1600_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak_f1600_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak_f1600_alt.correct",
+      "elapsed_seconds": 57.72812,
+      "start_unixtime": 1795803764.113691,
+      "end_unixtime": 1795803821.841811,
+      "specs": [
+        "SHA3_KECCAK_F1600_ALT_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK_F1600_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak_f1600_alt2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak_f1600_alt2.correct",
+      "elapsed_seconds": 222.658668,
+      "start_unixtime": 1795803769.705276,
+      "end_unixtime": 1795803992.363944,
+      "specs": [
+        "SHA3_KECCAK_F1600_ALT2_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK_F1600_ALT2_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak2_f1600",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak2_f1600.correct",
+      "elapsed_seconds": 137.736518,
+      "start_unixtime": 1795803770.207664,
+      "end_unixtime": 1795803907.944182,
+      "specs": [
+        "SHA3_KECCAK2_F1600_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK2_F1600_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak2_f1600_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak2_f1600_alt.correct",
+      "elapsed_seconds": 94.828993,
+      "start_unixtime": 1795803771.245095,
+      "end_unixtime": 1795803866.074088,
+      "specs": [
+        "SHA3_KECCAK2_F1600_ALT_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK2_F1600_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak4_f1600",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak4_f1600.correct",
+      "elapsed_seconds": 1711.530829,
+      "start_unixtime": 1795803774.871111,
+      "end_unixtime": 1795805486.40194,
+      "specs": [
+        "SHA3_KECCAK4_F1600_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK4_F1600_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak4_f1600_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak4_f1600_alt.correct",
+      "elapsed_seconds": 2080.469577,
+      "start_unixtime": 1795803778.615762,
+      "end_unixtime": 1795805859.085339,
+      "specs": [
+        "SHA3_KECCAK4_F1600_ALT_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK4_F1600_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sha3/sha3_keccak4_f1600_alt2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sha3/sha3_keccak4_f1600_alt2.correct",
+      "elapsed_seconds": 1869.874712,
+      "start_unixtime": 1795803779.342415,
+      "end_unixtime": 1795805649.217127,
+      "specs": [
+        "SHA3_KECCAK4_F1600_ALT2_SUBROUTINE_CORRECT",
+        "SHA3_KECCAK4_F1600_ALT2_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_add_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_add_sm2.correct",
+      "elapsed_seconds": 20.669161,
+      "start_unixtime": 1795803779.466391,
+      "end_unixtime": 1795803800.135552,
+      "specs": [
+        "BIGNUM_ADD_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_cmul_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_cmul_sm2.correct",
+      "elapsed_seconds": 21.294395,
+      "start_unixtime": 1795803779.90659,
+      "end_unixtime": 1795803801.200985,
+      "specs": [
+        "BIGNUM_CMUL_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_deamont_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_deamont_sm2.correct",
+      "elapsed_seconds": 21.445451,
+      "start_unixtime": 1795803780.260025,
+      "end_unixtime": 1795803801.705476,
+      "specs": [
+        "BIGNUM_DEAMONT_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_demont_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_demont_sm2.correct",
+      "elapsed_seconds": 21.359673,
+      "start_unixtime": 1795803781.419648,
+      "end_unixtime": 1795803802.779321,
+      "specs": [
+        "BIGNUM_DEMONT_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_double_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_double_sm2.correct",
+      "elapsed_seconds": 20.703756,
+      "start_unixtime": 1795803781.907754,
+      "end_unixtime": 1795803802.61151,
+      "specs": [
+        "BIGNUM_DOUBLE_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_half_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_half_sm2.correct",
+      "elapsed_seconds": 20.392303,
+      "start_unixtime": 1795803786.445347,
+      "end_unixtime": 1795803806.83765,
+      "specs": [
+        "BIGNUM_HALF_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_inv_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_inv_sm2.correct",
+      "elapsed_seconds": 230.443694,
+      "start_unixtime": 1795803788.028417,
+      "end_unixtime": 1795804018.472111,
+      "specs": [
+        "BIGNUM_INV_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_mod_nsm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_mod_nsm2.correct",
+      "elapsed_seconds": 22.611068,
+      "start_unixtime": 1795803788.164931,
+      "end_unixtime": 1795803810.775999,
+      "specs": [
+        "BIGNUM_MOD_NSM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_mod_nsm2_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_mod_nsm2_4.correct",
+      "elapsed_seconds": 20.573088,
+      "start_unixtime": 1795803789.280201,
+      "end_unixtime": 1795803809.853289,
+      "specs": [
+        "BIGNUM_MOD_NSM2_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_mod_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_mod_sm2.correct",
+      "elapsed_seconds": 22.143591,
+      "start_unixtime": 1795803789.272717,
+      "end_unixtime": 1795803811.416308,
+      "specs": [
+        "BIGNUM_MOD_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_mod_sm2_4",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_mod_sm2_4.correct",
+      "elapsed_seconds": 20.513999,
+      "start_unixtime": 1795803791.558338,
+      "end_unixtime": 1795803812.072337,
+      "specs": [
+        "BIGNUM_MOD_SM2_4_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_montinv_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_montinv_sm2.correct",
+      "elapsed_seconds": 232.813481,
+      "start_unixtime": 1795803791.999334,
+      "end_unixtime": 1795804024.812815,
+      "specs": [
+        "BIGNUM_MONTINV_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_montmul_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_montmul_sm2.correct",
+      "elapsed_seconds": 33.571994,
+      "start_unixtime": 1795803792.380483,
+      "end_unixtime": 1795803825.952477,
+      "specs": [
+        "BIGNUM_AMONTMUL_SM2_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_montmul_sm2_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_montmul_sm2_alt.correct",
+      "elapsed_seconds": 32.267142,
+      "start_unixtime": 1795803804.266394,
+      "end_unixtime": 1795803836.533536,
+      "specs": [
+        "BIGNUM_AMONTMUL_SM2_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTMUL_SM2_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_montsqr_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_montsqr_sm2.correct",
+      "elapsed_seconds": 30.115933,
+      "start_unixtime": 1795803806.526841,
+      "end_unixtime": 1795803836.642774,
+      "specs": [
+        "BIGNUM_AMONTSQR_SM2_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_montsqr_sm2_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_montsqr_sm2_alt.correct",
+      "elapsed_seconds": 28.347256,
+      "start_unixtime": 1795803807.556296,
+      "end_unixtime": 1795803835.903552,
+      "specs": [
+        "BIGNUM_AMONTSQR_SM2_ALT_SUBROUTINE_CORRECT",
+        "BIGNUM_MONTSQR_SM2_ALT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_neg_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_neg_sm2.correct",
+      "elapsed_seconds": 20.193955,
+      "start_unixtime": 1795803808.068055,
+      "end_unixtime": 1795803828.26201,
+      "specs": [
+        "BIGNUM_NEG_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_optneg_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_optneg_sm2.correct",
+      "elapsed_seconds": 20.404389,
+      "start_unixtime": 1795803808.970098,
+      "end_unixtime": 1795803829.374487,
+      "specs": [
+        "BIGNUM_OPTNEG_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_sub_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_sub_sm2.correct",
+      "elapsed_seconds": 20.661222,
+      "start_unixtime": 1795803809.230839,
+      "end_unixtime": 1795803829.892061,
+      "specs": [
+        "BIGNUM_SUB_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_tomont_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_tomont_sm2.correct",
+      "elapsed_seconds": 22.510891,
+      "start_unixtime": 1795803810.589945,
+      "end_unixtime": 1795803833.100836,
+      "specs": [
+        "BIGNUM_TOMONT_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "sm2/bignum_triple_sm2",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/sm2/bignum_triple_sm2.correct",
+      "elapsed_seconds": 20.945025,
+      "start_unixtime": 1795803811.429856,
+      "end_unixtime": 1795803832.374881,
+      "specs": [
+        "BIGNUM_TRIPLE_SM2_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes-xts/aes_xts_decrypt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes-xts/aes_xts_decrypt.correct",
+      "elapsed_seconds": 129.323611,
+      "start_unixtime": 1795803813.196934,
+      "end_unixtime": 1795803942.520545,
+      "specs": [
+        "AES_XTS_DECRYPT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes-xts/aes_xts_encrypt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes-xts/aes_xts_encrypt.correct",
+      "elapsed_seconds": 107.785586,
+      "start_unixtime": 1795803813.372642,
+      "end_unixtime": 1795803921.158228,
+      "specs": [
+        "AES_XTS_ENCRYPT_SUBROUTINE_CORRECT"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes128_gcm_dec",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes128_gcm_dec.correct",
+      "elapsed_seconds": 583.194231,
+      "start_unixtime": 1795803816.293607,
+      "end_unixtime": 1795804399.487838,
+      "specs": [
+        "AES128_GCM_DEC_NOIBT_SUBROUTINE_CORRECT",
+        "AES128_GCM_DEC_NOIBT_SUBROUTINE_SAFE",
+        "AES128_GCM_DEC_SUBROUTINE_CORRECT",
+        "AES128_GCM_DEC_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes128_gcm_dec_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes128_gcm_dec_alt.correct",
+      "elapsed_seconds": 757.125906,
+      "start_unixtime": 1795803817.177849,
+      "end_unixtime": 1795804574.303755,
+      "specs": [
+        "AES128_GCM_DEC_ALT_NOIBT_SUBROUTINE_CORRECT",
+        "AES128_GCM_DEC_ALT_NOIBT_SUBROUTINE_SAFE",
+        "AES128_GCM_DEC_ALT_SUBROUTINE_CORRECT",
+        "AES128_GCM_DEC_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes128_gcm_enc",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes128_gcm_enc.correct",
+      "elapsed_seconds": 445.744,
+      "start_unixtime": 1795803817.860891,
+      "end_unixtime": 1795804263.604891,
+      "specs": [
+        "AES128_GCM_ENC_NOIBT_SUBROUTINE_CORRECT",
+        "AES128_GCM_ENC_NOIBT_SUBROUTINE_SAFE",
+        "AES128_GCM_ENC_SUBROUTINE_CORRECT",
+        "AES128_GCM_ENC_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes128_gcm_enc_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes128_gcm_enc_alt.correct",
+      "elapsed_seconds": 387.712132,
+      "start_unixtime": 1795803818.520253,
+      "end_unixtime": 1795804206.232385,
+      "specs": [
+        "AES128_GCM_ENC_ALT_NOIBT_SUBROUTINE_CORRECT",
+        "AES128_GCM_ENC_ALT_NOIBT_SUBROUTINE_SAFE",
+        "AES128_GCM_ENC_ALT_SUBROUTINE_CORRECT",
+        "AES128_GCM_ENC_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes256_gcm_dec",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes256_gcm_dec.correct",
+      "elapsed_seconds": 421.180288,
+      "start_unixtime": 1795803822.378645,
+      "end_unixtime": 1795804243.558933,
+      "specs": [
+        "AES256_GCM_DEC_NOIBT_SUBROUTINE_CORRECT",
+        "AES256_GCM_DEC_NOIBT_SUBROUTINE_SAFE",
+        "AES256_GCM_DEC_SUBROUTINE_CORRECT",
+        "AES256_GCM_DEC_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes256_gcm_dec_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes256_gcm_dec_alt.correct",
+      "elapsed_seconds": 603.72411,
+      "start_unixtime": 1795803828.28653,
+      "end_unixtime": 1795804432.01064,
+      "specs": [
+        "AES256_GCM_DEC_ALT_NOIBT_SUBROUTINE_CORRECT",
+        "AES256_GCM_DEC_ALT_NOIBT_SUBROUTINE_SAFE",
+        "AES256_GCM_DEC_ALT_SUBROUTINE_CORRECT",
+        "AES256_GCM_DEC_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes256_gcm_enc",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes256_gcm_enc.correct",
+      "elapsed_seconds": 780.349882,
+      "start_unixtime": 1795803832.360795,
+      "end_unixtime": 1795804612.710677,
+      "specs": [
+        "AES256_GCM_ENC_NOIBT_SUBROUTINE_CORRECT",
+        "AES256_GCM_ENC_NOIBT_SUBROUTINE_SAFE",
+        "AES256_GCM_ENC_SUBROUTINE_CORRECT",
+        "AES256_GCM_ENC_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "aes_gcm/aes256_gcm_enc_alt",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-27-15.32.1795793543/s2n-bignum/arm/aes_gcm/aes256_gcm_enc_alt.correct",
+      "elapsed_seconds": 406.234837,
+      "start_unixtime": 1795803834.637152,
+      "end_unixtime": 1795804240.871989,
+      "specs": [
+        "AES256_GCM_ENC_ALT_NOIBT_SUBROUTINE_CORRECT",
+        "AES256_GCM_ENC_ALT_NOIBT_SUBROUTINE_SAFE",
+        "AES256_GCM_ENC_ALT_SUBROUTINE_CORRECT",
+        "AES256_GCM_ENC_ALT_SUBROUTINE_SAFE"
+      ],
+      "status": "pass"
+    }
+  ]
+}
