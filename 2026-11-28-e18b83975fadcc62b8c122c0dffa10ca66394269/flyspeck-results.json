@@ -1,0 +1,32 @@
+{
+  "flyspeck_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-28-03.46.1795837608/Flyspeck",
+  "flyspeck_commit": "f8359e0964f34eb555efd1edf7b3fd26447b26c4",
+  "hol_light_dir": "/home/ubuntu/holbench-runs/holbench-2026-11-28-03.46.1795837608/hol-light",
+  "hol_light_commit": "e18b83975fadcc62b8c122c0dffa10ca66394269",
+  "log_file": "/home/ubuntu/holbench-runs/holbench-2026-11-28-03.46.1795837608/logs/flyspeck-run.log",
+  "machine": {
+    "architecture": "aarch64",
+    "cpu_brand": "Neoverse-V3",
+    "num_cores": 192,
+    "memory_total_bytes": 404872937472,
+    "memory_total_gib": 377.07
+  },
+  "total": 1,
+  "counts": {
+    "pass": 1,
+    "fail": 0,
+    "skip": 0,
+    "missing": 0
+  },
+  "total_elapsed_seconds": 14109.0,
+  "tests": [
+    {
+      "name": "Flyspeck/Build.build_sequence_full",
+      "log_path": "/home/ubuntu/holbench-runs/holbench-2026-11-28-03.46.1795837608/logs/flyspeck-run.log",
+      "status": "pass",
+      "elapsed_seconds": 14109.0,
+      "start_unixtime": 1795855339.0,
+      "end_unixtime": 1795869448.0
+    }
+  ]
+}
